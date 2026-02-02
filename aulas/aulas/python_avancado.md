@@ -12,6 +12,8 @@ O primeiro passo é garantir que o Python esteja instalado em seu sistema. Você
 
 ### **Seção 2: Ambientes Virtuais (`virtualenv`) 🌳**
 
+![Ambientes Virtuais](../assets/images/virtual_env.png)
+
 Ambientes virtuais são pastas isoladas que contêm uma instalação específica do Python e todas as bibliotecas necessárias para um único projeto. Usá-los é uma prática essencial para evitar conflitos de versão entre projetos.
 
 **🤔 Por que usar?**
@@ -153,4 +155,27 @@ Isso abrirá uma nova aba em seu navegador com a interface do JupyterLab.
 
 ---
 
-### [ricardotecpro.github.io](https://ricardotecpro.github.io/)
+## 🎯 Teste Seus Conhecimentos
+
+Agora que você domina os conceitos avançados, que tal testar seus conhecimentos?
+
+<div style="text-align: center; padding: 2rem; background: linear-gradient(135deg, #FFD43B 0%, #FFA500 100%); border-radius: 10px; margin: 2rem 0;">
+  <h3 style="color: white; margin-bottom: 1rem;">🧠 Quiz de Fixação</h3>
+  <p style="color: white; margin-bottom: 1.5rem;">
+    Teste seus conhecimentos sobre Python Avançado com questões interativas!
+  </p>
+  <a href="/ads_spec_backend_com_python/quiz/python_avancado/" style="display: inline-block; background: white; color: #306998; padding: 12px 30px; border-radius: 25px; text-decoration: none; font-weight: bold; transition: transform 0.2s;">
+    Fazer Quiz Agora →
+  </a>
+</div>
+
+---
+
+## 📚 Próximos Passos
+
+Parabéns por completar a aula de Python Avançado! Continue sua jornada:
+
+- 💪 **Praticar**: [Exercícios](../exercicios/index.md)
+- 🎯 **Aplicar**: [Projetos](../projetos/index.md)
+- 📖 **Revisar**: [Python Básico](python_basico.md)
+

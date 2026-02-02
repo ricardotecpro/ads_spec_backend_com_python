@@ -1,155 +1,232 @@
-# 🐍 Python: A Linguagem Versátil e Poderosa
+# 🐍 Python Backend - Curso Completo
 
-Python é uma linguagem de programação de alto nível, interpretada e de propósito geral, criada por Guido van Rossum e lançada pela primeira vez em 1991. Sua filosofia de design enfatiza a legibilidade do código com uma sintaxe que permite aos desenvolvedores expressar conceitos em menos linhas de código do que seria possível em linguagens como C++ ou Java.
+Curso completo de Python do zero ao avançado, com foco em desenvolvimento backend.
 
-Devido à sua simplicidade, vasta gama de bibliotecas e comunidade ativa, Python se tornou uma das linguagens mais populares do mundo, dominando áreas que vão do desenvolvimento web à inteligência artificial.
+## 🎯 Sobre o Curso
 
------
+Este curso oferece uma trilha completa de aprendizado em Python, desde os conceitos básicos até tópicos avançados de backend development.
 
-## 📜 Filosofia e Características Principais
+### ✨ Destaques
 
-O design do Python é guiado por um conjunto de princípios conhecido como "O Zen de Python" (digite `import this` em um interpretador Python para ler). Suas características refletem essa filosofia.
+- ✅ **Aulas Completas** - Material didático detalhado
+- ✅ **Slides Profissionais** - Apresentações com Marp
+- ✅ **Quizzes Interativos** - Teste seus conhecimentos
+- ✅ **Exercícios Práticos** - Mão na massa
+- ✅ **Projetos Reais** - Construa seu portfólio
 
-### Simplicidade e Legibilidade
+## 🚀 Começando
 
-A sintaxe do Python é limpa, minimalista e se assemelha à linguagem humana, tornando o código fácil de ler e escrever. A indentação (uso de espaços em branco) para definir blocos de código, em vez de chaves ou palavras-chave, é uma característica marcante que força um código visualmente organizado. O guia de estilo oficial, **PEP 8**, ajuda a manter a consistência em toda a comunidade.
+### Pré-requisitos
 
-### Linguagem Interpretada
+- Python 3.11+
+- Poetry
+- Node.js (para Marp CLI)
 
-Python é uma linguagem interpretada, o que significa que o código-fonte é executado linha por linha diretamente por um interpretador, sem a necessidade de uma etapa de compilação separada. Isso agiliza o ciclo de desenvolvimento e depuração.
+### Instalação
 
-### Tipagem Dinâmica e Forte
+```bash
+# Clonar repositório
+git clone https://github.com/ricardotecpro/ads_spec_backend_com_python.git
+cd ads_spec_backend_com_python
 
-  - **Dinâmica**: Você não precisa declarar o tipo de uma variável. O tipo é inferido em tempo de execução.
-  - **Forte**: O interpretador impõe os tipos de dados. Operações entre tipos incompatíveis (como somar um número e um texto) não são permitidas implicitamente, evitando erros comuns.
+# Instalar Poetry (se não tiver)
+pip install poetry
 
-<!-- end list -->
+# Instalar dependências
+poetry install
 
-```python
-# Tipagem dinâmica: 'idade' se torna um inteiro, 'nome' se torna uma string.
-idade = 30
-nome = "Carlos"
-
-# O código abaixo causaria um erro (TypeError), pois a tipagem é forte.
-# print(idade + nome) 
+# Instalar Marp CLI (opcional, para slides)
+npm install -g @marp-team/marp-cli
 ```
 
-### "Baterias Inclusas" (Batteries Included)
+## 📚 Comandos Disponíveis
 
-Python vem com uma biblioteca padrão vasta e robusta, que inclui módulos para lidar com uma infinidade de tarefas comuns, como manipulação de texto, acesso a redes, operações com o sistema de arquivos, e muito mais, sem a necessidade de instalar pacotes externos.
+### Com Poetry/Taskipy
 
------
+```bash
+# Servidor local
+poetry run task serve
 
-## 📦 O Ecossistema e Gerenciamento de Pacotes
+# Build do site
+poetry run task build
 
-A maior força do Python reside em seu ecossistema, gerenciado principalmente pelo **pip** e pelo **PyPI**.
+# Gerar slides
+poetry run task slides
 
-### Pip e PyPI
+# Executar testes
+poetry run task test
 
-  - **pip**: É o gerenciador de pacotes padrão para Python. Ele permite instalar e gerenciar bibliotecas e dependências de software de forma simples e direta a partir da linha de comando.
-  - **PyPI (Python Package Index)**: É o repositório de software oficial para a comunidade Python. Abriga centenas de milhares de pacotes de código aberto que estendem as funcionalidades do Python para praticamente qualquer finalidade imaginável.
-
-**Comandos essenciais do pip:**
-
-```sh
-# Instala um pacote (ex: a popular biblioteca para requisições HTTP)
-pip install requests
-
-# Salva todas as dependências do projeto em um arquivo
-pip freeze > requirements.txt
-
-# Instala todas as dependências listadas em um arquivo
-pip install -r requirements.txt
+# Deploy (com Mike)
+poetry run task deploy
 ```
 
------
+### Com Invoke
 
-## 🌐 Principais Áreas de Aplicação
+```bash
+# Limpar arquivos gerados
+invoke clean
 
-A versatilidade do Python permite que ele seja usado em uma variedade impressionante de domínios.
+# Build completo (slides + site)
+invoke build-all
 
-### Desenvolvimento Web (Backend)
+# Servidor local
+invoke serve-all
 
-  - **Django**: Um framework web de alto nível, "baterias inclusas", que incentiva o desenvolvimento rápido e o design limpo e pragmático.
-  - **Flask**: Um micro-framework leve e flexível que fornece o básico, permitindo que os desenvolvedores escolham suas próprias ferramentas e bibliotecas.
+# Atualizar dependências
+invoke update-deps
 
-### Ciência de Dados e Análise (Data Science)
-
-Este é um dos campos onde Python reina supremo, graças a bibliotecas poderosas:
-
-  - **Pandas**: Para manipulação e análise de dados em estruturas de alto desempenho (DataFrames).
-  - **NumPy**: Para computação numérica e trabalho com arrays multidimensionais.
-  - **Matplotlib** e **Seaborn**: Para criação de visualizações de dados estáticas e interativas.
-
-### Machine Learning e Inteligência Artificial (AI)
-
-  - **Scikit-learn**: Uma biblioteca simples e eficiente para mineração de dados e análise preditiva.
-  - **TensorFlow (Google)** e **PyTorch (Meta)**: Frameworks de ponta para deep learning e construção de redes neurais.
-
-### Automação de Tarefas e Scripting
-
-Python é frequentemente usado como uma "linguagem de cola" para automatizar tarefas repetitivas, como renomear arquivos, extrair dados de sites (*web scraping*) e gerenciar sistemas.
-
------
-
-## 📊 Visualizando uma Aplicação de Dados
-
-O diagrama abaixo mostra um fluxo de trabalho comum em um projeto de ciência de dados usando o ecossistema Python.
-
-```mermaid
-graph TD;
-    A[Fonte de Dados (CSV, API, DB)] --> B{Script Python};
-    
-    subgraph "Processamento em Python"
-        B -- usa --> C[Pandas para carregar e limpar];
-        C --> D[NumPy для cálculos numéricos];
-        D --> E[Scikit-learn para criar modelo];
-        E --> F[Matplotlib/Seaborn para visualizar];
-    end
-
-    F --> G[Resultado: Análise, Gráfico ou Relatório];
+# Ver todos os comandos
+invoke help-tasks
 ```
 
------
+## 📁 Estrutura do Projeto
 
-## 🚀 Começando com Python
-
-Iniciar com Python é um processo direto.
-
-1.  **Instale o Python**: Baixe o instalador mais recente para o seu sistema operacional a partir do [site oficial python.org](https://www.python.org/).
-2.  **Abra um terminal ou editor de código**.
-3.  **Escreva seu primeiro código**:
-
-<!-- end list -->
-
-```python
-# hello.py
-
-# Uma função para saudar alguém.
-def saudar(nome):
-    """Esta função imprime uma saudação personalizada."""
-    # f-strings são uma forma moderna e legível de formatar strings.
-    print(f"Olá, {nome}! Bem-vindo ao mundo do Python.")
-
-# Pede ao usuário para inserir um nome.
-nome_do_usuario = input("Qual é o seu nome? ")
-
-# Chama a função com a entrada do usuário.
-saudar(nome_do_usuario)
+```
+ads_spec_backend_com_python/
+├── aulas/                      # Conteúdo das aulas
+│   ├── assets/                # Imagens, CSS, JS
+│   ├── aulas/                 # Aulas (Python Básico, Avançado)
+│   ├── quiz/                  # Quizzes interativos
+│   ├── setup/                 # Guias de instalação
+│   └── index.md               # Homepage
+├── slides/                    # Slides Marp
+│   ├── brutos/               # Slides fonte (.md)
+│   │   ├── python-theme.css # Tema customizado
+│   │   └── *.md             # Slides
+│   └── html/                 # Slides gerados (.html)
+├── hooks/                     # Hooks customizados MkDocs
+│   ├── copy_slides.py        # Copia slides para site
+│   └── quiz_hook.py          # Processa quizzes
+├── .github/workflows/         # CI/CD
+│   ├── deploy.yml            # Deploy automático
+│   └── test.yml              # Testes automáticos
+├── pyproject.toml            # Poetry + Taskipy
+├── tasks.py                  # Invoke tasks
+└── mkdocs.yml                # Configuração MkDocs
 ```
 
-4.  **Execute o arquivo** no terminal:
-    ```sh
-    python hello.py
-    ```
+## 🎨 Tecnologias
 
------
+### Documentação
+- **MkDocs** - Gerador de sites estáticos
+- **Material for MkDocs** - Tema moderno
+- **Mike** - Versionamento de docs
 
-## 🎯 Por que Aprender Python?
+### Slides
+- **Marp** - Slides profissionais em Markdown
+- **Tema Python** - Cores oficiais Python.org
 
-  - **Curva de Aprendizagem Suave**: É amplamente considerada uma das linguagens mais fáceis para iniciantes devido à sua sintaxe simples e legível.
-  - **Extremamente Versátil**: Uma única linguagem pode ser usada para construir um site, analisar dados, treinar um modelo de IA ou automatizar sua casa.
-  - **Comunidade Gigante e Ativa**: Há uma abundância de tutoriais, fóruns e conferências. Quase qualquer dúvida que você tiver já foi respondida online.
-  - **Alta Demanda no Mercado**: Profissionais de Python são altamente requisitados, especialmente em campos de rápido crescimento como Data Science, Machine Learning e desenvolvimento backend.
-  - **Ecossistema de Bibliotecas Imbatível**: O PyPI oferece uma solução pronta para quase qualquer problema, acelerando drasticamente o desenvolvimento.
+### Automação
+- **Poetry** - Gerenciamento de dependências
+- **Taskipy** - Tasks simples
+- **Invoke** - Tasks complexas
 
+### Plugins
+- **mkdocs-quiz** - Quizzes interativos
+- **git-authors** - Autores por arquivo
+- **git-revision-date** - Data de modificação
+- **glightbox** - Lightbox para imagens
+- **macros** - Variáveis e macros
+
+### CI/CD
+- **GitHub Actions** - Deploy e testes automáticos
+
+## 🎓 Conteúdo
+
+### Instalação
+- Windows Setup
+- VSCode Configuration
+
+### Python Básico
+- Sintaxe
+- Tipos de dados
+- Estruturas de controle
+- Funções
+- Módulos
+
+### Python Avançado
+- Ambientes virtuais
+- Gerenciamento de pacotes (Poetry)
+- POO avançada
+- Decoradores
+- Context managers
+
+### Projetos
+- API REST com FastAPI
+- CRUD completo
+- Autenticação
+- Deploy
+
+## 🧪 Testes
+
+```bash
+# Executar testes
+poetry run task test
+
+# Testar links
+invoke test-links
+```
+
+## 🚀 Deploy
+
+### GitHub Pages (Automático)
+
+O deploy é automático via GitHub Actions quando você faz push para `main`.
+
+### Manual
+
+```bash
+# Deploy com Mike
+poetry run task deploy
+
+# Ou
+poetry run mike deploy estavel --push
+```
+
+## 🎨 Slides
+
+### Gerar Slides
+
+```bash
+# Com Taskipy
+poetry run task slides
+
+# Com Marp diretamente
+marp -I slides/brutos --html --theme slides/brutos/python-theme.css -o slides/html
+```
+
+### Visualizar Slides
+
+Após gerar, abra os arquivos em `slides/html/` no navegador.
+
+## 🤝 Contribuindo
+
+Contribuições são bem-vindas! Por favor:
+
+1. Fork o projeto
+2. Crie uma branch (`git checkout -b feature/nova-feature`)
+3. Commit suas mudanças (`git commit -m 'Add nova feature'`)
+4. Push para a branch (`git push origin feature/nova-feature`)
+5. Abra um Pull Request
+
+## 📝 Licença
+
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+## 👤 Autor
+
+**Ricardo**
+
+- GitHub: [@ricardotecpro](https://github.com/ricardotecpro)
+- LinkedIn: [ricardotecpro](https://linkedin.com/in/ricardotecpro)
+
+## 🙏 Agradecimentos
+
+- [FastAPI do Zero](https://github.com/dunossauro/fastapi-do-zero) - Inspiração para estrutura e automação
+- [MkDocs Material](https://squidfunk.github.io/mkdocs-material/) - Tema incrível
+- [Marp](https://marp.app/) - Slides profissionais
+- Comunidade Python Brasil
+
+---
+
+⭐ Se este projeto te ajudou, considere dar uma estrela!

@@ -1,0 +1,21 @@
+Python executable: C:\Dropbox\Crossover\github.io\ads_spec_backend_com_python\.venv\Scripts\python.exe
+Installed MkDocs Plugins:
+  - Name: search, Value: mkdocs.contrib.search:SearchPlugin
+  - Name: material/blog, Value: material.plugins.blog.plugin:BlogPlugin
+  - Name: material/group, Value: material.plugins.group.plugin:GroupPlugin
+  - Name: material/info, Value: material.plugins.info.plugin:InfoPlugin
+  - Name: material/meta, Value: material.plugins.meta.plugin:MetaPlugin
+  - Name: material/offline, Value: material.plugins.offline.plugin:OfflinePlugin
+  - Name: material/optimize, Value: material.plugins.optimize.plugin:OptimizePlugin
+  - Name: material/privacy, Value: material.plugins.privacy.plugin:PrivacyPlugin
+  - Name: material/projects, Value: material.plugins.projects.plugin:ProjectsPlugin
+  - Name: material/search, Value: material.plugins.search.plugin:SearchPlugin
+  - Name: material/social, Value: material.plugins.social.plugin:SocialPlugin
+  - Name: material/tags, Value: material.plugins.tags.plugin:TagsPlugin
+  - Name: material/typeset, Value: material.plugins.typeset.plugin:TypesetPlugin
+  - Name: mkdocs-revealjs, Value: mkdocs_revealjs.plugin:RevealjsPlugin
+
+Installed MkDocs Themes:
+  - Name: mkdocs, Value: mkdocs.themes.mkdocs
+  - Name: readthedocs, Value: mkdocs.themes.readthedocs
+  - Name: material, Value: material.templates

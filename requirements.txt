@@ -1,0 +1,8 @@
+aluno
+importlib_metadata
+invoke
+markdown
+playwright
+pytest
+requests
+rich
