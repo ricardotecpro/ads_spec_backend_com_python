@@ -1,0 +1,150 @@
+/* Extra CSS para melhorias gerais do site */
+
+/* ===== Melhorias de Tipografia ===== */
+.md-typeset {
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+.md-typeset h1 {
+    font-weight: 700;
+    color: var(--md-primary-fg-color);
+}
+
+.md-typeset h2 {
+    font-weight: 600;
+    border-left: 4px solid var(--md-accent-fg-color);
+    padding-left: 1rem;
+    margin-left: -1rem;
+}
+
+/* ===== Code Blocks ===== */
+.md-typeset code {
+    background-color: rgba(48, 105, 152, 0.1);
+    color: #306998;
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+    font-size: 0.9em;
+}
+
+.md-typeset pre code {
+    background-color: transparent;
+    color: inherit;
+}
+
+/* ===== Admonitions ===== */
+.md-typeset .admonition {
+    border-left: 4px solid;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== Tables ===== */
+.md-typeset table:not([class]) {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.md-typeset table:not([class]) th {
+    background-color: var(--md-primary-fg-color);
+    color: white;
+    font-weight: 600;
+}
+
+.md-typeset table:not([class]) tr:hover {
+    background-color: rgba(48, 105, 152, 0.05);
+}
+
+/* ===== Links ===== */
+.md-typeset a {
+    color: var(--md-primary-fg-color);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s;
+}
+
+.md-typeset a:hover {
+    border-bottom-color: var(--md-accent-fg-color);
+}
+
+/* ===== Navigation ===== */
+.md-tabs {
+    background: linear-gradient(135deg, #306998 0%, #4a7ba7 100%);
+}
+
+/* ===== Footer ===== */
+.md-footer {
+    background: linear-gradient(135deg, #306998 0%, #4a7ba7 100%);
+}
+
+/* ===== Search ===== */
+.md-search__input {
+    border-radius: 20px;
+}
+
+/* ===== Buttons ===== */
+.md-button {
+    border-radius: 20px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.md-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.md-button--primary {
+    background: linear-gradient(135deg, #306998 0%, #4a7ba7 100%);
+}
+
+/* ===== Scrollbar ===== */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #306998;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #FFD43B;
+}
+
+/* ===== Animações ===== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.md-content {
+    animation: fadeIn 0.3s ease-in;
+}
+
+/* ===== Responsividade ===== */
+@media screen and (max-width: 768px) {
+    .md-typeset {
+        font-size: 0.85rem;
+    }
+
+    .md-typeset h1 {
+        font-size: 1.8rem;
+    }
+
+    .md-typeset h2 {
+        font-size: 1.4rem;
+    }
+}
