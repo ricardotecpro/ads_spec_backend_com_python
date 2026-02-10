@@ -940,6 +940,32 @@
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>Installing collected packages: fastapi
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>Successfully installed fastapi-0.68.1
 </span></code></pre></div>
+<h3 id="exemplo-interativo-com-barra-de-progresso">Exemplo Interativo com Barra de Progresso</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>$ python manage.py migrate
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>Operations to perform:
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>  Apply all migrations: admin, auth, contenttypes, sessions
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>Running migrations:
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>  Applying contenttypes.0001_initial... OK
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>  Applying auth.0001_initial... OK
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>  Applying admin.0001_initial... OK
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>  Applying sessions.0001_initial... OK
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>$ python train_model.py
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>Training Epoch 1/10: 100%|██████████| 500/500 [00:15&lt;00:00, 32.15it/s] loss: 0.452
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>Training Epoch 2/10: 100%|██████████| 500/500 [00:14&lt;00:00, 33.10it/s] loss: 0.312
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>Training Epoch 3/10:  45%|████▌     | 225/500 [00:06&lt;00:08, 32.00it/s] loss: 0.289
+</span></code></pre></div>
+<h3 id="exemplo-de-input-do-usuario">Exemplo de Input do Usuário</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>$ git commit -a
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>Please enter the commit message for your changes. Lines starting
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>with '#' will be ignored, and an empty message aborts the commit.
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>On branch main
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>Changes to be committed:
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>  modified:   README.md
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>  modified:   main.py
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>&gt; Refatorando a função de login
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>[main 8f23a1b] Refatorando a função de login
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a> 2 files changed, 15 insertions(+), 3 deletions(-)
+</span></code></pre></div>
 <h2 id="2-diagramas-mermaidjs">2. Diagramas (Mermaid.js)</h2>
 <p>Podemos usar diagramas para explicar conceitos complexos como herança de classes.</p>
 <h3 id="exemplo-de-heranca">Exemplo de Herança</h3>
@@ -985,7 +1011,7 @@
     <span class="md-icon" title="Última atualização">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="10 de fevereiro de 2026 20:47:32 UTC">10 de fevereiro de 2026 20:47:32</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="10 de fevereiro de 2026 20:59:13 UTC">10 de fevereiro de 2026 20:59:13</span>
   </span>
 
     
