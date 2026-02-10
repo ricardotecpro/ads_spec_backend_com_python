@@ -1,204 +1,114 @@
-/* Custom CSS for Modern Home Page - Python.org Official Theme */
-
-/* Hero Section */
-.hero-section {
-    text-align: center;
-    padding: 4rem 2rem;
-    background: linear-gradient(135deg, #306998 0%, #FFD43B 100%);
-    border-radius: 15px;
-    margin: 2rem 0;
-    color: white;
-    box-shadow: 0 10px 40px rgba(48, 105, 152, 0.3);
+/* Parallax Container */
+.mdx-parallax {
+    height: 60vh;
+    /* Adjust height as needed */
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective: 300px;
+    position: relative;
+    /* Hide scrollbar for cleaner look if desired */
+    scrollbar-width: none;
 }
 
-.hero-section h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    font-weight: 700;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+.mdx-parallax::-webkit-scrollbar {
+    display: none;
 }
 
-.hero-subtitle {
-    font-size: 1.3rem;
-    margin-bottom: 2rem;
-    opacity: 0.95;
+.mdx-parallax__group {
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
 }
 
-.hero-cta {
+.mdx-parallax__layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     display: flex;
-    gap: 1rem;
     justify-content: center;
-    flex-wrap: wrap;
+    align-items: center;
 }
 
-.btn-primary,
-.btn-secondary {
-    display: inline-block;
-    padding: 14px 32px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1.1rem;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-.btn-primary {
-    background: white;
-    color: #306998;
-}
-
-.btn-primary:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-    background: #FFD43B;
-    color: #306998;
-}
-
-.btn-secondary {
-    background: rgba(255, 255, 255, 0.2);
-    color: white;
-    border: 2px solid white;
-}
-
-.btn-secondary:hover {
-    background: white;
-    color: #306998;
-    transform: translateY(-3px);
-}
-
-/* Features Grid */
-.features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    margin: 3rem 0;
-}
-
-.feature {
-    text-align: center;
-    padding: 2rem;
-    background: var(--md-default-bg-color);
-    border-radius: 12px;
-    border: 1px solid var(--md-default-fg-color--lightest);
-    transition: all 0.3s ease;
-}
-
-.feature:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(48, 105, 152, 0.2);
-    border-color: #306998;
-}
-
-.feature-icon {
-    font-size: 3rem;
-    display: block;
-    margin-bottom: 1rem;
-}
-
-.feature h3 {
-    margin: 0.5rem 0;
-    color: #306998;
-}
-
-.feature p {
-    margin: 0;
+.mdx-parallax__layer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     opacity: 0.8;
 }
 
-/* Stats Section */
-.stats-section {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 2rem;
-    margin: 3rem 0;
-    padding: 2rem;
-    background: linear-gradient(135deg, #FFD43B 0%, #FFA500 100%);
-    border-radius: 15px;
-    color: #2c3e50;
+/* Depth Calculation
+   scale = 1 + (translateZ * -1) / perspective
+   Example: translateZ = -300px, perspective = 300px
+   scale = 1 + (300 / 300) = 2
+*/
+
+.mdx-parallax__layer--deep {
+    transform: translateZ(-300px) scale(2);
+    z-index: 1;
 }
 
-.stat {
+.mdx-parallax__layer--mid {
+    transform: translateZ(-150px) scale(1.5);
+    z-index: 2;
+}
+
+.mdx-parallax__layer--fore {
+    transform: translateZ(0px) scale(1);
+    z-index: 3;
+}
+
+.mdx-parallax__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 4;
+    transform: translateZ(0);
+    /* Fix for some browsers */
+}
+
+/* Hero Overlay Styles */
+.hero-overlay {
     text-align: center;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.4);
+    /* Backdrop for readability */
+    padding: 2rem;
+    border-radius: 1rem;
+    backdrop-filter: blur(5px);
 }
 
-.stat-number {
-    display: block;
+.hero-title {
     font-size: 3rem;
     font-weight: 700;
-    margin-bottom: 0.5rem;
-    color: #306998;
+    margin-bottom: 1rem;
 }
 
-.stat-label {
-    display: block;
-    font-size: 1.1rem;
-    opacity: 0.9;
-    color: #2c3e50;
+.hero-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
 }
 
-/* Enhanced Cards */
-.md-typeset .grid.cards> :hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 30px rgba(48, 105, 152, 0.15);
+.hero-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
 }
 
-.md-typeset .grid.cards>* {
-    transition: all 0.3s ease;
-}
+/* Adjustments for Mobile */
+@media screen and (max-width: 768px) {
+    .mdx-parallax {
+        height: 50vh;
+    }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .hero-section h1 {
+    .hero-title {
         font-size: 2rem;
     }
-
-    .hero-subtitle {
-        font-size: 1.1rem;
-    }
-
-    .features-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .stats-section {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* Animations */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.hero-section,
-.features-grid,
-.stats-section {
-    animation: fadeInUp 0.6s ease-out;
-}
-
-/* Custom Scrollbar */
-::-webkit-scrollbar {
-    width: 10px;
-}
-
-::-webkit-scrollbar-track {
-    background: var(--md-default-bg-color);
-}
-
-::-webkit-scrollbar-thumb {
-    background: linear-gradient(135deg, #306998 0%, #FFD43B 100%);
-    border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(135deg, #FFD43B 0%, #306998 100%);
 }
