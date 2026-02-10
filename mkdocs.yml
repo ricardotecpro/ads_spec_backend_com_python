@@ -80,6 +80,14 @@ plugins:
   - macros
   - mkdocs-video
   - termynal
+  # - with-pdf:
+  #     enabled: true
+  #     author: Ricardo
+  #     copyright: Copyright &copy; 2026 Ricardo
+  #     cover: true
+  #     toc_title: Índice
+  #     toc_level: 2
+  #     ordered_chapter_level: 2
   - mkdocs-simple-hooks:
       hooks:
         on_post_build: "hooks.copy_slides:copy_slides"
@@ -115,7 +123,7 @@ nav:
     - Python Básico: aulas/python_basico.md
 
     - Python Avançado: aulas/python_avancado.md
-    - Recursos Visuais: aulas/recursos_visuais.md
+    - Recursos Visuais: recursos_visuais.md
   - Slides: slides/index.md
   - Quiz:
     - Todos os Quizzes: quiz/index.md

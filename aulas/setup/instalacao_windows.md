@@ -25,7 +25,7 @@ Antes de começar, verifique se seu sistema atende aos requisitos:
 
 ### 1.2 Executando o Instalador
 
-![Instalador do Python](../../assets/images/python_installer_windows.png)
+![Instalador do Python](../assets/images/python_installer_windows.png)
 
 > [!IMPORTANT]
 > **Atenção**: Marque a opção **"Add Python to PATH"** antes de continuar! Isso é essencial para usar o Python no terminal.
@@ -95,7 +95,7 @@ pip 23.3.1 from C:\Users\...\Python312\lib\site-packages\pip (python 3.12)
 
 ### 3.1 Instalando a Extensão Python
 
-![Extensão Python no VSCode](../../assets/images/vscode_python_extension.png)
+![Extensão Python no VSCode](../assets/images/vscode_python_extension.png)
 
 1. Abra o VSCode
 2. Clique no ícone de **Extensões** na barra lateral (ou pressione `Ctrl+Shift+X`)
