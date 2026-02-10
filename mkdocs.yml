@@ -104,6 +104,7 @@ extra_javascript:
   - assets/js/quiz.js
   - https://unpkg.com/mermaid@10.9.1/dist/mermaid.min.js
   - assets/js/mermaid-init.js
+  - assets/js/custom_termynal.js
 
 extra:
   social:
