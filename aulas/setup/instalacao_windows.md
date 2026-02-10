@@ -150,7 +150,7 @@ Abra as configurações (`Ctrl+,`) e ajuste:
 
 ### 4.2 Criando o Arquivo Python
 
-![Hello World no VSCode](../../assets/images/vscode_hello_world.png)
+![Hello World no VSCode](../assets/images/vscode_hello_world.png)
 
 1. No VSCode, clique em **"Novo Arquivo"** ou pressione `Ctrl+N`
 2. Salve como `hello.py` (`Ctrl+S`)

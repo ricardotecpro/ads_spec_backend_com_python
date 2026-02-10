@@ -39,7 +39,10 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git fetch origin gh-pages --depth=1 || echo "gh-pages branch not found"
-          git branch -f gh-pages origin/gh-pages || echo "gh-pages not found on remote"
+          # Generate slides before deploy
+          poetry run task slides
+          # Clean local gh-pages to ensure fresh fetch/deploy
+          git branch -D gh-pages || echo "gh-pages not present locally"
+          git fetch origin gh-pages --depth=1 || echo "gh-pages branch not found on remote"
           poetry run mike deploy --push --update-aliases estavel latest
           poetry run mike set-default --push estavel
