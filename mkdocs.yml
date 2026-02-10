@@ -77,6 +77,7 @@ plugins:
       enable_creation_date: true
       type: datetime
   - macros
+  - mkdocs-video
   - mkdocs-simple-hooks:
       hooks:
         on_post_build: "hooks.copy_slides:copy_slides"

@@ -19,6 +19,7 @@ dependencies = [
     "pillow (>=11.3.0,<12.0.0)",
     "pymdown-extensions (>=10.0.0,<11.0.0)",
     "mkdocs-simple-hooks (>=0.1.5,<0.2.0)",
+    "mkdocs-video (>=1.5.0,<2.0.0)",
 ]
 
 [dependency-groups]
@@ -32,9 +33,9 @@ dev = [
 ]
 
 [tool.taskipy.tasks]
-serve = {cmd="mkdocs serve --dev-addr localhost:8000", help="Servidor local MkDocs"}
+docs = {cmd="mkdocs serve --dev-addr localhost:8000", help="Servidor local MkDocs"}
 build = {cmd="mkdocs build", help="Build do site"}
-slides = {cmd="marp -I slides/brutos --html --theme slides/brutos/python-theme.css --allow-local-files -o slides/html", help="Gera slides com Marp"}
+slides = {cmd="marp -I slides/brutos --html --theme gaia --allow-local-files -o slides/html", help="Gera slides com Marp"}
 deploy = {cmd="mike deploy estavel --push --allow-empty", help="Deploy produção com Mike"}
 test = {cmd="pytest tests/ -v", help="Executa testes"}
 clean = {cmd="invoke clean", help="Limpa arquivos gerados"}
