@@ -37,4 +37,6 @@ jobs:
 
       - name: Deploy with Mike
         run: |
+          git fetch origin gh-pages --depth=1 || echo "gh-pages branch not found"
           poetry run mike deploy --push --update-aliases estavel latest
+          poetry run mike set-default --push estavel
