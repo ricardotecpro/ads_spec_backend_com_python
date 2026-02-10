@@ -78,6 +78,7 @@ plugins:
       type: datetime
   - macros
   - mkdocs-video
+  - termynal
   - mkdocs-simple-hooks:
       hooks:
         on_post_build: "hooks.copy_slides:copy_slides"
@@ -111,7 +112,9 @@ nav:
     - Windows: setup/instalacao_windows.md
   - Aulas:
     - Python Básico: aulas/python_basico.md
+
     - Python Avançado: aulas/python_avancado.md
+    - Recursos Visuais: aulas/recursos_visuais.md
   - Slides: slides/index.md
   - Quiz:
     - Todos os Quizzes: quiz/index.md

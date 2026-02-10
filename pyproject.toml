@@ -20,6 +20,8 @@ dependencies = [
     "pymdown-extensions (>=10.0.0,<11.0.0)",
     "mkdocs-simple-hooks (>=0.1.5,<0.2.0)",
     "mkdocs-video (>=1.5.0,<2.0.0)",
+    "termynal (>=0.13.1,<0.14.0)",
+
 ]
 
 [dependency-groups]
