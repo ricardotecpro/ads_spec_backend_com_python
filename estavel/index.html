@@ -906,7 +906,7 @@
   
 
 
-<!-- Hero Section --><div class="hero-section">
+<div class="hero-section">
   <h1>🐍 Aprenda Python do Zero ao Avançado</h1>
   <p class="hero-subtitle">
     Curso completo e gratuito com aulas práticas, quizzes interativos, exercícios e projetos reais para você dominar Python
@@ -1058,118 +1058,41 @@
   </div>
 </div>
 
-<p></p>
-<div style="text-align: center; padding: 2rem; margin: 2rem 0;"><p></p></div><style type="text/css">.quiz {
-  border: 1px solid black;
-  padding: 1rem;
-  margin: 1rem 0;
-}
-/* Set margin-top of first quiz child */
-.quiz > *:first-child {
-  margin-top: 0;
-}
-.hidden {
-  display: none;
-}
+<!-- Resources -->
+<div style="text-align: center; padding: 2rem; margin: 2rem 0;">
+  <h2 style="color: #306998; margin-bottom: 1.5rem;">📖 Recursos Adicionais</h2>
+  <p style="max-width: 700px; margin: 0 auto 2rem; opacity: 0.9;">
+    Além do conteúdo do curso, recomendamos explorar a comunidade Python Brasil e a documentação oficial para aprofundar seus conhecimentos.
+  </p>
+  <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+    <a href="https://python.org.br/" target="_blank" style="padding: 10px 20px; background: var(--md-code-bg-color); border-radius: 8px; text-decoration: none; transition: transform 0.2s;">
+      🇧🇷 Python Brasil
+    </a>
+    <a href="https://docs.python.org/pt-br/3/" target="_blank" style="padding: 10px 20px; background: var(--md-code-bg-color); border-radius: 8px; text-decoration: none; transition: transform 0.2s;">
+      📚 Documentação Oficial
+    </a>
+    <a href="https://pypi.org/" target="_blank" style="padding: 10px 20px; background: var(--md-code-bg-color); border-radius: 8px; text-decoration: none; transition: transform 0.2s;">
+      📦 PyPI - Pacotes
+    </a>
+  </div>
+</div>
 
-form button {
-  background-color: var(--md-primary-fg-color);
-  border: none;
-  color: var(--md-primary-bg-color);
-  padding: 0.5rem 1rem;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 0.8rem;
-}
+<!-- Footer CTA -->
+<div style="text-align: center; padding: 3rem 2rem; background: linear-gradient(135deg, #306998 0%, #FFD43B 100%); border-radius: 15px; margin: 2rem 0; color: white;">
+  <h2 style="margin-bottom: 1rem;">Pronto para Começar?</h2>
+  <p style="font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.95;">
+    Junte-se a milhares de desenvolvedores que já aprenderam Python!
+  </p>
+  <a href="setup/instalacao_windows/" style="display: inline-block; background: white; color: #306998; padding: 14px 32px; border-radius: 30px; text-decoration: none; font-weight: 600; font-size: 1.1rem; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s;">
+    Começar Agora →
+  </a>
+</div>
 
-.wrong label {
-  color: red;
-}
-.correct label {
-  color: green;
-}
-
-fieldset {
-  border: none;
-  display: flex;
-  flex-direction: column;
-}
-fieldset input {
-  margin: 0 10px;
-}
-fieldset label {
-  margin: 0 10px;
-}
-
-label.correct {
-  color: green;
-}
-label.wrong {
-  color: red;
-}
-input[type='radio'].correct {
-  accent-color: green;
-}
-input[type='radio'].wrong {
-  accent-color: red;
-}
-.content {
-  margin: 10px;
-}
-</style><script type="text/javascript" defer>document.querySelectorAll('.quiz').forEach((quiz) => {
-  let form = quiz.querySelector('form');
-  let fieldset = form.querySelector('fieldset');
-  form.addEventListener('submit', (event) => {
-    event.preventDefault();
-    let selectedAnswers = form.querySelectorAll('input[name="answer"]:checked');
-    let correctAnswers = fieldset.querySelectorAll(
-      'input[name="answer"][correct]'
-    );
-    // Check if all correct answers are selected
-    let is_correct = selectedAnswers.length === correctAnswers.length;
-    for (let i = 0; i < selectedAnswers.length; i++) {
-      if (!selectedAnswers[i].hasAttribute('correct')) {
-        is_correct = false;
-        break;
-      }
-    }
-    let section = quiz.querySelector('section');
-    if (is_correct) {
-      section.classList.remove('hidden');
-      resetFieldset(fieldset);
-      // Mark all fields with colors
-      const allAnswers = fieldset.querySelectorAll('input[name="answer"]');
-      for (let i = 0; i < allAnswers.length; i++) {
-        if (allAnswers[i].hasAttribute('correct')) {
-          allAnswers[i].parentElement.classList.add('correct');
-        } else {
-          allAnswers[i].parentElement.classList.add('wrong');
-        }
-      }
-    } else {
-      section.classList.add('hidden');
-      resetFieldset(fieldset);
-      // Mark wrong fields with colors
-      for (let i = 0; i < selectedAnswers.length; i++) {
-        if (!selectedAnswers[i].hasAttribute('correct')) {
-          selectedAnswers[i].parentElement.classList.add('wrong');
-        } else {
-          selectedAnswers[i].parentElement.classList.add('correct');
-        }
-      }
-    }
-  });
-});
-
-function resetFieldset(fieldset) {
-  const fieldsetChildren = fieldset.children;
-  for (let i = 0; i < fieldsetChildren.length; i++) {
-    fieldsetChildren[i].classList.remove('wrong');
-    fieldsetChildren[i].classList.remove('correct');
-  }
-}
-</script>
+<div style="text-align: center; padding: 1rem; opacity: 0.7;">
+  <p>
+    💡 <strong>Dica:</strong> Se você é iniciante, comece pela <a href="setup/instalacao_windows/">Instalação</a>, depois vá para as <a href="aulas/python_basico/">Aulas</a> e pratique com os <a href="quiz/">Quizzes</a>!
+  </p>
+</div>
 
 
 

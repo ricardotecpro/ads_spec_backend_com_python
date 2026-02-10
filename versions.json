@@ -2,6 +2,8 @@
   {
     "version": "estavel",
     "title": "estavel",
-    "aliases": []
+    "aliases": [
+      "latest"
+    ]
   }
 ]
