@@ -2,19 +2,10 @@
 hide:
   - navigation
   - toc
+template: home.html
 ---
 
-<!-- Hero Section -->
-<div class="hero-section">
-  <h1>🐍 Aprenda Python do Zero ao Avançado</h1>
-  <p class="hero-subtitle">
-    Curso completo e gratuito com aulas práticas, quizzes interativos, exercícios e projetos reais para você dominar Python
-  </p>
-  <div class="hero-cta">
-    <a href="setup/instalacao_windows/" class="btn-primary">🚀 Começar Agora</a>
-    <a href="aulas/python_basico/" class="btn-secondary">📚 Ver Aulas</a>
-  </div>
-</div>
+<!-- Hero Section Removed (Handled by home.html template) -->
 
 <!-- Features -->
 <div class="features-grid">

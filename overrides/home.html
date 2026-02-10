@@ -1,0 +1,53 @@
+{% extends "main.html" %}
+
+{% block tabs %}
+  {{ super() }}
+  <style>
+    /* Hide the hero section from index.md if present, or handle via CSS */
+    .md-content__inner {
+       margin-top: 0;
+       padding-top: 0;
+    }
+  </style>
+  
+  <section class="mdx-parallax">
+    <div class="mdx-parallax__group">
+      
+      <!-- Layer 1: Background -->
+      <div class="mdx-parallax__layer mdx-parallax__layer--deep">
+        <img src="assets/images/parallax_bg.png" alt="Deep Background">
+      </div>
+      
+      <!-- Layer 2: Middle Elements -->
+      <div class="mdx-parallax__layer mdx-parallax__layer--mid">
+        <img src="assets/images/parallax_mid.png" alt="Middle Elements">
+      </div>
+      
+      <!-- Layer 3: Foreground -->
+      <div class="mdx-parallax__layer mdx-parallax__layer--fore">
+        <img src="assets/images/parallax_fg.png" alt="Foreground">
+      </div>
+      
+      <!-- Content Overlay -->
+      <div class="mdx-parallax__content">
+        <!-- We can pull content from the page frontmatter or hardcode hero content here -->
+        <div class="hero-overlay">
+          <h1 class="hero-title">Python Backend</h1>
+          <p class="hero-subtitle">Do Zero ao Profissional com FastAPI</p>
+          <div class="hero-actions">
+            <a href="setup/instalacao_windows/" class="md-button md-button--primary">Começar Agora</a>
+            <a href="aulas/python_basico/" class="md-button">Ver Aulas</a>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+{% endblock %}
+
+{% block content %}
+  <!-- Render the rest of index.md content below the parallax header -->
+  <div class="mdx-container">
+    {{ super() }}
+  </div>
+{% endblock %}

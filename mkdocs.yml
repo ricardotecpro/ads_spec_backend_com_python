@@ -10,6 +10,7 @@ theme:
   language: pt
   favicon: /ads_spec_backend_com_python/assets/images/python-logo.svg
   logo: /ads_spec_backend_com_python/assets/images/python-logo.svg
+  custom_dir: overrides
   palette:
     - scheme: slate
       primary: blue
