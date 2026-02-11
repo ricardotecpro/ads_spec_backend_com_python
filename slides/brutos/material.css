@@ -5,12 +5,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Roboto+Mono:wght@400;700&display=swap');
 
 :root {
-    --color-primary: #009688;
-    /* Material Teal 500 */
-    --color-primary-dark: #00796B;
-    /* Material Teal 700 */
-    --color-accent: #FFC107;
-    /* Material Amber 500 */
+    --color-primary: #3776AB;
+    /* Python Blue */
+    --color-primary-dark: #306998;
+    /* Python Dark Blue */
+    --color-accent: #FFD43B;
+    /* Python Yellow */
     --color-text: #212121;
     /* Material Grey 900 */
     --color-background: #ffffff;
