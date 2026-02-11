@@ -20,8 +20,8 @@
 
 /* ===== Code Blocks ===== */
 .md-typeset code {
-    background-color: rgba(48, 105, 152, 0.1);
-    color: #306998;
+    background-color: rgba(76, 175, 80, 0.1);
+    color: #2E7D32;
     padding: 0.2em 0.4em;
     border-radius: 3px;
     font-size: 0.9em;
@@ -53,7 +53,7 @@
 }
 
 .md-typeset table:not([class]) tr:hover {
-    background-color: rgba(48, 105, 152, 0.05);
+    background-color: rgba(76, 175, 80, 0.05);
 }
 
 /* ===== Links ===== */
@@ -69,14 +69,10 @@
 }
 
 /* ===== Navigation ===== */
-.md-tabs {
-    background: linear-gradient(135deg, #306998 0%, #4a7ba7 100%);
-}
+/* Removed hardcoded blue gradient to use theme primary color */
 
 /* ===== Footer ===== */
-.md-footer {
-    background: linear-gradient(135deg, #306998 0%, #4a7ba7 100%);
-}
+/* Removed hardcoded blue gradient to use theme primary color */
 
 /* ===== Search ===== */
 .md-search__input {
@@ -95,7 +91,7 @@
 }
 
 .md-button--primary {
-    background: linear-gradient(135deg, #306998 0%, #4a7ba7 100%);
+    /* Uses theme primary color by default */
 }
 
 /* ===== Scrollbar ===== */
@@ -109,12 +105,12 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #306998;
+    background: var(--md-primary-fg-color);
     border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #FFD43B;
+    background: var(--md-accent-fg-color);
 }
 
 /* ===== Animações ===== */
@@ -147,7 +143,9 @@
     .md-typeset h2 {
         font-size: 1.4rem;
     }
-}/* Termynal Reload Button */
+}
+
+/* Termynal Reload Button */
 .termynal-reload-btn {
     position: absolute;
     top: 10px;
