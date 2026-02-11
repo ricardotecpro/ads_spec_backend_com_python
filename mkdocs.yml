@@ -3,6 +3,7 @@ site_url: https://ricardotecpro.github.io/ads_spec_backend_com_python
 repo_url: https://github.com/ricardotecpro/ads_spec_backend_com_python
 repo_name: ricardotecpro/ads_spec_backend_com_python
 edit_uri: edit/main/aulas/
+docs_dir: aulas
 
 theme:
   name: material
