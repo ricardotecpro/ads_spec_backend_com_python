@@ -138,15 +138,10 @@ saudar(nome_do_usuario)
 
 Agora que você aprendeu os fundamentos do Python, que tal testar seus conhecimentos?
 
-<div style="text-align: center; padding: 2rem; background: linear-gradient(135deg, #306998 0%, #FFD43B 100%); border-radius: 10px; margin: 2rem 0;">
-  <h3 style="color: white; margin-bottom: 1rem;">🧠 Quiz de Fixação</h3>
-  <p style="color: white; margin-bottom: 1.5rem;">
+!!! abstract "🧠 Quiz de Fixação"
     Teste seus conhecimentos sobre Python Básico com questões interativas!
-  </p>
-  <a href="/ads_spec_backend_com_python/quiz/python_basico/" style="display: inline-block; background: white; color: #306998; padding: 12px 30px; border-radius: 25px; text-decoration: none; font-weight: bold; transition: transform 0.2s;">
-    Fazer Quiz Agora →
-  </a>
-</div>
+
+    [Fazer Quiz Agora](../../quiz/python_basico.md){ .md-button .md-button--primary }
 
 ---
 

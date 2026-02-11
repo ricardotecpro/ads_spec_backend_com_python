@@ -2,41 +2,40 @@ site_name: Python Backend - Curso Completo
 site_url: https://ricardotecpro.github.io/ads_spec_backend_com_python
 repo_url: https://github.com/ricardotecpro/ads_spec_backend_com_python
 repo_name: ricardotecpro/ads_spec_backend_com_python
-edit_uri: tree/main/aulas
-docs_dir: aulas
+edit_uri: edit/main/aulas/
 
 theme:
   name: material
-  language: pt
-  favicon: /ads_spec_backend_com_python/assets/images/python-logo.svg
-  logo: /ads_spec_backend_com_python/assets/images/python-logo.svg
+  language: pt-BR
+  favicon: assets/images/python-logo.svg
+  logo: assets/images/python-logo.svg
   custom_dir: overrides
-  palette:
-    - scheme: slate
-      primary: blue
-      accent: yellow
-      toggle:
-        icon: material/weather-sunny
-        name: Modo claro
-    - scheme: default
-      primary: blue
-      accent: yellow
-      toggle:
-        icon: material/weather-night
-        name: Modo noturno
   features:
-    - content.code.annotate
-    - content.code.copy
-    - content.tabs.link
-    - search.suggest
-    - search.highlight
-    - search.share
+    - navigation.instant
+    - navigation.tracking
     - navigation.tabs
+    - navigation.tabs.sticky
     - navigation.sections
     - navigation.expand
     - navigation.top
-    - toc.follow
+    - navigation.footer
     - navigation.indexes
+    - toc.follow
+    - content.code.copy
+    - content.code.annotate
+  palette:
+    - scheme: slate
+      primary: teal
+      accent: amber
+      toggle:
+        icon: material/weather-night
+        name: Mudar para modo claro
+    - scheme: default
+      primary: teal
+      accent: amber
+      toggle:
+        icon: material/weather-sunny
+        name: Mudar para modo escuro
   icon:
     repo: fontawesome/brands/github
 
@@ -80,14 +79,8 @@ plugins:
   - macros
   - mkdocs-video
   - termynal
-  # - with-pdf:
-  #     enabled: true
-  #     author: Ricardo
-  #     copyright: Copyright &copy; 2026 Ricardo
-  #     cover: true
-  #     toc_title: Índice
-  #     toc_level: 2
-  #     ordered_chapter_level: 2
+  - minify:
+      minify_html: true
   - mkdocs-simple-hooks:
       hooks:
         on_post_build: "hooks.copy_slides:copy_slides"
@@ -118,11 +111,11 @@ extra:
 
 nav:
   - Home: index.md
-  - Instalação:
-    - Windows: setup/instalacao_windows.md
+  - Comece Aqui:
+    - Instalação: setup/instalacao_windows.md
   - Módulos:
-    - Python Básico: modulos/python_basico.md
-    - Python Avançado: modulos/python_avancado.md
+    - Básico: modulos/python_basico.md
+    - Avançado: modulos/python_avancado.md
     - Recursos Visuais: recursos_visuais.md
   - Slides: slides/index.md
   - Quiz:
