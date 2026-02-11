@@ -2,7 +2,7 @@ from PIL import Image, ImageDraw
 import os
 
 def create_placeholder_images():
-    assets_dir = "assets/images"
+    assets_dir = "aulas/assets/images"
     os.makedirs(assets_dir, exist_ok=True)
 
     # 1. Background (Dark Blue)

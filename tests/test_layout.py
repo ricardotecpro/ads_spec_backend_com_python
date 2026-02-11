@@ -1,7 +1,6 @@
 import pytest
 import os
 import subprocess
-import time
 import requests
 from pathlib import Path
 from playwright.sync_api import Page, expect
@@ -10,7 +9,6 @@ from playwright.sync_api import Page, expect
 @pytest.fixture(scope="session")
 def http_server():
     """Start a local HTTP server to serve the built site."""
-    import requests
     from time import sleep
     
     site_dir = Path("site").absolute()

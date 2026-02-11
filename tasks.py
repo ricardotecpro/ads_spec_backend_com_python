@@ -3,7 +3,6 @@ Invoke tasks para automação avançada do projeto
 """
 from pathlib import Path
 from invoke import task
-from rich import print
 from rich.console import Console
 
 console = Console()
