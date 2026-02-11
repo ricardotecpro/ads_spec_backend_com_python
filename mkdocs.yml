@@ -26,13 +26,13 @@ theme:
     - content.code.annotate
   palette:
     - scheme: slate
-      primary: green
+      primary: teal
       accent: amber
       toggle:
         icon: material/weather-night
         name: Mudar para modo claro
     - scheme: default
-      primary: green
+      primary: teal
       accent: amber
       toggle:
         icon: material/weather-sunny
