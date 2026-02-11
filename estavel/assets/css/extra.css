@@ -20,8 +20,8 @@
 
 /* ===== Code Blocks ===== */
 .md-typeset code {
-    background-color: rgba(76, 175, 80, 0.1);
-    color: #2E7D32;
+    background-color: rgba(0, 150, 136, 0.1);
+    color: #00695C;
     padding: 0.2em 0.4em;
     border-radius: 3px;
     font-size: 0.9em;
@@ -53,7 +53,7 @@
 }
 
 .md-typeset table:not([class]) tr:hover {
-    background-color: rgba(76, 175, 80, 0.05);
+    background-color: rgba(0, 150, 136, 0.05);
 }
 
 /* ===== Links ===== */
