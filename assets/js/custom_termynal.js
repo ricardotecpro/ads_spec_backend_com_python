@@ -6,6 +6,12 @@ document.addEventListener("DOMContentLoaded", function () {
     setTimeout(() => {
         const terminals = document.querySelectorAll(".termynal");
 
+        // Safety check if Termynal library is available
+        if (typeof Termynal === 'undefined') {
+            console.warn("Termynal library not loaded or not globally available.");
+            return;
+        }
+
         terminals.forEach(term => {
             // Prevent duplicates
             if (term.querySelector('.termynal-reload-btn')) return;
@@ -25,19 +31,33 @@ document.addEventListener("DOMContentLoaded", function () {
                 e.preventDefault();
                 e.stopPropagation();
 
-                // Check if Termynal is available
-                if (typeof Termynal === 'undefined') {
-                    console.error("Termynal library not loaded.");
-                    return;
-                }
-
-                // Remove the button temporarily so it isn't affected (optional, but safe)
+                // Remove the button temporarily so it isn't affected
                 btn.remove();
 
+                // Reset specific Termynal attributes/styles to force re-animation
+                // Termynal usually adds styles to lines. We need to clear them.
+                const lines = term.querySelectorAll('[data-ty]');
+                lines.forEach(line => {
+                    // Reset visibility and display styles
+                    line.style.opacity = '';
+                    line.style.visibility = '';
+                    line.style.display = '';
+                    // Remove any inline styles Termynal might have added
+                    line.removeAttribute('style');
+
+                    // Termynal might add data attributes for state, but usually it relies on 'data-ty'
+                    // Standard Termynal.js uses 'data-ty-prompt' to add prompt. 
+                    // If plugin added prompt via JS, we might have issues, but usually it's in HTML.
+                });
+
+                // Remove any dynamically added cursor elements if Termynal adds them
+                const cursors = term.querySelectorAll('[data-ty-cursor]');
+                cursors.forEach(c => c.remove());
+
                 // Re-initialize
-                // We create a new instance on the same container.
-                // Termynal's constructor resets the lines' styles (visibilty/opacity).
                 try {
+                    // Check if there are options stored in data attributes of the container
+                    // Termynal constructor will pick up data-termynal, data-ty-typeDelay, etc.
                     new Termynal(term);
                 } catch (err) {
                     console.error("Error restarting Termynal:", err);
