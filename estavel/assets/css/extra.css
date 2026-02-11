@@ -1,4 +1,11 @@
 /* Extra CSS para melhorias gerais do site */
+:root {
+    --md-primary-fg-color: #3776AB;
+    --md-primary-fg-color--light: #4B8BBE;
+    --md-primary-fg-color--dark: #306998;
+    --md-accent-fg-color: #FFD43B;
+}
+
 
 /* ===== Melhorias de Tipografia ===== */
 .md-typeset {
@@ -20,8 +27,8 @@
 
 /* ===== Code Blocks ===== */
 .md-typeset code {
-    background-color: rgba(0, 150, 136, 0.1);
-    color: #00695C;
+    background-color: rgba(55, 118, 171, 0.1);
+    color: #3776AB;
     padding: 0.2em 0.4em;
     border-radius: 3px;
     font-size: 0.9em;
@@ -53,7 +60,7 @@
 }
 
 .md-typeset table:not([class]) tr:hover {
-    background-color: rgba(0, 150, 136, 0.05);
+    background-color: rgba(55, 118, 171, 0.05);
 }
 
 /* ===== Links ===== */
