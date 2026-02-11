@@ -1,6 +1,6 @@
 ---
 marp: true
-theme: python
+theme: material
 paginate: true
 ---
 
