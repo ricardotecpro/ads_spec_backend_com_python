@@ -47,16 +47,21 @@
 .mdx-parallax__layer--deep {
     transform: translateZ(-300px) scale(2);
     z-index: 1;
+    filter: blur(2px) brightness(0.7); /* Subtle blur for depth */
 }
 
 .mdx-parallax__layer--mid {
     transform: translateZ(-150px) scale(1.5);
     z-index: 2;
+    mix-blend-mode: screen; /* Blend with background for glowing effect */
+    opacity: 0.9;
 }
 
 .mdx-parallax__layer--fore {
     transform: translateZ(0px) scale(1);
     z-index: 3;
+    mix-blend-mode: overlay; /* Subtle blending for foreground elements */
+    pointer-events: none; /* Allow clicking through if needed */
 }
 
 .mdx-parallax__content {
