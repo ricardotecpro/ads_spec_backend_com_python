@@ -47,7 +47,7 @@ template: home.html
 
     **Tópicos**: Fundamentos, sintaxe, bibliotecas, ambientes virtuais e boas práticas
 
-    [:arrow_right: Começar a estudar](aulas/python_basico/)
+    [:arrow_right: Começar a estudar](modulos/python_basico.md)
 
 -   :material-presentation: **Slides**
 

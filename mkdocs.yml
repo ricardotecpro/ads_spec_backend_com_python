@@ -36,7 +36,7 @@ theme:
     - navigation.expand
     - navigation.top
     - toc.follow
-    - toc.integrate
+    - navigation.indexes
   icon:
     repo: fontawesome/brands/github
 
@@ -120,10 +120,9 @@ nav:
   - Home: index.md
   - Instalação:
     - Windows: setup/instalacao_windows.md
-  - Aulas:
-    - Python Básico: aulas/python_basico.md
-
-    - Python Avançado: aulas/python_avancado.md
+  - Módulos:
+    - Python Básico: modulos/python_basico.md
+    - Python Avançado: modulos/python_avancado.md
     - Recursos Visuais: recursos_visuais.md
   - Slides: slides/index.md
   - Quiz:

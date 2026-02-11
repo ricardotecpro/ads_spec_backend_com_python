@@ -27,8 +27,8 @@ Antes de começar, verifique se seu sistema atende aos requisitos:
 
 ![Instalador do Python](../assets/images/python_installer_windows.png)
 
-> [!IMPORTANT]
-> **Atenção**: Marque a opção **"Add Python to PATH"** antes de continuar! Isso é essencial para usar o Python no terminal.
+!!! important "Atenção"
+    **Atenção**: Marque a opção **"Add Python to PATH"** antes de continuar! Isso é essencial para usar o Python no terminal.
 
 **Passos da instalação:**
 
@@ -63,8 +63,8 @@ pip --version
 pip 23.3.1 from C:\Users\...\Python312\lib\site-packages\pip (python 3.12)
 ```
 
-> [!TIP]
-> Se os comandos não forem reconhecidos, reinicie o terminal ou o computador e tente novamente.
+!!! tip "Dica"
+    Se os comandos não forem reconhecidos, reinicie o terminal ou o computador e tente novamente.
 
 ---
 
@@ -256,8 +256,8 @@ pip install -r requirements.txt
 deactivate
 ```
 
-> [!NOTE]
-> O VSCode detecta automaticamente ambientes virtuais e oferece selecioná-los como interpretador Python.
+!!! note "Nota"
+    O VSCode detecta automaticamente ambientes virtuais e oferece selecioná-los como interpretador Python.
 
 ---
 
@@ -397,7 +397,7 @@ Agora que você tem tudo configurado:
 
 ---
 
-> [!TIP]
-> **Dica Final**: Pratique todos os dias! Mesmo que seja apenas 15 minutos, a consistência é a chave para dominar Python. 🚀
+!!! tip "Dica Final"
+    **Dica Final**: Pratique todos os dias! Mesmo que seja apenas 15 minutos, a consistência é a chave para dominar Python. 🚀
 
-**Pronto para começar?** Volte para as [Aulas](../aulas/python_basico.md) e comece sua jornada! 🐍
+**Pronto para começar?** Volte para as [Aulas](../modulos/python_basico.md) e comece sua jornada! 🐍
