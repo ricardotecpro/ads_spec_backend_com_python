@@ -12,11 +12,11 @@ theme:
   logo: assets/images/python-logo.png
   custom_dir: overrides
   features:
-    - navigation.instant
+    # - navigation.instant
     - navigation.tracking
     - navigation.tabs
     # - navigation.tabs.sticky # Removed to prevent parallax duplication issues
-    - navigation.sections
+    # - navigation.sections
     - navigation.expand
     - navigation.top
     - navigation.footer
@@ -80,8 +80,8 @@ plugins:
   - macros
   - mkdocs-video
   - termynal
-  - minify:
-      minify_html: true
+  # - minify:
+  #     minify_html: true
   - mkdocs-simple-hooks:
       hooks:
         on_post_build: "hooks.copy_slides:copy_slides"
