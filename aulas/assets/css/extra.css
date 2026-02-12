@@ -76,7 +76,10 @@
 }
 
 /* ===== Navigation ===== */
-/* Removed hardcoded blue gradient to use theme primary color */
+.md-header,
+.md-tabs {
+    background-color: #3776AB !important;
+}
 
 /* ===== Footer ===== */
 /* Removed hardcoded blue gradient to use theme primary color */
@@ -110,12 +113,13 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--md-primary-fg-color);
+    background: var(--md-accent-fg-color);
     border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: var(--md-accent-fg-color);
+    background: #e6c200;
+    /* Darker yellow for hover */
 }
 
 /* ===== Animações ===== */
