@@ -2,7 +2,7 @@
     --md-primary-fg-color: #3776AB;
     --md-primary-fg-color--light: #4B8BBE;
     --md-primary-fg-color--dark: #306998;
-    --md-accent-fg-color: #ffd242;
+    --md-accent-fg-color: #ffda62;
     /* Updated to requested: #ffda62 (approximated for contrast or exact?) User asked for #ffda62 */
 }
 
@@ -97,9 +97,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.md-button--primary {
-    /* Uses theme primary color by default */
-}
+/* .md-button--primary { } - Removed empty rule */
 
 /* ===== Scrollbar ===== */
 ::-webkit-scrollbar {
