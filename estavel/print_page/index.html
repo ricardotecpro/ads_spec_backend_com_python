@@ -2395,6 +2395,14 @@
 4. Esperar assar
 5. Servir</p>
 <p>Na computação, usamos <strong>Linguagens de Programação</strong> para escrever esses algoritmos de uma forma que o computador entenda.</p>
+<pre class="mermaid"><code>graph TD
+    A[Início] --&gt; B{Tem Ingredientes?}
+    B -- Não --&gt; C[Comprar]
+    C --&gt; B
+    B -- Sim --&gt; D[Misturar Massa]
+    D --&gt; E[Assar]
+    E --&gt; F[Servir]
+    F --&gt; G[Fim]</code></pre>
 <h3 id="01-2-por-que-python">2. Por que Python?</h3>
 <p>Python é uma das linguagens mais populares do mundo. Ela foi criada por <strong>Guido van Rossum</strong> e lançada em 1991.</p>
 <p><strong>Principais características:</strong>
@@ -2561,8 +2569,16 @@ Escreva um código que imprima seu nome, sua idade e sua cidade, um por linha.</
 </tr>
 </tbody>
 </table>
-<p><strong>Verificando o tipo:</strong>
-Use a função <code>type()</code> para descobrir o tipo de um dado.</p>
+<pre class="mermaid"><code>mindmap
+  root((Tipos de Dados))
+    Texto
+      str
+    Números
+      int
+      float
+    Booleanos
+      bool</code></pre>
+<h3 id="02-3-a-funcao-type">3. A Função <code>type()</code></h3>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#02-__codelineno-1-1"></a><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>      <span class="c1"># &lt;class 'int'&gt;</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#02-__codelineno-1-2"></a><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="mf">3.14</span><span class="p">))</span>    <span class="c1"># &lt;class 'float'&gt;</span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#02-__codelineno-1-3"></a><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="s2">"Olá"</span><span class="p">))</span>   <span class="c1"># &lt;class 'str'&gt;</span>
@@ -2871,6 +2887,14 @@ Use a função <code>type()</code> para descobrir o tipo de um dado.</p>
 <li>Lógicos <code>and</code></li>
 <li>Lógicos <code>or</code></li>
 </ol>
+<pre class="mermaid"><code>graph TD
+    A[Expressão: 5 + 2 * 3]
+    B[Multiplicação Primeiro: 2 * 3 = 6]
+    C[Soma Depois: 5 + 6]
+    D[Resultado: 11]
+    A --&gt; B
+    B --&gt; C
+    C --&gt; D</code></pre>
 <hr>
 <h2 id="03-em-pratica">💻 Em Prática</h2>
 <p>Vamos criar um programa que verifica se uma pessoa pode votar (maior de 16 anos) <strong>E</strong> se o voto é obrigatório (entre 18 e 70 anos).</p>
@@ -2950,6 +2974,12 @@ Use a função <code>type()</code> para descobrir o tipo de um dado.</p>
 Mas a vida real é cheia de decisões:
 <em>"SE estiver chovendo, levo guarda-chuva. SENÃO, vou de óculos escuros."</em></p>
 <p>Em Python, usamos estruturas condicionais para desviar o fluxo do programa baseando-se em testes lógicos (<code>True</code> ou <code>False</code>).</p>
+<pre class="mermaid"><code>graph TD
+    A[Início] --&gt; B{Chovendo?}
+    B -- Sim --&gt; C[Levar Guarda-Chuva]
+    B -- Não --&gt; D[Ir de Óculos Escuros]
+    C --&gt; E[Sair de Casa]
+    D --&gt; E</code></pre>
 <h3 id="04-2-a-estrutura-if-se">2. A Estrutura <code>if</code> (Se)</h3>
 <p>O bloco <code>if</code> só executa se a condição for verdadeira (<code>True</code>).</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#04-__codelineno-0-1"></a><span class="n">idade</span> <span class="o">=</span> <span class="mi">20</span>
@@ -3086,6 +3116,11 @@ Regra:
 <h3 id="05-1-o-que-sao-loops">1. O que são Loops?</h3>
 <p>Imagine que você precisa imprimir o nome de 100 alunos. Escrever 100 <code>print()</code> seria cansativo e nada inteligente.
 Loops permitem repetir um bloco de código várias vezes.</p>
+<pre class="mermaid"><code>graph TD
+    A[Início] --&gt; B{Condição Verdadeira?}
+    B -- Sim --&gt; C[Executar Bloco]
+    C --&gt; B
+    B -- Não --&gt; D[Sair do Loop]</code></pre>
 <h3 id="05-2-o-loop-for-para">2. O Loop <code>for</code> (Para)</h3>
 <p>O <code>for</code> é usado quando sabemos <strong>quantas vezes</strong> queremos repetir algo, ou para percorrer itens de uma coleção (que veremos na próxima aula).</p>
 <p>Para repetir um número exato de vezes, usamos a função auxiliar <code>range()</code>.</p>
@@ -3240,6 +3275,12 @@ Em Python, delimitamos listas com colchetes <code>[]</code>.</p>
 </span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#06-__codelineno-0-7"></a><span class="c1"># Lista mista (Python permite!)</span>
 </span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#06-__codelineno-0-8"></a><span class="n">mistura</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="s2">"Olá"</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="mf">3.14</span><span class="p">]</span>
 </span></code></pre></div>
+<pre class="mermaid"><code>graph LR
+    subgraph Lista
+    A[0: 10] --- B[1: "Olá"]
+    B --- C[2: True]
+    C --- D[3: 3.14]
+    end</code></pre>
 <h3 id="06-2-acessando-itens-indexacao">2. Acessando Itens (Indexação)</h3>
 <p>Cada item tem um endereço (índice), começando do <strong>ZERO</strong>.</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#06-__codelineno-1-1"></a><span class="n">frutas</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"Maçã"</span><span class="p">,</span> <span class="s2">"Banana"</span><span class="p">,</span> <span class="s2">"Uva"</span><span class="p">]</span>
@@ -3435,6 +3476,12 @@ Usamos chaves <code>{}</code>.</p>
 </span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#07-__codelineno-3-6"></a><span class="nb">print</span><span class="p">(</span><span class="n">A</span> <span class="o">-</span> <span class="n">B</span><span class="p">)</span> <span class="c1"># {1, 2} -&gt; Diferença (O que tem só em A)</span>
 </span></code></pre></div>
 <h3 id="07-5-quando-usar-o-que">5. Quando usar o quê?</h3>
+<pre class="mermaid"><code>graph TD
+    A{Precisa mudar?}
+    A -- Sim --&gt; B{Precisa de Ordem?}
+    A -- Não --&gt; C[Tupla]
+    B -- Sim --&gt; D[Lista]
+    B -- Não --&gt; E[Set]</code></pre>
 <table>
 <thead>
 <tr>
@@ -3552,6 +3599,10 @@ Usamos chaves <code>{}</code>.</p>
 <p>Dicionários são coleções flexíveis onde armazenamos dados em pares <strong>Chave: Valor</strong>.
 Pense em um dicionário real: você procura uma palavra (chave) para encontrar seu significado (valor).</p>
 <p>Em Python, usamos chaves <code>{}</code> (assim como sets), mas com a sintaxe <code>chave: valor</code>.</p>
+<pre class="mermaid"><code>graph LR
+    A((Chave)) --&gt; B[Valor]
+    C((Nome)) --&gt; D["Ricardo"]
+    E((Idade)) --&gt; F[30]</code></pre>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#08-__codelineno-0-1"></a><span class="c1"># Criando um dicionário</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#08-__codelineno-0-2"></a><span class="n">aluno</span> <span class="o">=</span> <span class="p">{</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#08-__codelineno-0-3"></a>    <span class="s2">"nome"</span><span class="p">:</span> <span class="s2">"Ricardo"</span><span class="p">,</span>
@@ -3696,6 +3747,9 @@ Imagine uma função como uma <strong>Mini-Máquina</strong>:
 1. Entra matéria-prima (Parâmetros).
 2. A máquina trabalha (Corpo da função).
 3. Sai um produto final (Retorno).</p>
+<pre class="mermaid"><code>graph LR
+    A[Entrada: Parâmetros] --&gt; B(Processamento: Função)
+    B --&gt; C[Saída: Retorno]</code></pre>
 <p><strong>Vantagens:</strong>
 - <strong>Reutilização:</strong> Escreva uma vez, use mil vezes.
 - <strong>Organização:</strong> Quebra programas complexos em partes menores.
@@ -3875,14 +3929,19 @@ Podemos dar um nome curto para o módulo.</p>
 <h3 id="10-5-o-que-sao-pacotes">5. O que são Pacotes?</h3>
 <p>Pacotes são <strong>pastas</strong> que contêm módulos.
 Para o Python entender uma pasta como pacote, antigamente era obrigatório ter um arquivo <code>__init__.py</code> (hoje é opcional, mas boa prática).</p>
-<p>Estrutura:
-</p><div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#10-__codelineno-5-1"></a>meu_projeto/
+<p>Estrutura:</p>
+<pre class="mermaid"><code>graph TD
+    A[Meu Projeto] --&gt; B[main.py]
+    A --&gt; C[Pacote Matemática]
+    C --&gt; D[geometria.py]
+    C --&gt; E[estatistica.py]</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#10-__codelineno-5-1"></a>meu_projeto/
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#10-__codelineno-5-2"></a>├── main.py
 </span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#10-__codelineno-5-3"></a>└── matematica/          &lt;-- Pacote
 </span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#10-__codelineno-5-4"></a>    ├── __init__.py
 </span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#10-__codelineno-5-5"></a>    ├── geometria.py     &lt;-- Módulo
 </span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#10-__codelineno-5-6"></a>    └── estatistica.py   &lt;-- Módulo
-</span></code></pre></div><p></p>
+</span></code></pre></div>
 <p>Uso:
 </p><div class="language-python highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#10-__codelineno-6-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">matematica</span><span class="w"> </span><span class="kn">import</span> <span class="n">geometria</span>
 </span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#10-__codelineno-6-2"></a>
@@ -3970,8 +4029,12 @@ Para o Python entender uma pasta como pacote, antigamente era obrigatório ter u
 <p>Modos comuns:
 - <code>'r'</code> (<strong>Read</strong>): Leitura. (Padrão). Erro se não existir.
 - <code>'w'</code> (<strong>Write</strong>): Escrita. <strong>Apaga</strong> tudo se já existir. Cria se não existir.
-- <code>'a'</code> (<strong>Append</strong>): Adicionar. Escreve no final sem apagar.
 - <code>'x'</code> (<strong>Exclusive</strong>): Cria arquivo. Erro se já existir.</p>
+<pre class="mermaid"><code>graph TD
+    A[Abrir Arquivo] --&gt; B{Modo?}
+    B -- 'r' --&gt; C[Ler]
+    B -- 'w' --&gt; D[Escrever (Apaga)]
+    B -- 'a' --&gt; E[Anexar (Fim)]</code></pre>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#11-__codelineno-0-1"></a><span class="c1"># Modo "antigo" (não recomendado)</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#11-__codelineno-0-2"></a><span class="n">arquivo</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"nota.txt"</span><span class="p">,</span> <span class="s2">"w"</span><span class="p">)</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#11-__codelineno-0-3"></a><span class="n">arquivo</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">"Olá, arquivo!"</span><span class="p">)</span>
@@ -4132,6 +4195,12 @@ O <code>with</code> fecha o arquivo automaticamente, mesmo se der erro no meio d
 <li><code>else</code>: Roda se <strong>NÃO</strong> der erro.</li>
 <li><code>finally</code>: Roda <strong>SEMPRE</strong> (com ou sem erro).</li>
 </ol>
+<pre class="mermaid"><code>graph TD
+    A[Tentar (Try)] --&gt; B{Erro?}
+    B -- Sim --&gt; C[Capturar (Except)]
+    B -- Não --&gt; D[Else]
+    C --&gt; E[Finally]
+    D --&gt; E</code></pre>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#12-__codelineno-3-1"></a><span class="k">try</span><span class="p">:</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#12-__codelineno-3-2"></a>    <span class="n">arquivo</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"dados.txt"</span><span class="p">,</span> <span class="s2">"r"</span><span class="p">)</span>
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#12-__codelineno-3-3"></a>    <span class="n">conteudo</span> <span class="o">=</span> <span class="n">arquivo</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
@@ -4253,6 +4322,14 @@ A Programação Orientada a Objetos tenta modelar o mundo real. No mundo real, t
 <blockquote>
 <p>Posso ter 1000 casas (objetos) feitas a partir de uma única planta (classe).</p>
 </blockquote>
+<pre class="mermaid"><code>classDiagram
+    class Casa {
+        +cor
+        +numero
+        +abrir_porta()
+    }
+    Casa &lt;|-- Casa_Rua_X
+    Casa &lt;|-- Casa_Rua_Y</code></pre>
 <h3 id="13-3-criando-uma-classe">3. Criando uma Classe</h3>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#13-__codelineno-0-1"></a><span class="c1"># Convenção: Nomes de classes usam PascalCase (PrimeiraLetraMaiuscula)</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#13-__codelineno-0-2"></a><span class="k">class</span><span class="w"> </span><span class="nc">Cachorro</span><span class="p">:</span>
@@ -4384,6 +4461,19 @@ Ela "herda" todos os atributos e métodos da classe pai (Superclasse).</p>
 Um <code>Aluno</code> <strong>é uma</strong> <code>Pessoa</code>.
 Um <code>Professor</code> <strong>é uma</strong> <code>Pessoa</code>.
 Ambos têm nome e idade, mas fazem coisas diferentes.</p>
+<pre class="mermaid"><code>classDiagram
+    class Pessoa {
+        +nome
+        +idade
+    }
+    class Aluno {
+        +estudar()
+    }
+    class Professor {
+        +ensinar()
+    }
+    Pessoa &lt;|-- Aluno
+    Pessoa &lt;|-- Professor</code></pre>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#14-__codelineno-0-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Pessoa</span><span class="p">:</span> <span class="c1"># Classe Pai (Superclasse)</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#14-__codelineno-0-2"></a>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nome</span><span class="p">,</span> <span class="n">idade</span><span class="p">):</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#14-__codelineno-0-3"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">nome</span> <span class="o">=</span> <span class="n">nome</span>
@@ -4539,6 +4629,14 @@ Classes filhos podem ter o <strong>mesmo método</strong> da classe pai, mas com
 - <strong>API (Garçom):</strong> Leva o pedido até a cozinha (Servidor).
 - <strong>Servidor (Cozinha):</strong> Prepara os dados.
 - <strong>API:</strong> Traz a resposta para você.</p>
+<pre class="mermaid"><code>sequenceDiagram
+    participant Cliente
+    participant API
+    participant Servidor
+    Cliente-&gt;&gt;API: Pedido (Request)
+    API-&gt;&gt;Servidor: Repassa Pedido
+    Servidor-&gt;&gt;API: Resposta (Dados)
+    API-&gt;&gt;Cliente: Entrega Resposta (JSON)</code></pre>
 <p>Grandes sites (Google, Facebook, Twitter, Previsão do Tempo) oferecem APIs para que nossos programas possam interagir com eles.</p>
 <h3 id="15-2-o-formato-json">2. O Formato JSON</h3>
 <p>Como os sistemas conversam? Eles usam JSON, que é MUITO parecido com os Dicionários do Python.</p>
