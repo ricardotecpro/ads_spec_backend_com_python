@@ -143,6 +143,7 @@ nav:
     - 'Aula 15 - Projeto Final e Próximos Passos': 15.md
     - 'Aula 16 - Testes e Boas Práticas': 16.md    
   - Slides: slides/
-  - Exercícios: exercicios/
-  - Quizzes: quizzes/
-  - Projetos: projetos/
+  - Exercícios: exercicios/index.md
+  - Quizzes: quizzes/index.md
+  - Projetos: projetos/index.md
+  - Versão para Impressão: print_page.md
