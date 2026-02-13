@@ -118,32 +118,34 @@ extra:
 
 nav:
   - Início: index.md
-  - Instalação:
-    - 'Configuração do Ambiente (Windows + VSCode)': setup/instalacao_windows.md
-  - Módulo 1 – Fundamentos:
-    - 'Aula 01 - Introdução à Computação e Python': 01.md
-    - 'Aula 02 - Variáveis, Tipos de Dados e Operadores': 02.md
-    - 'Aula 03 - Entrada e Saída de Dados (I/O)': 03.md
-  - Módulo 2 – Estruturas de Dados:
-    - 'Aula 04 - Estruturas Condicionais (if/elif/else)': 04.md
-    - 'Aula 05 - Estruturas de Repetição (for/while)': 05.md
-    - 'Aula 06 - Listas e Tuplas': 06.md
-  - Módulo 3 – Funções:
-    - 'Aula 07 - Dicionários e Sets': 07.md
-    - 'Aula 08 - Funções (Parte 1: Básico)': 08.md
-    - 'Aula 09 - Funções (Parte 2: Parâmetros, Return, Escopo)': 09.md
-  - Módulo 4 – Arquivos:
-    - 'Aula 10 - Manipulação de Arquivos e JSON': 10.md
-    - 'Aula 11 - Tratamento de Exceções e Debugging': 11.md
-  - Módulo 5 – POO:
-    - 'Aula 12 - Introdução a Classes e Objetos': 12.md
-    - 'Aula 13 - Herança e Polimorfismo': 13.md
-  - Módulo 6 – Ecossistema:
-    - 'Aula 14 - Bancos de Dados (SQLite) e APIs': 14.md
-    - 'Aula 15 - Projeto Final e Próximos Passos': 15.md
-    - 'Aula 16 - Testes e Boas Práticas': 16.md    
-  - Slides: slides/
-  - Exercícios: exercicios/index.md
-  - Quizzes: quizzes/index.md
-  - Projetos: projetos/index.md
+  - Curso:
+    - Instalação:
+      - 'Configuração do Ambiente (Windows + VSCode)': setup/instalacao_windows.md
+    - Módulo 1 – Fundamentos:
+      - 'Aula 01 - Introdução à Computação e Python': 01.md
+      - 'Aula 02 - Variáveis, Tipos de Dados e Operadores': 02.md
+      - 'Aula 03 - Entrada e Saída de Dados (I/O)': 03.md
+    - Módulo 2 – Estruturas de Dados:
+      - 'Aula 04 - Estruturas Condicionais (if/elif/else)': 04.md
+      - 'Aula 05 - Estruturas de Repetição (for/while)': 05.md
+      - 'Aula 06 - Listas e Tuplas': 06.md
+    - Módulo 3 – Funções:
+      - 'Aula 07 - Dicionários e Sets': 07.md
+      - 'Aula 08 - Funções (Parte 1: Básico)': 08.md
+      - 'Aula 09 - Funções (Parte 2: Parâmetros, Return, Escopo)': 09.md
+    - Módulo 4 – Arquivos:
+      - 'Aula 10 - Manipulação de Arquivos e JSON': 10.md
+      - 'Aula 11 - Tratamento de Exceções e Debugging': 11.md
+    - Módulo 5 – POO:
+      - 'Aula 12 - Introdução a Classes e Objetos': 12.md
+      - 'Aula 13 - Herança e Polimorfismo': 13.md
+    - Módulo 6 – Ecossistema:
+      - 'Aula 14 - Bancos de Dados (SQLite) e APIs': 14.md
+      - 'Aula 15 - Projeto Final e Próximos Passos': 15.md
+      - 'Aula 16 - Testes e Boas Práticas': 16.md
+  - Material Complementar:
+      - Slides: slides/
+      - Exercícios: exercicios/index.md
+      - Quizzes: quizzes/index.md
+      - Projetos: projetos/index.md
   - Versão para Impressão: print_page.md
