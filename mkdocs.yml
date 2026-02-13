@@ -69,7 +69,6 @@ plugins:
   - mkdocs-revealjs
   - search:
       lang: pt
-  - awesome-pages
   - mkdocs-jupyter
   - glightbox
   - mkdocs_quiz
@@ -145,4 +144,3 @@ nav:
     - 'Aula 16 - Testes e Boas Práticas': 16.md    
   - Projetos: projetos/
   - Quizzes: quizzes/
-  - Versão para impressão: print_page.md
