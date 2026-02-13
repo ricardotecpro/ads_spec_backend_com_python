@@ -153,6 +153,12 @@ hide:
 
 <!-- Adicione mais cards aqui conforme criar novos slides -->
 
+<div class="slide-card">
+  <h3>⚡ Demonstração Reveal.js</h3>
+  <p>Exemplo de slides com animações avançadas, fragmentos e transições.</p>
+  <a href="../slides/revealjs/" class="slide-link" target="_blank">Ver Demo →</a>
+</div>
+
 </div>
 
 <div class="instructions">
