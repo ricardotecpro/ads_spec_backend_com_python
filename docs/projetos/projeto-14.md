@@ -25,3 +25,11 @@ Criar um sistema de batalha de RPG usando classes, herança e polimorfismo.
 
 ## 🚀 Desafio Extra
 Crie uma classe `Arqueiro` que tem chance de "Crítico" (dano dobrado) quando ataca. Use o módulo `random` para calcular essa chance.
+
+## 🧪 Testes
+
+Se possível, crie um arquivo `test_rpg.py` para validar sua lógica:
+
+1. Teste se o Personagem morre quando vida chega a 0.
+2. Teste se o Guerreiro tem mais vida que o Mago.
+3. Teste se o ataque reduz a vida do inimigo corretamente.
