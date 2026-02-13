@@ -142,5 +142,7 @@ nav:
     - 'Aula 14 - Bancos de Dados (SQLite) e APIs': 14.md
     - 'Aula 15 - Projeto Final e Próximos Passos': 15.md
     - 'Aula 16 - Testes e Boas Práticas': 16.md    
-  - Projetos: projetos/
+  - Slides: slides/
+  - Exercícios: exercicios/
   - Quizzes: quizzes/
+  - Projetos: projetos/

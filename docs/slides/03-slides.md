@@ -1,21 +1,7 @@
 ---
 layout: revealjs
-theme: gaia
-paginate: true
-backgroundColor: #fff
-style: |
-  section {
-    font-family: 'Roboto', sans-serif;
-  }
-  h1, h2, h3 {
-    color: #3776ab;
-  }
-  code {
-    background: #f0f0f0;
-    border-radius: 5px;
-    padding: 2px 5px;
-  }
 ---
+
 
 <!-- _class: lead -->
 # Aula 03
