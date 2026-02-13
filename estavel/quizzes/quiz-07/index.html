@@ -21,7 +21,7 @@
     
     
       
-        <title>Quiz 07 - Tuplas e Sets - Python Backend - Curso Completo</title>
+        <title>Quiz 07 - Introdução - Python Backend - Curso Completo</title>
       
     
     
@@ -92,7 +92,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#quiz-07-tuplas-e-sets" class="md-skip">
+        <a href="#quiz-07-introducao" class="md-skip">
           Pular para conteúdo
         </a>
       
@@ -129,7 +129,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Quiz 07 - Tuplas e Sets
+              Quiz 07 - Introdução
             
           </span>
         </div>
@@ -1693,54 +1693,146 @@
   
 
 
-<h1 id="quiz-07-tuplas-e-sets">Quiz 07 - Tuplas e Sets</h1>
-<ol>
-<li>
-<p>Qual a principal diferença entre Lista e Tupla?</p>
-<ul>
-<li>[ ] Listas usam parênteses, Tuplas usam colchetes</li>
-<li>[x] Listas são mutáveis, Tuplas são imutáveis</li>
-<li>[ ] Tuplas aceitam duplicatas, Listas não</li>
-<li>[ ] Não há diferença</li>
-</ul>
-</li>
-<li>
-<p>Qual estrutura remove duplicatas automaticamente?</p>
-<ul>
-<li>[ ] List</li>
-<li>[ ] Tuple</li>
-<li>[x] Set</li>
-<li>[ ] Dictionary</li>
-</ul>
-</li>
-<li>
-<p>O que acontece se tentarmos fazer <code>meu_set[0]</code>?</p>
-<ul>
-<li>[ ] Acessa o primeiro item</li>
-<li>[x] Gera um erro (TypeError) pois set não tem índice</li>
-<li>[ ] Retorna None</li>
-<li>[ ] Retorna o set inteiro</li>
-</ul>
-</li>
-<li>
-<p>Qual operador faz a <strong>interseção</strong> de dois sets (itens em comum)?</p>
-<ul>
-<li>[ ] |</li>
-<li>[ ] -</li>
-<li>[x] &amp;</li>
-<li>[ ] +</li>
-</ul>
-</li>
-<li>
-<p>Dado <code>t = (1, 2, 3)</code>, o comando <code>t[0] = 10</code> funciona?</p>
-<ul>
-<li>[ ] Sim, a tupla vira <code>(10, 2, 3)</code></li>
-<li>[x] Não, erro de TypeError (item assignment)</li>
-<li>[ ] Sim, mas a tupla vira uma lista</li>
-<li>[ ] Depende da versão do Python</li>
-</ul>
-</li>
-</ol>
+<h1 id="quiz-07-introducao">Quiz 07 - Introdução</h1>
+<style>
+    .quiz-container {
+        margin: 2rem 0;
+        padding: 1.5rem;
+        border: 2px solid #3776ab;
+        border-radius: 8px;
+        background: #f8f9fa;
+    }
+
+    .quiz-question {
+        font-size: 1.1rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        color: #2c3e50;
+    }
+
+    .quiz-option {
+        padding: 0.8rem 1rem;
+        margin: 0.5rem 0;
+        border: 2px solid #ddd;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: all 0.3s;
+        background: white;
+    }
+
+    .quiz-option:hover {
+        border-color: #3776ab;
+        background: #e8f4f8;
+    }
+
+    .quiz-option.correct {
+        border-color: #28a745;
+        background: #d4edda;
+    }
+
+    .quiz-option.incorrect {
+        border-color: #dc3545;
+        background: #f8d7da;
+    }
+
+    .quiz-feedback {
+        margin-top: 1rem;
+        padding: 1rem;
+        border-radius: 4px;
+        display: none;
+    }
+
+    .quiz-feedback.show {
+        display: block;
+    }
+
+    .quiz-feedback.correct {
+        background: #d4edda;
+        border: 1px solid #28a745;
+        color: #155724;
+    }
+
+    .quiz-feedback.incorrect {
+        background: #f8d7da;
+        border: 1px solid #dc3545;
+        color: #721c24;
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const quizContainers = document.querySelectorAll('.quiz-container');
+
+        quizContainers.forEach(container => {
+            const options = container.querySelectorAll('.quiz-option');
+            const feedback = container.querySelector('.quiz-feedback');
+
+            options.forEach(option => {
+                option.addEventListener('click', function () {
+                    // Reset all options in this container
+                    options.forEach(opt => {
+                        opt.classList.remove('correct', 'incorrect');
+                    });
+
+                    const isCorrect = this.getAttribute('data-correct') === 'true';
+                    const feedbackText = this.getAttribute('data-feedback');
+
+                    // Mark this option
+                    this.classList.add(isCorrect ? 'correct' : 'incorrect');
+
+                    // Show feedback
+                    feedback.textContent = feedbackText;
+                    feedback.className = 'quiz-feedback show ' + (isCorrect ? 'correct' : 'incorrect');
+                });
+            });
+        });
+    });
+</script>
+
+<div class="quiz-container">
+  <div class="quiz-question">1. Qual a principal diferença entre Lista e Tupla?</div>
+  <div class="quiz-option" data-correct="false" data-feedback="Incorreto. Tente novamente.">Listas usam parênteses, Tuplas usam colchetes</div>
+  <div class="quiz-option" data-correct="true" data-feedback="✅ Correto! Listas são mutáveis, Tuplas são imutáveis">Listas são mutáveis, Tuplas são imutáveis</div>
+  <div class="quiz-option" data-correct="false" data-feedback="Incorreto. Tente novamente.">Tuplas aceitam duplicatas, Listas não</div>
+  <div class="quiz-option" data-correct="false" data-feedback="Incorreto. Tente novamente.">Não há diferença</div>
+  <div class="quiz-feedback"></div>
+</div>
+
+<div class="quiz-container">
+  <div class="quiz-question">2. Qual estrutura remove duplicatas automaticamente?</div>
+  <div class="quiz-option" data-correct="false" data-feedback="Incorreto. Tente novamente.">List</div>
+  <div class="quiz-option" data-correct="false" data-feedback="Incorreto. Tente novamente.">Tuple</div>
+  <div class="quiz-option" data-correct="true" data-feedback="✅ Correto! Set">Set</div>
+  <div class="quiz-option" data-correct="false" data-feedback="Incorreto. Tente novamente.">Dictionary</div>
+  <div class="quiz-feedback"></div>
+</div>
+
+<div class="quiz-container">
+  <div class="quiz-question">3. O que acontece se tentarmos fazer `meu_set[0]`?</div>
+  <div class="quiz-option" data-correct="false" data-feedback="Incorreto. Tente novamente.">Acessa o primeiro item</div>
+  <div class="quiz-option" data-correct="true" data-feedback="✅ Correto! Gera um erro (TypeError) pois set não tem índice">Gera um erro (TypeError) pois set não tem índice</div>
+  <div class="quiz-option" data-correct="false" data-feedback="Incorreto. Tente novamente.">Retorna None</div>
+  <div class="quiz-option" data-correct="false" data-feedback="Incorreto. Tente novamente.">Retorna o set inteiro</div>
+  <div class="quiz-feedback"></div>
+</div>
+
+<div class="quiz-container">
+  <div class="quiz-question">4. Qual operador faz a **interseção** de dois sets (itens em comum)?</div>
+  <div class="quiz-option" data-correct="false" data-feedback="Incorreto. Tente novamente.">|</div>
+  <div class="quiz-option" data-correct="false" data-feedback="Incorreto. Tente novamente.">-</div>
+  <div class="quiz-option" data-correct="true" data-feedback="✅ Correto! &amp;">&amp;</div>
+  <div class="quiz-option" data-correct="false" data-feedback="Incorreto. Tente novamente.">+</div>
+  <div class="quiz-feedback"></div>
+</div>
+
+<div class="quiz-container">
+  <div class="quiz-question">5. Dado `t = (1, 2, 3)`, o comando `t[0] = 10` funciona?</div>
+  <div class="quiz-option" data-correct="false" data-feedback="Incorreto. Tente novamente.">Sim, a tupla vira `(10, 2, 3)`</div>
+  <div class="quiz-option" data-correct="true" data-feedback="✅ Correto! Não, erro de TypeError (item assignment)">Não, erro de TypeError (item assignment)</div>
+  <div class="quiz-option" data-correct="false" data-feedback="Incorreto. Tente novamente.">Sim, mas a tupla vira uma lista</div>
+  <div class="quiz-option" data-correct="false" data-feedback="Incorreto. Tente novamente.">Depende da versão do Python</div>
+  <div class="quiz-feedback"></div>
+</div>
 
 
 
@@ -1763,7 +1855,7 @@
     <span class="md-icon" title="Última atualização">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="13 de fevereiro de 2026 22:13:23 UTC">13 de fevereiro de 2026 22:13:23</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="13 de fevereiro de 2026 23:04:58 UTC">13 de fevereiro de 2026 23:04:58</span>
   </span>
 
     

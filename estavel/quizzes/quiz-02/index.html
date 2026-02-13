@@ -21,7 +21,7 @@
     
     
       
-        <title>Quiz 02 - Variáveis e Tipos - Python Backend - Curso Completo</title>
+        <title>Quiz 02 - Introdução - Python Backend - Curso Completo</title>
       
     
     
@@ -92,7 +92,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#quiz-02-variaveis-e-tipos" class="md-skip">
+        <a href="#quiz-02-introducao" class="md-skip">
           Pular para conteúdo
         </a>
       
@@ -129,7 +129,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Quiz 02 - Variáveis e Tipos
+              Quiz 02 - Introdução
             
           </span>
         </div>
@@ -1693,54 +1693,146 @@
   
 
 
-<h1 id="quiz-02-variaveis-e-tipos">Quiz 02 - Variáveis e Tipos</h1>
-<ol>
-<li>
-<p>Qual o tipo de dado da variável <code>x</code> em <code>x = 10.5</code>?</p>
-<ul>
-<li>[ ] int</li>
-<li>[x] float</li>
-<li>[ ] str</li>
-<li>[ ] bool</li>
-</ul>
-</li>
-<li>
-<p>Qual a saída do código <code>print(type("10"))</code>?</p>
-<ul>
-<li>[ ] <class 'int'></class></li>
-<li>[ ] <class 'float'></class></li>
-<li>[x] <class 'str'></class></li>
-<li>[ ] <class 'bool'></class></li>
-</ul>
-</li>
-<li>
-<p>O que a função <code>input()</code> retorna por padrão?</p>
-<ul>
-<li>[ ] Um número inteiro (int)</li>
-<li>[ ] Um número decimal (float)</li>
-<li>[x] Um texto (str)</li>
-<li>[ ] O tipo que o usuário escolher</li>
-</ul>
-</li>
-<li>
-<p>Qual variável segue as boas práticas (snake_case) do Python?</p>
-<ul>
-<li>[ ] NomeUsuario</li>
-<li>[x] nome_usuario</li>
-<li>[ ] nome-usuario</li>
-<li>[ ] NOMEUSUARIO</li>
-</ul>
-</li>
-<li>
-<p>Qual o resultado de <code>10 // 3</code> (divisão inteira)?</p>
-<ul>
-<li>[ ] 3.3333...</li>
-<li>[x] 3</li>
-<li>[ ] 1</li>
-<li>[ ] 10</li>
-</ul>
-</li>
-</ol>
+<h1 id="quiz-02-introducao">Quiz 02 - Introdução</h1>
+<style>
+    .quiz-container {
+        margin: 2rem 0;
+        padding: 1.5rem;
+        border: 2px solid #3776ab;
+        border-radius: 8px;
+        background: #f8f9fa;
+    }
+
+    .quiz-question {
+        font-size: 1.1rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        color: #2c3e50;
+    }
+
+    .quiz-option {
+        padding: 0.8rem 1rem;
+        margin: 0.5rem 0;
+        border: 2px solid #ddd;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: all 0.3s;
+        background: white;
+    }
+
+    .quiz-option:hover {
+        border-color: #3776ab;
+        background: #e8f4f8;
+    }
+
+    .quiz-option.correct {
+        border-color: #28a745;
+        background: #d4edda;
+    }
+
+    .quiz-option.incorrect {
+        border-color: #dc3545;
+        background: #f8d7da;
+    }
+
+    .quiz-feedback {
+        margin-top: 1rem;
+        padding: 1rem;
+        border-radius: 4px;
+        display: none;
+    }
+
+    .quiz-feedback.show {
+        display: block;
+    }
+
+    .quiz-feedback.correct {
+        background: #d4edda;
+        border: 1px solid #28a745;
+        color: #155724;
+    }
+
+    .quiz-feedback.incorrect {
+        background: #f8d7da;
+        border: 1px solid #dc3545;
+        color: #721c24;
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const quizContainers = document.querySelectorAll('.quiz-container');
+
+        quizContainers.forEach(container => {
+            const options = container.querySelectorAll('.quiz-option');
+            const feedback = container.querySelector('.quiz-feedback');
+
+            options.forEach(option => {
+                option.addEventListener('click', function () {
+                    // Reset all options in this container
+                    options.forEach(opt => {
+                        opt.classList.remove('correct', 'incorrect');
+                    });
+
+                    const isCorrect = this.getAttribute('data-correct') === 'true';
+                    const feedbackText = this.getAttribute('data-feedback');
+
+                    // Mark this option
+                    this.classList.add(isCorrect ? 'correct' : 'incorrect');
+
+                    // Show feedback
+                    feedback.textContent = feedbackText;
+                    feedback.className = 'quiz-feedback show ' + (isCorrect ? 'correct' : 'incorrect');
+                });
+            });
+        });
+    });
+</script>
+
+<div class="quiz-container">
+  <div class="quiz-question">1. Qual o tipo de dado da variável `x` em `x = 10.5`?</div>
+  <div class="quiz-option" data-correct="false" data-feedback="Incorreto. Tente novamente.">int</div>
+  <div class="quiz-option" data-correct="true" data-feedback="✅ Correto! float">float</div>
+  <div class="quiz-option" data-correct="false" data-feedback="Incorreto. Tente novamente.">str</div>
+  <div class="quiz-option" data-correct="false" data-feedback="Incorreto. Tente novamente.">bool</div>
+  <div class="quiz-feedback"></div>
+</div>
+
+<div class="quiz-container">
+  <div class="quiz-question">2. Qual a saída do código `print(type("10"))`?</div>
+  <div class="quiz-option" data-correct="false" data-feedback="Incorreto. Tente novamente."><class 'int'></class></div>
+  <div class="quiz-option" data-correct="false" data-feedback="Incorreto. Tente novamente."><class 'float'></class></div>
+  <div class="quiz-option" data-correct="true" data-feedback="✅ Correto! &lt;class 'str'&gt;"><class 'str'></class></div>
+  <div class="quiz-option" data-correct="false" data-feedback="Incorreto. Tente novamente."><class 'bool'></class></div>
+  <div class="quiz-feedback"></div>
+</div>
+
+<div class="quiz-container">
+  <div class="quiz-question">3. O que a função `input()` retorna por padrão?</div>
+  <div class="quiz-option" data-correct="false" data-feedback="Incorreto. Tente novamente.">Um número inteiro (int)</div>
+  <div class="quiz-option" data-correct="false" data-feedback="Incorreto. Tente novamente.">Um número decimal (float)</div>
+  <div class="quiz-option" data-correct="true" data-feedback="✅ Correto! Um texto (str)">Um texto (str)</div>
+  <div class="quiz-option" data-correct="false" data-feedback="Incorreto. Tente novamente.">O tipo que o usuário escolher</div>
+  <div class="quiz-feedback"></div>
+</div>
+
+<div class="quiz-container">
+  <div class="quiz-question">4. Qual variável segue as boas práticas (snake_case) do Python?</div>
+  <div class="quiz-option" data-correct="false" data-feedback="Incorreto. Tente novamente.">NomeUsuario</div>
+  <div class="quiz-option" data-correct="true" data-feedback="✅ Correto! nome_usuario">nome_usuario</div>
+  <div class="quiz-option" data-correct="false" data-feedback="Incorreto. Tente novamente.">nome-usuario</div>
+  <div class="quiz-option" data-correct="false" data-feedback="Incorreto. Tente novamente.">NOMEUSUARIO</div>
+  <div class="quiz-feedback"></div>
+</div>
+
+<div class="quiz-container">
+  <div class="quiz-question">5. Qual o resultado de `10 // 3` (divisão inteira)?</div>
+  <div class="quiz-option" data-correct="false" data-feedback="Incorreto. Tente novamente.">3.3333...</div>
+  <div class="quiz-option" data-correct="true" data-feedback="✅ Correto! 3">3</div>
+  <div class="quiz-option" data-correct="false" data-feedback="Incorreto. Tente novamente.">1</div>
+  <div class="quiz-option" data-correct="false" data-feedback="Incorreto. Tente novamente.">10</div>
+  <div class="quiz-feedback"></div>
+</div>
 
 
 
@@ -1763,7 +1855,7 @@
     <span class="md-icon" title="Última atualização">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="13 de fevereiro de 2026 22:13:23 UTC">13 de fevereiro de 2026 22:13:23</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="13 de fevereiro de 2026 23:04:58 UTC">13 de fevereiro de 2026 23:04:58</span>
   </span>
 
     
