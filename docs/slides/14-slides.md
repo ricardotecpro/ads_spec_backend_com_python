@@ -1,4 +1,5 @@
 ---
+layout: revealjs
 theme: gaia
 paginate: true
 backgroundColor: #fff

@@ -8,8 +8,8 @@ docs_dir: docs
 theme:
   name: material
   language: pt-BR
-  favicon: assets/images/python-logo.png
-  logo: assets/images/python-logo.png
+  favicon: assets/images/python-logo.svg
+  logo: assets/images/python-logo.svg
   custom_dir: overrides
   features:
     - navigation.tracking
@@ -66,6 +66,7 @@ markdown_extensions:
   - tables
 
 plugins:
+  - mkdocs-revealjs
   - search:
       lang: pt
   - awesome-pages
@@ -84,7 +85,6 @@ plugins:
   - rss:
       match_path: .*
       date_from_meta:
-        as_creation_date: date
         datetime_format: '%Y-%m-%d %H:%M:%S'
   - print-site:
       add_to_navigation: true
@@ -93,16 +93,16 @@ plugins:
       hooks:
         on_post_build: "hooks.copy_slides:copy_slides"
 
-hooks:
-  - hooks/quiz_hook.py
+# hooks:
+#   - hooks/quiz_hook.py
 
 extra_css:
-  - assets/css/quiz.css
+#   - assets/css/quiz.css
   - assets/css/home.css
   - assets/css/extra.css
 
 extra_javascript:
-  - assets/js/quiz.js
+#   - assets/js/quiz.js
   - https://unpkg.com/mermaid@10.9.1/dist/mermaid.min.js
   - assets/js/mermaid-init.js
   - assets/js/custom_termynal.js
