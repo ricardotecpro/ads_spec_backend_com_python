@@ -1354,6 +1354,8 @@
       
         
       
+        
+      
     
     
     
@@ -1442,6 +1444,34 @@
     
   
     Aula 15 - Projeto Final e Próximos Passos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../16/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 16 - Testes e Boas Práticas
   
 
     
@@ -1904,6 +1934,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.3 Aula 16 - Testes e Boas Práticas
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2236,6 +2277,17 @@
     <span class="md-ellipsis">
       
         8.2 Aula 15 - Projeto Final e Próximos Passos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.3 Aula 16 - Testes e Boas Práticas
       
     </span>
   </a>
@@ -4747,6 +4799,132 @@ Classes filhos podem ter o <strong>mesmo método</strong> da classe pai, mas com
 </ul>
 </li>
 </ul>
+</div></body></html></section><section class="print-page" id="16" heading-number="8.3"><html><head>
+        <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            remove_material_navigation();remove_mkdocs_theme_navigation();generate_toc();
+        })
+        </script>
+        </head><body><h1 id="aula-16-testes-e-tdd-test-driven-development">Aula 16 - Testes e TDD (Test Driven Development)</h1>
+<h2 id="16-objetivos-da-aula">🎯 Objetivos da Aula</h2>
+<ul>
+<li>[ ] Compreender a importância dos <strong>Testes Automatizados</strong></li>
+<li>[ ] Conhecer a filosofia <strong>TDD</strong> (Desenvolvimento Guiado por Testes)</li>
+<li>[ ] Usar a biblioteca <code>pytest</code> (padrão de mercado)</li>
+<li>[ ] Estruturar um projeto Python profissional</li>
+</ul>
+<hr>
+<h2 id="16-conteudo">📚 Conteúdo</h2>
+<h3 id="16-1-por-que-testar">1. Por que testar?</h3>
+<p>Imagine que você consertou um erro no código, mas sem querer quebrou outra parte que estava funcionando. Isso se chama <strong>Regressão</strong>.
+Testes automatizados garantem que seu código continua funcionando como esperado, mesmo após alterações.</p>
+<blockquote>
+<p>"Código sem testes é código legado." - Michael Feathers</p>
+</blockquote>
+<h3 id="16-2-o-que-e-tdd">2. O que é TDD?</h3>
+<p>TDD (<strong>Test Driven Development</strong>) é uma técnica onde você escreve o teste <strong>ANTES</strong> do código.
+O ciclo do TDD (Red-Green-Refactor):</p>
+<ol>
+<li>🔴 <strong>Red:</strong> Escreva um teste que falha (porque a funcionalidade ainda não existe).</li>
+<li>🟢 <strong>Green:</strong> Escreva o código mínimo necessário para o teste passar.</li>
+<li>🔵 <strong>Refactor:</strong> Melhore o código (limpeza), mantendo o teste passando.</li>
+</ol>
+<pre class="mermaid"><code>graph TD
+    A(Red: Teste Falha) --&gt; B(Green: Código Passa)
+    B --&gt; C(Refactor: Melhorar Código)
+    C --&gt; A</code></pre>
+<h3 id="16-3-a-biblioteca-pytest">3. A biblioteca <code>pytest</code></h3>
+<p>O Python tem o <code>unittest</code> nativo, mas o mundo usa <code>pytest</code> porque é mais simples e poderoso.
+Ele procura automaticamente arquivos que começam com <code>test_</code> ou terminam com <code>_test.py</code>.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#16-__codelineno-0-1"></a><span class="c1"># test_calculadora.py</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#16-__codelineno-0-2"></a><span class="k">def</span><span class="w"> </span><span class="nf">test_soma</span><span class="p">():</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#16-__codelineno-0-3"></a>    <span class="k">assert</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">4</span>
+</span></code></pre></div>
+<p>Para rodar, basta digitar no terminal:
+<code>pytest</code></p>
+<h3 id="16-4-escrevendo-tests-profissionais">4. Escrevendo Tests Profissionais</h3>
+<p>Um teste geralmente segue o padrão <strong>AAA</strong>:
+- <strong>Arrange (Preparar):</strong> Cria os objetos e dados necessários.
+- <strong>Act (Agir):</strong> Chama a função que queremos testar.
+- <strong>Assert (Verificar):</strong> Confere se o resultado é o esperado.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#16-__codelineno-1-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">test_deve_adicionar_item_na_lista</span><span class="p">():</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#16-__codelineno-1-2"></a>    <span class="c1"># Arrange</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#16-__codelineno-1-3"></a>    <span class="n">lista</span> <span class="o">=</span> <span class="p">[]</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#16-__codelineno-1-4"></a>    <span class="n">item</span> <span class="o">=</span> <span class="s2">"Arroz"</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#16-__codelineno-1-5"></a>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#16-__codelineno-1-6"></a>    <span class="c1"># Act</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#16-__codelineno-1-7"></a>    <span class="n">lista</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#16-__codelineno-1-8"></a>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#16-__codelineno-1-9"></a>    <span class="c1"># Assert</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#16-__codelineno-1-10"></a>    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#16-__codelineno-1-11"></a>    <span class="k">assert</span> <span class="n">lista</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">"Arroz"</span>
+</span></code></pre></div>
+<h3 id="16-5-estrutura-de-projeto">5. Estrutura de Projeto</h3>
+<p>Organização é tudo. Um projeto Python moderno se parece com isso:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#16-__codelineno-2-1"></a>meu_projeto/
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#16-__codelineno-2-2"></a>├── src/             &lt;-- Código fonte (source)
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#16-__codelineno-2-3"></a>│   ├── __init__.py
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#16-__codelineno-2-4"></a>│   └── main.py
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#16-__codelineno-2-5"></a>├── tests/           &lt;-- Testes
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#16-__codelineno-2-6"></a>│   ├── __init__.py
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#16-__codelineno-2-7"></a>│   └── test_main.py
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#16-__codelineno-2-8"></a>├── README.md        &lt;-- Documentação
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#16-__codelineno-2-9"></a>└── pyproject.toml   &lt;-- Configurações e Dependências
+</span></code></pre></div>
+<hr>
+<h2 id="16-em-pratica-mini-tdd">💻 Em Prática (Mini TDD)</h2>
+<p>Vamos criar uma função que retorna o dobro, usando TDD.</p>
+<p><strong>Passo 1 (Red):</strong> Criar o teste <code>test_dobro.py</code>.
+</p><div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#16-__codelineno-3-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">app</span><span class="w"> </span><span class="kn">import</span> <span class="n">dobro</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#16-__codelineno-3-2"></a>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#16-__codelineno-3-3"></a><span class="k">def</span><span class="w"> </span><span class="nf">test_dobro_de_cinco</span><span class="p">():</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#16-__codelineno-3-4"></a>    <span class="k">assert</span> <span class="n">dobro</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="o">==</span> <span class="mi">10</span>
+</span></code></pre></div>
+<em>Se rodar agora, dá erro (ImportError), pois <code>app.py</code> nem existe.</em><p></p>
+<p><strong>Passo 2 (Green):</strong> Criar <code>app.py</code> com o mínimo para passar.
+</p><div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#16-__codelineno-4-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">dobro</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#16-__codelineno-4-2"></a>    <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="mi">2</span>
+</span></code></pre></div>
+<em>Agora roda o <code>pytest</code> e passa!</em><p></p>
+<p><strong>Passo 3 (Refactor):</strong> Melhorar se necessário (neste caso, já está simples).</p>
+<hr>
+<h2 id="16-resumo">📝 Resumo</h2>
+<ul>
+<li><strong>TDD:</strong> Teste antes do código.</li>
+<li><strong>Ciclo:</strong> Vermelho -&gt; Verde -&gt; Refatorar.</li>
+<li><strong>Pytest:</strong> Ferramenta poderosa e simples.</li>
+<li><strong>Assert:</strong> O comando que valida se é Verdade ou Falso.</li>
+<li><strong>Confiança:</strong> Testes dão segurança para mudar o código.</li>
+</ul>
+<hr>
+<h2 id="16-proximos-passos">🎯 Próximos Passos</h2>
+<div class="grid cards">
+<ul>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"></path></svg></span> <strong>Acessar Slides</strong></p>
+<ul>
+<li><a href="#slides-16-slides">Ver Slides da Aula</a></li>
+</ul>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"></path></svg></span> <strong>Quiz</strong></p>
+<ul>
+<li><a href="#quizzes-quiz-16">Responder Quiz</a></li>
+</ul>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M20.57 14.86 22 13.43 20.57 12 17 15.57 8.43 7 12 3.43 10.57 2 9.14 3.43 7.71 2 5.57 4.14 4.14 2.71 2.71 4.14l1.43 1.43L2 7.71l1.43 1.43L2 10.57 3.43 12 7 8.43 15.57 17 12 20.57 13.43 22l1.43-1.43L16.29 22l2.14-2.14 1.43 1.43 1.43-1.43-1.43-1.43L22 16.29z"></path></svg></span> <strong>Exercícios</strong></p>
+<ul>
+<li><a href="#exercicios-exercicios-16">Lista de Exercícios</a></li>
+</ul>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="m20 22-3.86-1.55c.7-1.53 1.2-3.11 1.51-4.72zM7.86 20.45 4 22l2.35-6.27c.31 1.61.81 3.19 1.51 4.72M12 2s5 2 5 10c0 3.1-.75 5.75-1.67 7.83A2 2 0 0 1 13.5 21h-3a2 2 0 0 1-1.83-1.17C7.76 17.75 7 15.1 7 12c0-8 5-10 5-10m0 10c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2"></path></svg></span> <strong>Projeto Final</strong></p>
+<ul>
+<li><a href="#projetos-projeto-16">Gerenciador de Tarefas com TDD</a></li>
+</ul>
+</li>
+</ul>
 </div></body></html></section></section></div><style>.print-site-enumerate-headings #index > h1:before { content: '1 ' }
 
                 .print-site-enumerate-headings #index h2:before { content: '1.' counter(counter-index-2) ' ' }
@@ -4841,6 +5019,11 @@ Classes filhos podem ter o <strong>mesmo método</strong> da classe pai, mas com
 
                 .print-site-enumerate-headings #15 h2:before { content: '8.2.' counter(counter-15-2) ' ' }
                 .print-site-enumerate-headings #15 h2 {  counter-increment: counter-15-2 }
+            
+.print-site-enumerate-headings #16 > h1:before { content: '8.3 ' }
+
+                .print-site-enumerate-headings #16 h2:before { content: '8.3.' counter(counter-16-2) ' ' }
+                .print-site-enumerate-headings #16 h2 {  counter-increment: counter-16-2 }
             </style>
 
 
