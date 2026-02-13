@@ -2,8 +2,8 @@ site_name: Python Backend - Curso Completo
 site_url: https://ricardotecpro.github.io/ads_spec_backend_com_python
 repo_url: https://github.com/ricardotecpro/ads_spec_backend_com_python
 repo_name: ricardotecpro/ads_spec_backend_com_python
-edit_uri: edit/main/aulas/
-docs_dir: aulas
+edit_uri: edit/main/docs/
+docs_dir: docs
 
 theme:
   name: material
@@ -12,11 +12,8 @@ theme:
   logo: assets/images/python-logo.png
   custom_dir: overrides
   features:
-    # - navigation.instant
     - navigation.tracking
     - navigation.tabs
-    # - navigation.tabs.sticky # Removed to prevent parallax duplication issues
-    # - navigation.sections
     - navigation.expand
     - navigation.top
     - navigation.footer
@@ -24,6 +21,8 @@ theme:
     - toc.follow
     - content.code.copy
     - content.code.annotate
+    - search.suggest
+    - search.highlight
   palette:
     - scheme: slate
       primary: indigo
@@ -69,6 +68,8 @@ markdown_extensions:
 plugins:
   - search:
       lang: pt
+  - awesome-pages
+  - mkdocs-jupyter
   - glightbox
   - mkdocs_quiz
   - git-authors:
@@ -80,8 +81,14 @@ plugins:
   - macros
   - mkdocs-video
   - termynal
-  # - minify:
-  #     minify_html: true
+  - rss:
+      match_path: .*
+      date_from_meta:
+        as_creation_date: date
+        datetime_format: '%Y-%m-%d %H:%M:%S'
+  - print-site:
+      add_to_navigation: true
+      print_page_title: "Versão para Impressão"
   - mkdocs-simple-hooks:
       hooks:
         on_post_build: "hooks.copy_slides:copy_slides"
@@ -111,17 +118,28 @@ extra:
     default: estavel
 
 nav:
-  - Home: index.md
-  - Comece Aqui:
-    - Instalação: setup/instalacao_windows.md
-  - Módulos:
-    - Básico: modulos/python_basico.md
-    - Avançado: modulos/python_avancado.md
-    - Recursos Visuais: recursos_visuais.md
-  - Slides: slides/index.md
-  - Quiz:
-    - Todos os Quizzes: quiz/index.md
-    - Python Básico: quiz/python_basico.md
-    - Python Avançado: quiz/python_avancado.md
-  - Exercícios: exercicios/index.md
-  - Projetos: projetos/index.md
+  - Início: index.md
+  - Módulo 1 – Fundamentos:
+    - 'Aula 01 - Introdução à Computação e Python': 01.md
+    - 'Aula 02 - Variáveis, Tipos de Dados e Operadores': 02.md
+    - 'Aula 03 - Entrada e Saída de Dados (I/O)': 03.md
+  - Módulo 2 – Estruturas de Dados:
+    - 'Aula 04 - Estruturas Condicionais (if/elif/else)': 04.md
+    - 'Aula 05 - Estruturas de Repetição (for/while)': 05.md
+    - 'Aula 06 - Listas e Tuplas': 06.md
+  - Módulo 3 – Funções:
+    - 'Aula 07 - Dicionários e Sets': 07.md
+    - 'Aula 08 - Funções (Parte 1: Básico)': 08.md
+    - 'Aula 09 - Funções (Parte 2: Parâmetros, Return, Escopo)': 09.md
+  - Módulo 4 – Arquivos:
+    - 'Aula 10 - Manipulação de Arquivos e JSON': 10.md
+    - 'Aula 11 - Tratamento de Exceções e Debugging': 11.md
+  - Módulo 5 – POO:
+    - 'Aula 12 - Introdução a Classes e Objetos': 12.md
+    - 'Aula 13 - Herança e Polimorfismo': 13.md
+  - Módulo 6 – Ecossistema:
+    - 'Aula 14 - Bancos de Dados (SQLite) e APIs': 14.md
+    - 'Aula 15 - Projeto Final e Próximos Passos': 15.md
+  - Projetos: projetos/
+  - Quizzes: quizzes/
+  - Versão para impressão: print_page.md

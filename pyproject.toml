@@ -23,6 +23,10 @@ dependencies = [
     "termynal (>=0.13.1,<0.14.0)",
     "mkdocs-with-pdf (>=0.9.3,<0.10.0)",
     "mkdocs-minify-plugin (>=0.8.0,<0.9.0)",
+    "mkdocs-print-site-plugin (>=2.8,<3.0)",
+    "mkdocs-awesome-pages-plugin (>=2.10.1,<3.0.0)",
+    "mkdocs-jupyter (>=0.25.1,<0.26.0)",
+    "mkdocs-rss-plugin (>=1.17.9,<2.0.0)",
 
 ]
 
@@ -40,9 +44,9 @@ dev = [
 [tool.taskipy.tasks]
 docs = {cmd="mkdocs serve --dev-addr localhost:8000", help="Servidor local MkDocs"}
 build = {cmd="mkdocs build", help="Build do site"}
-slides = {cmd="marp -I slides/brutos --html --theme-set slides/brutos/material.css --theme material --allow-local-files -o slides/html", help="Gera slides com Marp"}
+slides = {cmd="npx @marp-team/marp-cli -I docs/slides --html --allow-local-files -o slides/html", help="Gera slides com Marp"}
 deploy = {cmd="mike deploy estavel --push --allow-empty", help="Deploy produção com Mike"}
-test = {cmd="pytest tests/ -v", help="Executa testes"}
+test = {cmd="pytest tests/test_course_structure.py -v", help="Executa testes da nova estrutura"}
 clean = {cmd="invoke clean", help="Limpa arquivos gerados"}
 
 [tool.poetry]
