@@ -75,8 +75,14 @@ plugins:
   - glightbox
   - mkdocs_quiz
   - git-authors:
-      show_email_address: false
+      show_contribution: true
       show_line_count: true
+      count_empty_lines: false
+      fallback_to_empty: false
+      sort_authors_by: contribution
+      authorship_threshold_percent: 10
+      exclude:
+        - index.md
   - git-revision-date-localized:
       enable_creation_date: true
       type: datetime
@@ -89,13 +95,13 @@ plugins:
         datetime_format: '%Y-%m-%d %H:%M:%S'
   - print-site:
       add_to_navigation: true
-      print_page_title: "Versão para Impressão"
-  - mkdocs-simple-hooks:
-      hooks:
-        on_post_build: "hooks.copy_slides:copy_slides"
+      print_page_title: 'Versão para Impressão'
+      add_print_site_banner: false
+      enumerate_headings: false
+      enumerate_figures: false
 
-# hooks:
-#   - hooks/quiz_hook.py
+hooks:
+  - hooks/copy_slides.py
 
 extra_css:
 #   - assets/css/quiz.css
@@ -146,7 +152,7 @@ nav:
       - 'Aula 15 - Projeto Final e Próximos Passos': 15.md
       - 'Aula 16 - Testes e Boas Práticas': 16.md
   - Material Complementar:
-      - Slides: slides/
+      - Slides: slides/index.md
       - Exercícios: exercicios/index.md
       - Quizzes: quizzes/index.md
       - Projetos: projetos/index.md
