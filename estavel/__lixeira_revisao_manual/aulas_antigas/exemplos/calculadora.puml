@@ -1,0 +1,13 @@
+@startuml
+class Calculadora {
+    + multiplicar(a: int, b: int): int
+    + somar(a: int, b: int): int
+    + subtrair(a: int, b: int): int
+}
+
+Calculadora --> "1" MainProgram : uses
+
+class MainProgram {
+    + main()
+}
+@enduml
