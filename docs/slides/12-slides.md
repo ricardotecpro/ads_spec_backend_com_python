@@ -1,37 +1,120 @@
 ---
-theme: material
+theme: gaia
+paginate: true
+backgroundColor: #fff
+style: |
+  section {
+    font-family: 'Roboto', sans-serif;
+  }
+  h1, h2, h3 {
+    color: #3776ab;
+  }
+  code {
+    background: #f0f0f0;
+    border-radius: 5px;
+    padding: 2px 5px;
+  }
 ---
 
-# Introdução a Classes e Objetos
-## Aula 12
+<!-- _class: lead -->
+# Aula 12
+## Tratamento de Erros e Exceções
+
+![bg right:40% 80%](https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg)
 
 ---
 
-## Objetivos
-- Objetivo 1
-- Objetivo 2
+## 🎯 Objetivos
+
+- Impedir que o programa quebre ("Crash").
+- Blocos `try`, `except`, `else`, `finally`.
+- Tipos comuns de erros.
+- Lançar exceções (`raise`).
 
 ---
 
-## Tópico 1
-Conteúdo do tópico...
+## 💥 O Problema
 
----
-
-## Exemplo de Código
+O mundo real é caótico. Usuários digitam errado, arquivos somem, a internet cai.
 
 ```python
-def hello():
-    print("Mundo")
+x = int(input("Número: "))
+# Se digitar "oi", o programa FECHA com erro vermelho.
+```
+
+Precisamos lidar com isso elegantemente.
+
+---
+
+## 🛡️ A Estrutura Básica
+
+```python
+try:
+    # Tente fazer isso...
+    x = int(input("Número: "))
+    print(10 / x)
+
+except ValueError:
+    # Se der erro de valor (texto em vez de num)
+    print("Digite apenas números!")
+
+except ZeroDivisionError:
+    # Se tentar dividir por zero
+    print("Não pode dividir por 0!")
+
+except Exception as e:
+    # Qualquer outro erro
+    print(f"Erro desconhecido: {e}")
 ```
 
 ---
 
-## Resumo
-- Ponto chave 1
-- Ponto chave 2
+## ☀️ Else e Finally
+
+```python
+try:
+    arquivo = open("dados.txt", "r")
+except FileNotFoundError:
+    print("Erro ao abrir.")
+else:
+    # Só executa se o TRY deu certo
+    print("Arquivo aberto com sucesso!")
+    conteudo = arquivo.read()
+finally:
+    # Executa SEMPRE (dando erro ou não)
+    print("Finalizando operação...")
+```
+
+---
+
+## 🤚 Raise (Levantar erro)
+
+Você pode criar suas próprias regras.
+
+```python
+def sacar(saldo, valor):
+    if valor > saldo:
+        raise ValueError("Saldo insuficiente!")
+    
+    return saldo - valor
+
+try:
+    sacar(100, 500)
+except ValueError as e:
+    print(f"Falha no saque: {e}")
+```
+
+---
+
+## 🏁 Resumo
+
+1. Use `try/except` para código perigoso (I/O, Conversão).
+2. Capture erros específicos (`ValueError` é melhor que `Exception`).
+3. O programa não para se o erro for tratado.
+4. `finally` é ótimo para fechar recursos.
 
 ---
 
 <!-- _class: lead -->
-# Próxima Aula: ...
+# Prática! 🚀
+Vamos blindar nossos códigos.

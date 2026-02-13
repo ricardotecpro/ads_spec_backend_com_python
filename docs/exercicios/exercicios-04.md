@@ -1,10 +1,28 @@
-# Exercícios Aula 04
+# Exercícios - Aula 04
 
-## Nível: Fácil
-1. Crie um programa que...
+## 1. Positivo, Negativo ou Zero?
+Peça um número ao usuário e diga se ele é Positivo, Negativo ou Zero.
 
-## Nível: Médio
-2. Faça uma função que...
+## 2. Par ou Ímpar (com if)
+Peça um número e diga se é par ou ímpar.
+(Dica: Se o resto da divisão por 2 for 0, é par).
 
-## Nível: Difícil
-3. Implemente um algoritmo que...
+## 3. Maior de dois números
+Peça dois números e diga qual é o maior, ou se são iguais.
+
+## 4. Classificação de Idade
+Peça a idade e classifique:
+- 0 a 12: Criança
+- 13 a 17: Adolescente
+- 18 a 59: Adulto
+- 60+: Idoso
+
+## 5. Simulador de Empréstimo
+Para aprovar um empréstimo bancário, peça:
+- O valor da casa
+- O salário do comprador
+- Em quantos anos vai pagar
+
+Calcule o valor da prestação mensal (Valor Casa / Meses).
+Se a prestação for maior que 30% do salário, imprima "Empréstimo negado".
+Caso contrário, imprima "Empréstimo aprovado" e o valor da prestação.

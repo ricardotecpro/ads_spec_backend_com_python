@@ -1,37 +1,136 @@
 ---
-theme: material
+theme: gaia
+paginate: true
+backgroundColor: #fff
+style: |
+  section {
+    font-family: 'Roboto', sans-serif;
+  }
+  h1, h2, h3 {
+    color: #3776ab;
+  }
+  code {
+    background: #f0f0f0;
+    border-radius: 5px;
+    padding: 2px 5px;
+  }
 ---
 
-# Funções (Parte 1: Básico)
-## Aula 08
+<!-- _class: lead -->
+# Aula 08
+## Dicionários
+
+![bg right:40% 80%](https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg)
 
 ---
 
-## Objetivos
-- Objetivo 1
-- Objetivo 2
+## 🎯 Objetivos
+
+- Estrutura Chave-Valor (`key: value`)
+- Acesso seguro com `.get()`
+- Manipulação (Add, Edit, Remove)
+- Loops em dicionários
 
 ---
 
-## Tópico 1
-Conteúdo do tópico...
+## 📖 O que é um Dict?
 
----
-
-## Exemplo de Código
+Uma coleção onde cada item tem uma "etiqueta" (chave).
+Análogo a um JSON ou uma linha de tabela.
 
 ```python
-def hello():
-    print("Mundo")
+carro = {
+    "marca": "Ford",
+    "modelo": "Mustang",
+    "ano": 1964
+}
+```
+
+- Chaves (`keys`): "marca", "modelo", "ano"
+- Valores (`values`): "Ford", "Mustang", 1964
+
+---
+
+## 🔑 Acessando Dados
+
+Use a chave entre colchetes.
+
+```python
+print(carro["modelo"]) # Mustang
+```
+
+### O método `.get()`
+Se a chave não existir, `[]` quebra o código. `get()` retorna `None` (seguro).
+
+```python
+print(carro.get("cor")) # None
+print(carro.get("cor", "Preto")) # Valor padrão
 ```
 
 ---
 
-## Resumo
-- Ponto chave 1
-- Ponto chave 2
+## ✏️ Modificando
+
+```python
+# Alterar valor existente
+carro["ano"] = 2020
+
+# Criar nova chave
+carro["cor"] = "Vermelho"
+
+# Remover chave
+del carro["modelo"]
+# ou
+cor = carro.pop("cor")
+```
+
+---
+
+## 🔄 Loops e Dicts
+
+Três formas principais:
+
+```python
+# 1. Pelas chaves (keys)
+for k in carro.keys():
+    print(k)
+
+# 2. Pelos valores (values)
+for v in carro.values():
+    print(v)
+
+# 3. Por ambos (items) - O MAIS USADO!
+for k, v in carro.items():
+    print(f"{k}: {v}")
+```
+
+---
+
+## 🏗️ Lista de Dicionários
+
+Estrutura muito poderosa para dados reais.
+
+```python
+clientes = [
+    {"id": 1, "nome": "Ana"},
+    {"id": 2, "nome": "Beto"}
+]
+
+print(clientes[0]["nome"]) # Ana
+```
+
+---
+
+## 🏁 Resumo
+
+1. Dicionários mapeiam **chaves** para **valores**.
+2. Sintaxe: `{chave: valor}`.
+3. Chaves devem ser únicas.
+4. Use `.items()` para iterar chave e valor juntos.
+5. Base para APIs e manipulação de dados complexos.
 
 ---
 
 <!-- _class: lead -->
-# Próxima Aula: ...
+# Prática! 🚀
+Vamos para os exercícios.

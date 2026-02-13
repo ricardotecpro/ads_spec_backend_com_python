@@ -1,37 +1,140 @@
 ---
-theme: material
+theme: gaia
+paginate: true
+backgroundColor: #fff
+style: |
+  section {
+    font-family: 'Roboto', sans-serif;
+  }
+  h1, h2, h3 {
+    color: #3776ab;
+  }
+  code {
+    background: #f0f0f0;
+    border-radius: 5px;
+    padding: 2px 5px;
+  }
 ---
 
-# Introdução à Computação e Python
-## Aula 01
+<!-- _class: lead -->
+# Aula 01
+## Introdução à Computação e Python
+
+![bg right:40% 80%](https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg)
 
 ---
 
-## Objetivos
-- Objetivo 1
-- Objetivo 2
+## 🎯 Objetivos da Aula
+
+- Compreender Lógica de Programação
+- Conhecer a linguagem Python
+- Configurar o Ambiente (VSCode)
+- Criar o primeiro programa ("Olá Mundo")
 
 ---
 
-## Tópico 1
-Conteúdo do tópico...
+## 🤔 O que é Programação?
+
+É a arte de instruir o computador.
+
+- **Computador:** Rápido, mas "burro" (precisa de instruções explícitas).
+- **Algoritmo:** Sequência de passos lógicos para resolver um problema.
+- **Código:** O algoritmo traduzido para uma linguagem que o computador entende.
 
 ---
 
-## Exemplo de Código
+## 🐍 Por que Python?
+
+Criada por **Guido van Rossum** (1991).
+
+- **Legível:** Parece inglês simples.
+- **Produtiva:** Faz mais com menos linhas de código.
+- **Versátil:** Web, Dados, IA, Automação...
+- **Mercado:** Uma das linguagens mais demandadas hoje.
+
+---
+
+## 🛠️ Ferramentas
+
+1. **Python (Interpretador):** O "cérebro" que executa o código.
+2. **VSCode (Editor):** Onde escrevemos o código.
+
+> Dica: Instale as extensões recomendadas no VSCode para facilitar sua vida!
+
+---
+
+## 🌍 Olá, Mundo!
+
+A tradição da programação.
 
 ```python
-def hello():
-    print("Mundo")
+print("Olá, Mundo!")
 ```
+
+- `print`: Função de saída (output). Mostra dados na tela.
+- `()`: Parênteses indicam chamada de função.
+- `""`: Aspas indicam texto (string).
 
 ---
 
-## Resumo
-- Ponto chave 1
-- Ponto chave 2
+## 📝 Comentários
+
+O computador ignora, mas humanos agradecem.
+
+```python
+# Isto é um comentário
+print("Oi") # Comentário ao lado
+
+"""
+Comentário de
+várias linhas
+"""
+```
+
+Use para explicar o "porquê" do código, não o "como".
+
+---
+
+## 📦 Variáveis (Spoiler)
+
+Caixinhas para guardar dados.
+
+```python
+nome = "Maria"
+idade = 25
+
+print(nome)
+print(idade)
+```
+
+Veremos mais detalhes na próxima aula!
+
+---
+
+## 🐞 Erros Comuns (Sintaxe)
+
+O Python é rigoroso!
+
+```python
+Print("Oi") # Erro! (P maiúsculo)
+print "Oi"  # Erro! (Falta parênteses - Python 3)
+ print("Oi") # Erro! (Indentação incorreta no início)
+```
+
+**Atenção aos detalhes!**
+
+---
+
+## 🏁 Resumo
+
+1. Programar é criar algoritmos.
+2. Python é simples e poderoso.
+3. `print()` mostra coisas na tela.
+4. Comentários ajudam na documentação.
 
 ---
 
 <!-- _class: lead -->
-# Próxima Aula: ...
+# Dúvidas?
+
+Vamos para os exercícios! 🚀

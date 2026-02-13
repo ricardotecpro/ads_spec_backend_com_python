@@ -119,6 +119,8 @@ extra:
 
 nav:
   - Início: index.md
+  - Instalação:
+    - 'Configuração do Ambiente (Windows + VSCode)': setup/instalacao_windows.md
   - Módulo 1 – Fundamentos:
     - 'Aula 01 - Introdução à Computação e Python': 01.md
     - 'Aula 02 - Variáveis, Tipos de Dados e Operadores': 02.md

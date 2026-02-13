@@ -1,37 +1,125 @@
 ---
-theme: material
+theme: gaia
+paginate: true
+backgroundColor: #fff
+style: |
+  section {
+    font-family: 'Roboto', sans-serif;
+  }
+  h1, h2, h3 {
+    color: #3776ab;
+  }
+  code {
+    background: #f0f0f0;
+    border-radius: 5px;
+    padding: 2px 5px;
+  }
 ---
 
-# Dicionários e Sets
-## Aula 07
+<!-- _class: lead -->
+# Aula 07
+## Tuplas e Sets
+
+![bg right:40% 80%](https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg)
 
 ---
 
-## Objetivos
-- Objetivo 1
-- Objetivo 2
+## 🎯 Objetivos
+
+- Tuplas (Listas imutáveis)
+- Desempacotamento
+- Sets (Conjuntos únicos)
+- União, Interseção e Diferença
 
 ---
 
-## Tópico 1
-Conteúdo do tópico...
+## 🔒 Tuplas (Tuples)
 
----
-
-## Exemplo de Código
+Irmãs imutáveis das listas. Usam parênteses `()`.
 
 ```python
-def hello():
-    print("Mundo")
+coordenadas = (10, 20)
+dias = ("Seg", "Ter", "Qua")
+```
+
+**Por que usar?**
+1. **Segurança:** Garante que dados não mudem.
+2. **Performance:** Levemente mais rápidas.
+3. **Sentido:** "Isto é um grupo fixo de dados".
+
+---
+
+## 🎁 Desempacotamento
+
+Extrair valores de uma tupla para variáveis.
+
+```python
+ponto = (3, 4)
+
+x, y = ponto
+# x = 3
+# y = 4
+```
+
+> Muito usado em funções que retornam múltiplos valores!
+
+---
+
+## 🦄 Sets (Conjuntos)
+
+Coleções desordenadas de elementos **únicos**. Usam chaves `{}`.
+
+```python
+s = {1, 2, 3, 3, 3}
+print(s) # {1, 2, 3} (Removeu duplicatas)
+```
+
+**Principais Usos:**
+- Remover itens repetidos de uma lista.
+- Testar pertinência (`if x in set`) de forma ultra rápida.
+
+---
+
+## 🧮 Matemática dos Conjuntos
+
+Lembra da escola? Diagramas de Venn?
+
+```python
+A = {1, 2, 3}
+B = {3, 4, 5}
+
+# União (|) - Junta tudo
+print(A | B) # {1, 2, 3, 4, 5}
+
+# Interseção (&) - O que tem nos dois
+print(A & B) # {3}
+
+# Diferença (-) - O que tem só no A
+print(A - B) # {1, 2}
 ```
 
 ---
 
-## Resumo
-- Ponto chave 1
-- Ponto chave 2
+## 🆚 Batalha das Estruturas
+
+| Recurso | Lista | Tupla | Set |
+| :--- | :---: | :---: | :---: |
+| Sintaxe | `[]` | `()` | `{}` |
+| Ordenada? | ✅ | ✅ | ❌ |
+| Indexável? | ✅ | ✅ | ❌ |
+| Imutável? | ❌ | ✅ | ❌ |
+| Duplicatas? | ✅ | ✅ | ❌ |
+
+---
+
+## 🏁 Resumo
+
+1. Use **Tuplas** para dados constantes.
+2. Use **Sets** para garantir unicidade e operações matemáticas.
+3. Converta listas em sets com `set(lista)` para limpar duplicatas.
 
 ---
 
 <!-- _class: lead -->
-# Próxima Aula: ...
+# Prática! 🚀
+Vamos para os exercícios.

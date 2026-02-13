@@ -1,16 +1,31 @@
-# Quiz 12: Introdução a Classes e Objetos
+# Quiz 12 - Exceções
 
-**Teste seus conhecimentos.**
+1. Qual bloco contém o código que pode gerar um erro?
+    - [ ] except
+    - [x] try
+    - [ ] catch
+    - [ ] test
 
-1. Qual a saída do código abaixo?
-    ```python
-    x = 10
-    print(x * 2)
-    ```
-    - ( ) 10
-    - (x) 20
-    - ( ) 100
+2. Qual bloco é executado SEMPRE, independentemente de erro?
+    - [ ] else
+    - [ ] always
+    - [x] finally
+    - [ ] default
 
-2. Python é uma linguagem compilada?
-    - ( ) Verdadeiro
-    - (x) Falso
+3. Qual exceção é levantada ao tentar dividir um número por zero?
+    - [ ] ValueError
+    - [ ] TypeError
+    - [ ] MathError
+    - [x] ZeroDivisionError
+
+4. O comando `raise` serve para:
+    - [ ] Tratar um erro
+    - [ ] Ignorar um erro
+    - [x] Lançar (gerar) um erro propositalmente
+    - [ ] Aumentar a prioridade do erro
+
+5. É considerado boa prática usar `except:` sem especificar o tipo de erro?
+    - [ ] Sim, economiza código
+    - [x] Não, pois pode ocultar erros inesperados e dificultar a depuração
+    - [ ] Sim, o Python recomenda
+    - [ ] Tanto faz
