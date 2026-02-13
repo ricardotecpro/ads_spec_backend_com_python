@@ -1,9 +1,3 @@
----
-layout: revealjs
----
-
-
-<!-- _class: lead -->
 # Aula 09
 ## Funções (Parte 1)
 
@@ -124,6 +118,5 @@ Veremos mais no projeto de hoje!
 
 ---
 
-<!-- _class: lead -->
 # Prática! 🚀
 Vamos modularizar nossos códigos.

@@ -1,9 +1,3 @@
----
-layout: revealjs
----
-
-
-<!-- _class: lead -->
 # Aula 06
 ## Listas
 
@@ -124,6 +118,5 @@ sorted(nums) # [1, 3, 5, 8] (Ordena)
 
 ---
 
-<!-- _class: lead -->
 # Prática! 🚀
 Vamos para os exercícios.

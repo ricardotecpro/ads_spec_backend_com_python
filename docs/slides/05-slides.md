@@ -1,9 +1,3 @@
----
-layout: revealjs
----
-
-
-<!-- _class: lead -->
 # Aula 05
 ## Estruturas de Repetição (Loops)
 
@@ -117,6 +111,5 @@ Use `while` para eventos incertos.
 
 ---
 
-<!-- _class: lead -->
 # Let's Loop! 🚀
 Prática com repetições.

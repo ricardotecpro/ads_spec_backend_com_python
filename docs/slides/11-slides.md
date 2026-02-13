@@ -1,9 +1,3 @@
----
-layout: revealjs
----
-
-
-<!-- _class: lead -->
 # Aula 11
 ## Manipulação de Arquivos
 
@@ -95,6 +89,5 @@ with open("nomes.txt", "r") as f:
 
 ---
 
-<!-- _class: lead -->
 # Prática! 🚀
 Vamos salvar nossos dados.

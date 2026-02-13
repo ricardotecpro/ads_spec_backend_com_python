@@ -1,9 +1,3 @@
----
-layout: revealjs
----
-
-
-<!-- _class: lead -->
 # Aula 08
 ## Dicionários
 
@@ -118,6 +112,5 @@ print(clientes[0]["nome"]) # Ana
 
 ---
 
-<!-- _class: lead -->
 # Prática! 🚀
 Vamos para os exercícios.

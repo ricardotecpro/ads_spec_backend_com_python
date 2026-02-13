@@ -1,9 +1,3 @@
----
-layout: revealjs
----
-
-
-<!-- _class: lead -->
 # Aula 16
 ## Testes e TDD
 
@@ -97,6 +91,5 @@ Isso é profissional e evita bagunça.
 
 ---
 
-<!-- _class: lead -->
 # Projeto Final 🚀
 Gerenciador de Tarefas Profissional com TDD.

@@ -1,9 +1,3 @@
----
-layout: revealjs
----
-
-
-<!-- _class: lead -->
 # Aula 14
 ## POO Avançada
 
@@ -95,6 +89,5 @@ Para acessar privados, usamos métodos **Getters e Setters** (`get_senha`, `set_
 
 ---
 
-<!-- _class: lead -->
 # Prática! 🚀
 Vamos evoluir nossos objetos.

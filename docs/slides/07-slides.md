@@ -1,9 +1,3 @@
----
-layout: revealjs
----
-
-
-<!-- _class: lead -->
 # Aula 07
 ## Tuplas e Sets
 
@@ -107,6 +101,5 @@ print(A - B) # {1, 2}
 
 ---
 
-<!-- _class: lead -->
 # Prática! 🚀
 Vamos para os exercícios.

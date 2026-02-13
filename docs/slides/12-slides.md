@@ -1,9 +1,3 @@
----
-layout: revealjs
----
-
-
-<!-- _class: lead -->
 # Aula 12
 ## Tratamento de Erros e Exceções
 
@@ -102,6 +96,5 @@ except ValueError as e:
 
 ---
 
-<!-- _class: lead -->
 # Prática! 🚀
 Vamos blindar nossos códigos.

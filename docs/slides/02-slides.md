@@ -1,9 +1,3 @@
----
-layout: revealjs
----
-
-
-<!-- _class: lead -->
 # Aula 02
 ## Variáveis e Tipos de Dados
 
@@ -122,6 +116,5 @@ print(f"A {nome} tem {idade} anos.")
 
 ---
 
-<!-- _class: lead -->
 # Vamos Praticar! 🚀
 Exercícios e Projeto

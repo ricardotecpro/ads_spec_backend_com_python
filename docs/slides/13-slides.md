@@ -1,9 +1,3 @@
----
-layout: revealjs
----
-
-
-<!-- _class: lead -->
 # Aula 13
 ## Orientação a Objetos (Intro)
 
@@ -99,6 +93,5 @@ Isso é o `self`: o próprio objeto `c1`.
 
 ---
 
-<!-- _class: lead -->
 # Prática! 🚀
 Vamos criar nossos próprios objetos.

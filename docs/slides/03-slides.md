@@ -1,9 +1,3 @@
----
-layout: revealjs
----
-
-
-<!-- _class: lead -->
 # Aula 03
 ## Operadores
 
@@ -124,6 +118,5 @@ print(pode_dirigir) # True
 
 ---
 
-<!-- _class: lead -->
 # Hora de Codar! 🚀
 Bora para os exercícios.

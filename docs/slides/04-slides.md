@@ -1,9 +1,3 @@
----
-layout: revealjs
----
-
-
-<!-- _class: lead -->
 # Aula 04
 ## Estruturas Condicionais (if/elif/else)
 
@@ -120,6 +114,5 @@ if idade >= 18 and tem_carteira:
 
 ---
 
-<!-- _class: lead -->
 # Prática! 🚀
 Vamos resolver problemas reais.

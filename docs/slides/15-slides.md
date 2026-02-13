@@ -1,9 +1,3 @@
----
-layout: revealjs
----
-
-
-<!-- _class: lead -->
 # Aula 15
 ## APIs e JSON
 
@@ -99,6 +93,5 @@ Retorna:
 
 ---
 
-<!-- _class: lead -->
 # Prática! 🚀
 Vamos conectar na Matrix.

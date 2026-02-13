@@ -1,9 +1,3 @@
----
-layout: revealjs
----
-
-
-<!-- _class: lead -->
 # Aula 10
 ## Módulos e Pacotes
 
@@ -120,6 +114,5 @@ Exemplo de estrutura:
 
 ---
 
-<!-- _class: lead -->
 # Prática! 🚀
 Vamos modularizar o mundo.
