@@ -1,8 +1,3 @@
----
-layout: revealjs
----
-
-<!-- _class: lead -->
 # Aula 01
 ## Introdução à Computação e Python
 
