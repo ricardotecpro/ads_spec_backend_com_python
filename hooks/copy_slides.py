@@ -46,3 +46,8 @@ def copy_slides(config, **kwargs):
     
     if html_copied == 0 and md_copied == 0:
         print("[yellow]⚠ Nenhum slide encontrado em docs/slides/[/yellow]")
+
+
+def on_post_build(config):
+    """Hook chamado após o build do MkDocs"""
+    copy_slides(config)

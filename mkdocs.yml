@@ -99,6 +99,8 @@ plugins:
       add_print_site_banner: false
       enumerate_headings: false
       enumerate_figures: false
+      exclude:
+        - __lixeira_revisao_manual/*
 
 hooks:
   - hooks/copy_slides.py
