@@ -101,8 +101,13 @@ def main():
     
     # Whitelist Markdown slides (used as source for HTML generation)
     for f in all_docs_files:
-        if "slides" in str(f) and f.name.endswith("-slides.md"):
+        if "slides" in str(f) and "src" in str(f) and f.name.endswith("-slides.md"):
             whitelist.add(f)
+        # Also whitelist the runtime markdown files in docs/slides/ (generated)
+        if "slides" in str(f) and f.parent.name == "slides" and f.name.endswith("-slides.md"):
+            whitelist.add(f)
+            
+    # Whitelist Quiz source files
             
     # Whitelist Quiz source files
     for f in all_docs_files:

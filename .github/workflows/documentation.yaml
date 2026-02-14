@@ -47,6 +47,8 @@ jobs:
           # Generate content before deploy
           poetry run task slides
           poetry run task quizzes
+          # Run tests to ensure quality
+          poetry run task test
           # Clean local gh-pages to ensure fresh fetch/deploy
           # Clean local gh-pages to ensure fresh fetch/deploy
           git branch -D gh-pages || echo "gh-pages not present locally"

@@ -68,22 +68,49 @@ def clean_slide_markdown(md_path: pathlib.Path) -> None:
 
 def generate_all_slides():
     """Gera arquivos HTML para todos os 16 slides"""
-    slides_dir = pathlib.Path('docs/slides')
+    slides_dst_dir = pathlib.Path('docs/slides')
+    slides_src_dir = slides_dst_dir / 'src'
+    
+    if not slides_src_dir.exists():
+        print("[yellow]⚠ Pasta docs/slides/src/ não encontrada.[/yellow]")
+        return
     
     print("\n[bold cyan]📊 Gerando Slides HTML...[/bold cyan]")
+    print(f"Fonte: {slides_src_dir}")
     
     for i in track(range(1, 17), description="Processando slides..."):
-        # Gerar HTML
-        html_path = slides_dir / f"{i:02d}-slides.html"
-        html_content = generate_slide_html(i)
-        html_path.write_text(html_content, encoding='utf-8')
+        src_md_name = f"{i:02d}-slides.md"
+        src_md_path = slides_src_dir / src_md_name
+        dst_md_path = slides_dst_dir / src_md_name
+        html_path = slides_dst_dir / f"{i:02d}-slides.html"
         
-        # Limpar markdown
-        md_path = slides_dir / f"{i:02d}-slides.md"
-        if md_path.exists():
-            clean_slide_markdown(md_path)
+        if src_md_path.exists():
+            # 1. Ler fonte
+            content = src_md_path.read_text(encoding='utf-8')
+            
+            # 2. Limpar (opcional, se já estiver limpo não faz mal)
+            # A função clean_slide_markdown era in-place, vamos fazer em memória aqui ou adaptar
+            # Para simplificar, copiamos e limpamos no destino
+            
+            # Remove frontmatter se existir
+            if content.startswith('---'):
+                parts = content.split('---', 2)
+                if len(parts) >= 3:
+                    content = parts[2].lstrip()
+                    lines = content.split('\n')
+                    cleaned_lines = [line for line in lines if not line.strip().startswith('<!-- _class:')]
+                    content = '\n'.join(cleaned_lines)
+            
+            # 3. Escrever Markdown runtime em docs/slides/
+            dst_md_path.write_text(content, encoding='utf-8')
+            
+            # 4. Gerar HTML referenciando este markdown
+            html_content = generate_slide_html(i)
+            html_path.write_text(html_content, encoding='utf-8')
+        else:
+            print(f"[yellow]⚠ Fonte {src_md_path} não encontrada[/yellow]")
     
-    print(f"[green]✓ {16} slides HTML gerados com sucesso![/green]")
+    print(f"[green]✓ {16} slides HTML e MD gerados com sucesso![/green]")
 
 
 def convert_quiz_to_html(quiz_number: int) -> str:
