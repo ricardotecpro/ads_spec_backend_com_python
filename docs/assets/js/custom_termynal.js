@@ -25,8 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
         button.addEventListener("click", () => {
             // Extract text: only lines with data-ty="input"
             const inputLines = termynal.querySelectorAll('[data-ty="input"]');
-            let textToCopy = "";
-
+            const lines = [];
             inputLines.forEach(line => {
                 let text = line.textContent;
                 // Remove generic prompt if present (naive check)
@@ -39,8 +38,9 @@ document.addEventListener("DOMContentLoaded", function () {
                     // Usually termynal keeps prompt in css/attr, not textContent, but check just in case
                 }
 
-                textToCopy += text + "\\n";
+                lines.push(text);
             });
+            textToCopy = lines.join("\\n");
 
             // Fallback: if no input lines found or empty, copy everything that looks like code
             if (!textToCopy) {
