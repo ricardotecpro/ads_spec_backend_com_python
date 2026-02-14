@@ -1,12 +1,12 @@
-# Configuração do Ambiente (Linux)
+# Configuração do Ambiente (Linux Ubuntu)
 
-Este guia mostra como instalar e configurar o Python e PyCharm no Linux para desenvolvimento.
+Este guia mostra como instalar e configurar o Python e PyCharm no **Ubuntu** para desenvolvimento.
 
 ---
 
-## 1. Instalando Python no Linux
+## 1. Instalando Python no Ubuntu
 
-A maioria das distribuições Linux já vem com Python instalado. Vamos verificar e atualizar se necessário.
+O Ubuntu já vem com Python instalado. Vamos verificar e atualizar se necessário.
 
 ### Verificar Versão Instalada
 
@@ -16,68 +16,58 @@ python3 --version
 
 Se aparecer `Python 3.10` ou superior, você já tem Python! Caso contrário, instale:
 
-### Ubuntu/Debian
+### Instalar Python e Ferramentas
 
 ```bash
+# Atualizar repositórios
 sudo apt update
-sudo apt install python3 python3-pip python3-venv
-```
 
-### Fedora/RHEL
+# Instalar Python 3 e ferramentas essenciais
+sudo apt install python3 python3-pip python3-venv -y
 
-```bash
-sudo dnf install python3 python3-pip
-```
-
-### Arch Linux
-
-```bash
-sudo pacman -S python python-pip
-```
-
-### Verificar Instalação
-
-```bash
+# Verificar instalação
 python3 --version
 pip3 --version
 ```
 
+**Saída esperada:**
+```
+Python 3.12.x
+pip 24.x.x
+```
+
 ---
 
-## 2. Instalando e Configurando PyCharm
+## 2. Instalando e Configurando PyCharm no Ubuntu
 
-PyCharm é uma IDE profissional para Python desenvolvida pela JetBrains.
+PyCharm é a melhor IDE para Python, desenvolvida pela JetBrains.
 
-### Opção 1: Via Snap (Recomendado)
+### Método Recomendado: Via Snap
+
+O Snap já vem instalado no Ubuntu. Use este método para instalação fácil:
 
 ```bash
-# Instalar PyCharm Community (Gratuito)
+# PyCharm Community (Gratuito e Open Source)
 sudo snap install pycharm-community --classic
 
-# OU PyCharm Professional (Pago, mas com trial)
+# OU PyCharm Professional (Pago, mas com 30 dias de trial)
 sudo snap install pycharm-professional --classic
 ```
 
-### Opção 2: Via Flatpak
+### Método Alternativo: Via Ubuntu Software
+
+1. Abra **Ubuntu Software** (ícone de sacola de compras)
+2. Busque por "PyCharm"
+3. Clique em **Install**
+
+### Abrir PyCharm
 
 ```bash
-# Adicionar repositório Flathub
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+# Via terminal
+pycharm-community
 
-# Instalar PyCharm Community
-flatpak install flathub com.jetbrains.PyCharm-Community
-```
-
-### Opção 3: Download Manual
-
-1. Acesse: [https://www.jetbrains.com/pycharm/download/#section=linux](https://www.jetbrains.com/pycharm/download/#section=linux)
-2. Baixe a versão **Community** (gratuita) ou **Professional** (trial 30 dias)
-3. Extraia o arquivo:
-
-```bash
-tar -xzf pycharm-community-*.tar.gz -C ~/
-cd ~/pycharm-community-*/bin
-./pycharm.sh
+# OU via menu de aplicativos
+# Pressione Super (tecla Windows) e digite "PyCharm"
 ```
 
 ---
