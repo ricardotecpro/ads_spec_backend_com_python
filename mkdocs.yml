@@ -150,10 +150,11 @@ nav:
     - Módulo 6 – Ecossistema:
       - 'Aula 15 - APIs e Requisições HTTP': 15.md
       - 'Aula 16 - Testes e Boas Práticas': 16.md
-  - Setup:
-      - 'Instalação Linux (Ubuntu)': setup/instalacao_linux.md
   - Material Complementar:
       - Slides: slides/index.md
       - Exercícios: exercicios/index.md
       - Quizzes: quizzes/index.md
       - Projetos: projetos/index.md
+      - Setup:
+          - 'Instalação Windows': setup/instalacao_windows.md
+          - 'Instalação Linux (Ubuntu)': setup/instalacao_linux.md
