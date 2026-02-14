@@ -40,6 +40,9 @@ jobs:
         with:
           node-version: '20'
 
+      - name: Install Playwright Browsers
+        run: poetry run playwright install --with-deps chromium
+
       - name: Deploy with Mike
         run: |
           git config user.name "github-actions[bot]"
