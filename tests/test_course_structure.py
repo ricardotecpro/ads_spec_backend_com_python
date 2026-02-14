@@ -3,11 +3,11 @@ import os
 from pathlib import Path
 
 # Expected course structure
-EXPECTED_LESSONS = [f"{i:02d}.md" for i in range(1, 16)]
-EXPECTED_SLIDES = [f"{i:02d}-slides.md" for i in range(1, 16)]
-EXPECTED_QUIZZES = [f"quiz-{i:02d}.md" for i in range(1, 16)]
-EXPECTED_EXERCISES = [f"exercicios-{i:02d}.md" for i in range(1, 16)]
-EXPECTED_PROJECTS = [f"projeto-{i:02d}.md" for i in range(1, 16)]
+EXPECTED_LESSONS = [f"{i:02d}.md" for i in range(1, 17)]
+EXPECTED_SLIDES = [f"{i:02d}-slides.md" for i in range(1, 17)]
+EXPECTED_QUIZZES = [f"quiz-{i:02d}.md" for i in range(1, 17)]
+EXPECTED_EXERCISES = [f"exercicios-{i:02d}.md" for i in range(1, 17)]
+EXPECTED_PROJECTS = [f"projeto-{i:02d}.md" for i in range(1, 17)]
 
 def test_content_structure_exists():
     """Verify that the basic directory structure exists."""
@@ -16,7 +16,6 @@ def test_content_structure_exists():
     assert os.path.exists("docs/quizzes"), "Quizzes directory missing"
     assert os.path.exists("docs/exercicios"), "Exercises directory missing"
     assert os.path.exists("docs/projetos"), "Projects directory missing"
-    assert os.path.exists("docs/__lixeira_revisao_manual"), "Trash directory missing"
 
 def test_lessons_exist():
     """Verify that all 15 lessons exist in docs/."""

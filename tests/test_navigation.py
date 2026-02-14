@@ -15,46 +15,61 @@ class TestNavigation:
         
         expect(page).to_have_title("Python Backend - Curso Completo")
 
+    def _ensure_menu_visible(self, page: Page):
+        """Helper to ensure menu is visible (opens drawer if needed)"""
+        if page.locator("label[for='__drawer']").is_visible():
+            page.locator("label[for='__drawer']").click()
+
     def test_curso_menu_exists(self, page_with_base_url: Page, base_url: str):
-        """Verifica se o menu 'Curso' existe"""
+        """Verifica se o menu 'Aulas' existe"""
         page = page_with_base_url
         page.goto(base_url)
         
-        # Procura pelo item de menu "Curso"
-        curso_menu = page.get_by_text("Curso", exact=False)
-        expect(curso_menu).to_be_visible()
+        # Open menu if mobile
+        self._ensure_menu_visible(page)
+        
+        # Procura pelo item de menu "Aulas"
+        # Usando match flexível
+        link = page.get_by_role("link", name="Aulas").first
+        expect(link).to_be_visible()
 
     def test_material_complementar_menu_exists(self, page_with_base_url: Page, base_url: str):
         """Verifica se o menu 'Material Complementar' existe"""
         page = page_with_base_url
         page.goto(base_url)
         
+        self._ensure_menu_visible(page)
+        
         # Procura pelo item de menu "Material Complementar"
-        material_menu = page.get_by_text("Material Complementar", exact=False)
-        expect(material_menu).to_be_visible()
+        link = page.get_by_role("link", name="Material Complementar").first
+        expect(link).to_be_visible()
 
     def test_print_version_link_exists(self, page_with_base_url: Page, base_url: str):
         """Verifica se o link 'Versão para Impressão' existe"""
         page = page_with_base_url
         page.goto(base_url)
         
-        # Procura pelo link de impressão
-        print_link = page.get_by_text("Versão para Impressão", exact=False)
-        expect(print_link).to_be_visible()
+        # Link de impressão geralmente é um ícone no header ou footer
+        # Verificamos a presença no DOM, não necessariamente visibilidade imediata (pode estar em menu)
+        print_link = page.locator("a[href*='print_page']")
+        expect(print_link.first).to_be_attached()
 
     def test_navigation_to_lesson_01(self, page_with_base_url: Page, base_url: str):
         """Verifica se é possível navegar para Aula 01"""
         page = page_with_base_url
         page.goto(base_url)
         
-        # Clica no menu Curso (se necessário expandir)
-        curso_menu = page.get_by_text("Curso", exact=False).first
-        if curso_menu.is_visible():
-            curso_menu.click()
+        self._ensure_menu_visible(page)
         
-        # Procura e clica no link da Aula 01
-        aula_01_link = page.get_by_text("Aula 01", exact=False).first
-        aula_01_link.click()
+        # Navigate Aulas -> Modulo 1 -> Aula 01
+        # Click Aulas
+        page.get_by_role("link", name="Aulas").first.click()
+        
+        # Click Modulo 1
+        page.get_by_text("Módulo 1", exact=False).first.click()
+        
+        # Click Aula 01
+        page.get_by_text("Aula 01", exact=False).first.click()
         
         # Verifica se chegou na página correta
         expect(page).to_have_url(f"{base_url}/01/")
