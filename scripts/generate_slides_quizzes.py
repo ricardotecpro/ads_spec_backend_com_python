@@ -16,10 +16,10 @@ def generate_slide_html(lesson_number: int) -> str:
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aula {lesson_number:02d} - Python Backend</title>
     
-    <link rel="stylesheet" href="../assets/revealjs/dist/reset.css">
-    <link rel="stylesheet" href="../assets/revealjs/dist/reveal.css">
-    <link rel="stylesheet" href="../assets/revealjs/dist/theme/black.css">
-    <link rel="stylesheet" href="../assets/revealjs/plugin/highlight/monokai.css">
+    <link rel="stylesheet" href="https://unpkg.com/reveal.js@4.5.0/dist/reset.css">
+    <link rel="stylesheet" href="https://unpkg.com/reveal.js@4.5.0/dist/reveal.css">
+    <link rel="stylesheet" href="https://unpkg.com/reveal.js@4.5.0/dist/theme/black.css">
+    <link rel="stylesheet" href="https://unpkg.com/reveal.js@4.5.0/plugin/highlight/monokai.css">
 </head>
 <body>
     <div class="reveal">
@@ -31,10 +31,10 @@ def generate_slide_html(lesson_number: int) -> str:
         </div>
     </div>
 
-    <script src="../assets/revealjs/dist/reveal.js"></script>
-    <script src="../assets/revealjs/plugin/markdown/markdown.js"></script>
-    <script src="../assets/revealjs/plugin/highlight/highlight.js"></script>
-    <script src="../assets/revealjs/plugin/notes/notes.js"></script>
+    <script src="https://unpkg.com/reveal.js@4.5.0/dist/reveal.js"></script>
+    <script src="https://unpkg.com/reveal.js@4.5.0/plugin/markdown/markdown.js"></script>
+    <script src="https://unpkg.com/reveal.js@4.5.0/plugin/highlight/highlight.js"></script>
+    <script src="https://unpkg.com/reveal.js@4.5.0/plugin/notes/notes.js"></script>
     <script>
         Reveal.initialize({{
             hash: true,

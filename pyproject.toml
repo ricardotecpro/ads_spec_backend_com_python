@@ -44,6 +44,7 @@ dev = [
 
 [tool.taskipy.tasks]
 docs = {cmd="mkdocs serve --dev-addr localhost:8000", help="Servidor local MkDocs"}
+serve = {cmd="task docs", help="Inicia servidor de desenvolvimento (alias para docs)"}
 build = {cmd="mkdocs build", help="Build do site"}
 slides = {cmd="python scripts/generate_slides_quizzes.py", help="Gera slides HTML"}
 quizzes = {cmd="python scripts/convert_quizzes.py", help="Gera quizzes interativos"}

@@ -6,40 +6,8 @@ import re
 from pathlib import Path
 from playwright.sync_api import Page, expect
 
-# Fixture to start a local HTTP server for testing
-@pytest.fixture(scope="session")
-def http_server():
-    """Start a local HTTP server to serve the built site."""
-    from time import sleep
-    
-    site_dir = Path("site").absolute()
-    
-    # Start HTTP server in background
-    server_process = subprocess.Popen(
-        ["python", "-m", "http.server", "8765", "--directory", str(site_dir)],
-        stdout=subprocess.PIPE,
-        stderr=subprocess.PIPE
-    )
-    
-    # Wait for server to be ready with retry
-    base_url = "http://localhost:8765"
-    max_retries = 10
-    for i in range(max_retries):
-        try:
-            response = requests.get(base_url, timeout=1)
-            if response.status_code == 200:
-                break
-        except requests.exceptions.RequestException:
-            if i == max_retries - 1:
-                server_process.terminate()
-                raise Exception("HTTP server failed to start")
-            sleep(1)
-    
-    yield base_url
-    
-    # Cleanup: terminate server
-    server_process.terminate()
-    server_process.wait()
+# Fixture moved to conftest.py
+
 
 # Test 1: Verify build output files exist
 def test_build_output_exists():
@@ -53,10 +21,10 @@ def test_build_output_exists():
     assert os.path.exists("site/assets/css/quiz.css"), "Quiz CSS not found"
 
 # Test 2: Homepage structure and content
-def test_homepage_structure(page: Page, http_server):
+def test_homepage_structure(page: Page, base_url):
     """Test that the homepage loads and has correct structure."""
     page.set_viewport_size({"width": 1920, "height": 1080})
-    page.goto(http_server)
+    page.goto(base_url)
     
     # Check title
     expect(page).to_have_title("Python Backend - Curso Completo")
@@ -71,9 +39,9 @@ def test_homepage_structure(page: Page, http_server):
     expect(cards).to_be_visible()
 
 # Test 3: Navigation to Lesson 01
-def test_lesson_01_page(page: Page, http_server):
+def test_lesson_01_page(page: Page, base_url):
     """Test Lesson 01 page loads and has correct content."""
-    page.goto(f"{http_server}/01/")
+    page.goto(f"{base_url}/01/")
     
     # Check title (flexible match)
     expect(page).to_have_title(re.compile(r"Aula 01.*Python"))
@@ -88,9 +56,9 @@ def test_lesson_01_page(page: Page, http_server):
          expect(quiz_containers.first).to_be_visible()
 
 # Test 4: Quiz interactivity
-def test_quiz_functionality(page: Page, http_server):
+def test_quiz_functionality(page: Page, base_url):
     """Test that quiz JavaScript works correctly."""
-    page.goto(f"{http_server}/01/")
+    page.goto(f"{base_url}/01/")
     
     # Wait for quiz to be visible
     first_quiz = page.locator(".quiz-container").first
@@ -105,9 +73,9 @@ def test_quiz_functionality(page: Page, http_server):
         expect(feedback).to_contain_text("Correto")
 
 # Test 5: Slides generation
-def test_slides_structure(page: Page, http_server):
+def test_slides_structure(page: Page, base_url):
     """Test that slides are generated correctly."""
-    page.goto(f"{http_server}/slides/")
+    page.goto(f"{base_url}/slides/")
     
     # Check title contains "Slides"
     title = page.title()
@@ -123,9 +91,9 @@ def test_slides_structure(page: Page, http_server):
     expect(content).to_be_visible()
 
 # Test 6: Lesson 16 page (Testing/Boas Práticas)
-def test_lesson_16_page(page: Page, http_server):
+def test_lesson_16_page(page: Page, base_url):
     """Test Lesson 16 page loads correctly."""
-    page.goto(f"{http_server}/16/")
+    page.goto(f"{base_url}/16/")
     
     # Check title
     expect(page).to_have_title(re.compile(r"Aula 16.*Testes"))
@@ -136,9 +104,9 @@ def test_lesson_16_page(page: Page, http_server):
         expect(quiz_containers.first).to_be_visible()
 
 # Test 7: Mermaid diagram rendering (checking Lesson 11)
-def test_mermaid_diagram(page: Page, http_server):
+def test_mermaid_diagram(page: Page, base_url):
     """Test that Mermaid diagrams are present in the content."""
-    page.goto(f"{http_server}/11/")
+    page.goto(f"{base_url}/11/")
     
     # Check for mermaid code block or rendered diagram
     # MkDocs Material renders mermaid as div.mermaid or similar
@@ -153,9 +121,9 @@ def test_mermaid_diagram(page: Page, http_server):
             expect(code_block.first).to_be_visible()
 
 # Test 8: Assets loading
-def test_assets_load(page: Page, http_server):
+def test_assets_load(page: Page, base_url):
     """Test that CSS and JS assets load correctly."""
-    page.goto(f"{http_server}/01/")
+    page.goto(f"{base_url}/01/")
     
     # Check that quiz.js is loaded
     quiz_script = page.locator("script[src*='quiz.js']")

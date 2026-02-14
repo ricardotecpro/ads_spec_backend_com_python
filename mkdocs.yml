@@ -100,12 +100,12 @@ hooks:
   - hooks/copy_slides.py
 
 extra_css:
-#   - assets/css/quiz.css
+  - assets/css/quiz.css
   - assets/css/home.css
   - assets/css/extra.css
 
 extra_javascript:
-#   - assets/js/quiz.js
+  - assets/js/quiz.js
   - https://unpkg.com/mermaid@10.9.1/dist/mermaid.min.js
   - assets/js/mermaid-init.js
   - assets/js/custom_termynal.js

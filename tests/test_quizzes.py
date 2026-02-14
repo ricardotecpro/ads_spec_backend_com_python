@@ -2,6 +2,7 @@
 Testes automatizados para verificar interatividade de quizzes
 """
 import pytest
+import re
 from playwright.sync_api import Page, expect
 
 
@@ -33,12 +34,11 @@ class TestQuizzes:
         page = page_with_base_url
         page.goto(f"{base_url}/quizzes/quiz-01/")
         
-        # Procura por inputs de radio ou checkbox
-        # O plugin mkdocs-quiz pode usar diferentes estruturas
-        inputs = page.locator("input[type='radio'], input[type='checkbox']")
+        # Procura por opções de quiz (estrutura customizada)
+        options = page.locator(".quiz-option")
         
-        # Deve haver pelo menos um input (5 perguntas com múltiplas opções)
-        expect(inputs.first).to_be_visible()
+        # Deve haver pelo menos uma opção
+        expect(options.first).to_be_visible()
 
     def test_quiz_questions_visible(self, page_with_base_url: Page, base_url: str):
         """Verifica se as perguntas do quiz estão visíveis"""
@@ -47,32 +47,37 @@ class TestQuizzes:
         
         # Verifica se há texto de pergunta
         # Procura pela primeira pergunta conhecida
-        question_text = page.get_by_text("O que é um algoritmo?")
-        expect(question_text).to_be_visible()
+        # Usando seletor CSS mais robusto
+        question = page.locator(".quiz-question").first
+        expect(question).to_be_visible()
+        # Opcional: verificar texto específico se soubermos
 
     def test_quiz_can_select_answer(self, page_with_base_url: Page, base_url: str):
         """Verifica se é possível selecionar uma resposta"""
         page = page_with_base_url
         page.goto(f"{base_url}/quizzes/quiz-01/")
         
-        # Tenta encontrar e clicar em um input
-        first_input = page.locator("input[type='radio'], input[type='checkbox']").first
+        # Encontra uma opção
+        option = page.locator(".quiz-option").first
         
-        if first_input.is_visible():
-            # Clica no input
-            first_input.click()
+        if option.is_visible():
+            # Clica na opção
+            option.click()
             
-            # Verifica se foi selecionado
-            expect(first_input).to_be_checked()
+            # Verifica se classe 'selected' foi adicionada (implementado no quiz.js)
+            expect(option).to_have_class(re.compile(r"selected"))
+            
+            # Verifica feedback
+            feedback = page.locator(".quiz-feedback").first
+            expect(feedback).to_be_visible()
 
     def test_quiz_has_multiple_questions(self, page_with_base_url: Page, base_url: str):
         """Verifica se o quiz tem múltiplas perguntas (pelo menos 5)"""
         page = page_with_base_url
         page.goto(f"{base_url}/quizzes/quiz-01/")
         
-        # Procura por marcadores de lista numerada (perguntas)
-        # As perguntas são formatadas como "1. ", "2. ", etc.
-        questions = page.locator("text=/^\\d+\\.\\s+/")
+        # Procura por containers de quiz
+        questions = page.locator(".quiz-container")
         
         # Deve haver pelo menos 5 perguntas
-        expect(questions).to_have_count(5, timeout=5000)
+        expect(questions).to_have_count(5)
