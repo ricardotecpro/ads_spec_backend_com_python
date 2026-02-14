@@ -8,8 +8,8 @@ docs_dir: docs
 theme:
   name: material
   language: pt-BR
-  favicon: assets/images/python-logo.svg
-  logo: assets/images/python-logo.svg
+  favicon: assets/images/python-logo-notext.svg
+  logo: assets/images/python-logo-notext.svg
   custom_dir: overrides
   features:
     - navigation.tracking
