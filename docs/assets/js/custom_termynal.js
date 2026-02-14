@@ -3,7 +3,8 @@ console.log('Termynal loaded');
 
 document.addEventListener("DOMContentLoaded", function () {
     // Find all termynal blocks
-    const termynals = document.querySelectorAll(".termynal");
+    const termynals = document.querySelectorAll(".termy");
+    console.log("Found termynals:", termynals.length);
 
     termynals.forEach(termynal => {
         // Create copy button
