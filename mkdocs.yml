@@ -84,7 +84,8 @@ plugins:
       type: datetime
   - macros
   - mkdocs-video
-  - termynal
+  - termynal:
+      buttons: windows
   - rss:
       match_path: .*
       date_from_meta:
