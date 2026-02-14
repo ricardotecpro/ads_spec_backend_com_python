@@ -155,6 +155,4 @@ nav:
       - Exercícios: exercicios/index.md
       - Quizzes: quizzes/index.md
       - Projetos: projetos/index.md
-      - Setup:
-          - 'Instalação Windows': setup/instalacao_windows.md
-          - 'Instalação Linux (Ubuntu)': setup/instalacao_linux.md
+      - Setup: setup/index.md
