@@ -40,15 +40,14 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Install Marp CLI
-        run: npm install -g @marp-team/marp-cli
-
       - name: Deploy with Mike
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          # Generate slides before deploy
+          # Generate content before deploy
           poetry run task slides
+          poetry run task quizzes
+          # Clean local gh-pages to ensure fresh fetch/deploy
           # Clean local gh-pages to ensure fresh fetch/deploy
           git branch -D gh-pages || echo "gh-pages not present locally"
           git fetch origin gh-pages --depth=1 || echo "gh-pages branch not found on remote"

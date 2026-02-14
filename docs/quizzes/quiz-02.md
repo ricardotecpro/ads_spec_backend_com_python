@@ -15,7 +15,7 @@
   <div class="quiz-question">2. Qual a saída do código `print(type("10"))`?</div>
   <div class="quiz-option" data-correct="false" data-feedback="Incorreto. Tente novamente."><class 'int'></div>
   <div class="quiz-option" data-correct="false" data-feedback="Incorreto. Tente novamente."><class 'float'></div>
-  <div class="quiz-option" data-correct="true" data-feedback="✅ Correto! <class 'str'>"><class 'str'></div>
+  <div class="quiz-option" data-correct="true" data-feedback="✅ Correto! "><class 'str'>">"><class 'str'></div>
   <div class="quiz-option" data-correct="false" data-feedback="Incorreto. Tente novamente."><class 'bool'></div>
   <div class="quiz-feedback"></div>
 </div>

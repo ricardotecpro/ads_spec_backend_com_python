@@ -105,10 +105,11 @@ def convert_quiz(quiz_path: pathlib.Path) -> bool:
         # Gerar HTML
         html_content = generate_quiz_html(quiz_num, questions)
         
-        # Salvar
-        quiz_path.write_text(html_content, encoding='utf-8')
+        # Salvar em docs/quizzes (um nível acima de src)
+        output_path = quiz_path.parent.parent / quiz_path.name
+        output_path.write_text(html_content, encoding='utf-8')
         
-        print(f"  [green]✓[/green] Converteu {quiz_path.name} ({len(questions)} perguntas)")
+        print(f"  [green]✓[/green] Converteu {quiz_path.name} -> {output_path} ({len(questions)} perguntas)")
         return True
         
     except Exception as e:
@@ -118,14 +119,22 @@ def convert_quiz(quiz_path: pathlib.Path) -> bool:
 
 def convert_all_quizzes():
     """Converte todos os quizzes"""
-    quizzes_dir = pathlib.Path('docs/quizzes')
+    # Usar pasta src como fonte
+    quizzes_src_dir = pathlib.Path('docs/quizzes/src')
+    
+    if not quizzes_src_dir.exists():
+        print("[yellow]⚠ Pasta docs/quizzes/src/ não encontrada. Criando...[/yellow]")
+        quizzes_src_dir.mkdir(parents=True, exist_ok=True)
+        print("[yellow]⚠ Por favor, coloque os arquivos markdown originais em docs/quizzes/src/[/yellow]")
+        return
     
     print("\n[bold cyan]🧠 Convertendo Quizzes para HTML...[/bold cyan]")
+    print(f"Fonte: {quizzes_src_dir}")
     
-    quiz_files = sorted(quizzes_dir.glob('quiz-*.md'))
+    quiz_files = sorted(quizzes_src_dir.glob('quiz-*.md'))
     
     if not quiz_files:
-        print("[yellow]⚠ Nenhum arquivo de quiz encontrado[/yellow]")
+        print("[yellow]⚠ Nenhum arquivo de quiz encontrado em docs/quizzes/src/[/yellow]")
         return
     
     converted = 0
