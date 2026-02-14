@@ -50,8 +50,18 @@ jobs:
           # Generate content before deploy
           poetry run task slides
           poetry run task quizzes
+          
+          # Start MkDocs server in background for tests
+          poetry run mkdocs serve &
+          PID=$!
+          sleep 10  # Wait for server to start
+          
           # Run tests to ensure quality
           poetry run task test
+          
+          # Kill server
+          kill $PID
+          
           # Clean local gh-pages to ensure fresh fetch/deploy
           # Clean local gh-pages to ensure fresh fetch/deploy
           git branch -D gh-pages || echo "gh-pages not present locally"
