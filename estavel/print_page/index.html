@@ -4271,8 +4271,8 @@ Para o Python entender uma pasta como pacote, antigamente era obrigatório ter u
 <pre class="mermaid"><code>graph TD
     A[Abrir Arquivo] --&gt; B{Modo?}
     B -- 'r' --&gt; C[Ler]
-    B -- 'w' --&gt; D[Escrever (Apaga)]
-    B -- 'a' --&gt; E[Anexar (Fim)]</code></pre>
+    B -- 'w' --&gt; D[Escrever - Apaga]
+    B -- 'a' --&gt; E[Anexar no Fim]</code></pre>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#11-__codelineno-0-1"></a><span class="c1"># Modo "antigo" (não recomendado)</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#11-__codelineno-0-2"></a><span class="n">arquivo</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"nota.txt"</span><span class="p">,</span> <span class="s2">"w"</span><span class="p">)</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#11-__codelineno-0-3"></a><span class="n">arquivo</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">"Olá, arquivo!"</span><span class="p">)</span>
@@ -4430,9 +4430,9 @@ O <code>with</code> fecha o arquivo automaticamente, mesmo se der erro no meio d
 <li><code>finally</code>: Roda <strong>SEMPRE</strong> (com ou sem erro).</li>
 </ol>
 <pre class="mermaid"><code>graph TD
-    A[Tentar (Try)] --&gt; B{Erro?}
-    B -- Sim --&gt; C[Capturar (Except)]
-    B -- Não --&gt; D[Else]
+    A[Tentar - Try] --&gt; B{Erro?}
+    B -- Sim --&gt; C[Capturar - Except]
+    B -- Nao --&gt; D[Else]
     C --&gt; E[Finally]
     D --&gt; E</code></pre>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#12-__codelineno-3-1"></a><span class="k">try</span><span class="p">:</span>
