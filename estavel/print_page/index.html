@@ -2618,6 +2618,13 @@
 <li>[ ] Entender o conceito de entrada e saída básica</li>
 </ul>
 <hr>
+<h2 id="01-teste-termynal">Teste Termynal</h2>
+<h3 id="01-opcao-3-code-block-termynal">Opção 3: Code Block (termynal)</h3>
+<div class="language-console highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#01-__codelineno-0-1"></a><span class="gp">$ </span>pip<span class="w"> </span>install<span class="w"> </span>termynal
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#01-__codelineno-0-2"></a><span class="go">---&gt; 100%</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#01-__codelineno-0-3"></a><span class="go">Installed</span>
+</span></code></pre></div>
+<hr>
 <h2 id="01-conteudo">📚 Conteúdo</h2>
 <h3 id="01-1-o-que-e-programacao">1. O que é Programação?</h3>
 <p>Programação é a arte de dar instruções a um computador para que ele realize tarefas específicas. Computadores não são "inteligentes"; eles são extremamente rápidos e obedientes. Eles precisam de comandos precisos para funcionar.</p>
@@ -2660,7 +2667,7 @@
 <p>A tradição na programação diz que o primeiro código que você escreve em uma nova linguagem deve exibir a mensagem "Olá Mundo" na tela. Em Python, isso é extremamente simples.</p>
 <p>Usamos a função <code>print()</code> para mostrar (imprimir) informações na tela.</p>
 <p><strong>Exemplo:</strong></p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#01-__codelineno-0-1"></a><span class="nb">print</span><span class="p">(</span><span class="s2">"Olá, Mundo!"</span><span class="p">)</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#01-__codelineno-1-1"></a><span class="nb">print</span><span class="p">(</span><span class="s2">"Olá, Mundo!"</span><span class="p">)</span>
 </span></code></pre></div>
 <p><strong>O que aconteceu?</strong>
 - <code>print</code>: É o comando (função) que diz ao Python: "Mostre isso na tela".
@@ -2668,18 +2675,18 @@
 - <code>"Olá, Mundo!"</code>: As aspas indicam que isso é um <strong>texto</strong> (string), e não um comando.</p>
 <h3 id="01-5-comentarios">5. Comentários</h3>
 <p>Comentários são anotações no código que o Python ignora. Eles servem para explicar o que o código faz para você mesmo (no futuro) ou para outros programadores.</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#01-__codelineno-1-1"></a><span class="c1"># Isto é um comentário de uma linha</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#01-__codelineno-1-2"></a><span class="nb">print</span><span class="p">(</span><span class="s2">"Python é legal"</span><span class="p">)</span>  <span class="c1"># Comentário na frente do código</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#01-__codelineno-1-3"></a>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#01-__codelineno-1-4"></a><span class="sd">"""</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#01-__codelineno-1-5"></a><span class="sd">Isto é um comentário</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#01-__codelineno-1-6"></a><span class="sd">de múltiplas linhas (Docstring)</span>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#01-__codelineno-1-7"></a><span class="sd">"""</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#01-__codelineno-2-1"></a><span class="c1"># Isto é um comentário de uma linha</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#01-__codelineno-2-2"></a><span class="nb">print</span><span class="p">(</span><span class="s2">"Python é legal"</span><span class="p">)</span>  <span class="c1"># Comentário na frente do código</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#01-__codelineno-2-3"></a>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#01-__codelineno-2-4"></a><span class="sd">"""</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#01-__codelineno-2-5"></a><span class="sd">Isto é um comentário</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#01-__codelineno-2-6"></a><span class="sd">de múltiplas linhas (Docstring)</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#01-__codelineno-2-7"></a><span class="sd">"""</span>
 </span></code></pre></div>
 <h3 id="01-6-variaveis-intro-rapida">6. Variáveis (Intro rápida)</h3>
 <p>Imagine que variáveis são <strong>caixinhas</strong> na memória do computador onde guardamos informações. Cada caixinha tem um <strong>nome</strong> (rótulo) e um <strong>valor</strong> (conteúdo).</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#01-__codelineno-2-1"></a><span class="n">mensagem</span> <span class="o">=</span> <span class="s2">"Bem-vindo ao curso!"</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#01-__codelineno-2-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">mensagem</span><span class="p">)</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#01-__codelineno-3-1"></a><span class="n">mensagem</span> <span class="o">=</span> <span class="s2">"Bem-vindo ao curso!"</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#01-__codelineno-3-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">mensagem</span><span class="p">)</span>
 </span></code></pre></div>
 <p>Neste exemplo:
 1. Criamos uma variável chamada <code>mensagem</code>.
@@ -2690,11 +2697,11 @@
 <p>Vamos abrir o VSCode e criar um arquivo chamado <code>aula01.py</code>.</p>
 <p><strong>Desafio:</strong>
 Escreva um código que imprima seu nome, sua idade e sua cidade, um por linha.</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#01-__codelineno-3-1"></a><span class="c1"># aula01.py</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#01-__codelineno-3-2"></a>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#01-__codelineno-3-3"></a><span class="nb">print</span><span class="p">(</span><span class="s2">"Nome: Ricardo"</span><span class="p">)</span>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#01-__codelineno-3-4"></a><span class="nb">print</span><span class="p">(</span><span class="s2">"Idade: 30"</span><span class="p">)</span>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#01-__codelineno-3-5"></a><span class="nb">print</span><span class="p">(</span><span class="s2">"Cidade: São Paulo"</span><span class="p">)</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#01-__codelineno-4-1"></a><span class="c1"># aula01.py</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#01-__codelineno-4-2"></a>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#01-__codelineno-4-3"></a><span class="nb">print</span><span class="p">(</span><span class="s2">"Nome: Ricardo"</span><span class="p">)</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#01-__codelineno-4-4"></a><span class="nb">print</span><span class="p">(</span><span class="s2">"Idade: 30"</span><span class="p">)</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#01-__codelineno-4-5"></a><span class="nb">print</span><span class="p">(</span><span class="s2">"Cidade: São Paulo"</span><span class="p">)</span>
 </span></code></pre></div>
 <p>Para executar:
 1. Abra o terminal no VSCode (<code>Ctrl + '</code>)
