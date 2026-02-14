@@ -16,10 +16,10 @@ def generate_slide_html(lesson_number: int) -> str:
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aula {lesson_number:02d} - Python Backend</title>
     
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/dist/reset.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/dist/reveal.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/dist/theme/black.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/plugin/highlight/monokai.css">
+    <link rel="stylesheet" href="../assets/revealjs/dist/reset.css">
+    <link rel="stylesheet" href="../assets/revealjs/dist/reveal.css">
+    <link rel="stylesheet" href="../assets/revealjs/dist/theme/black.css">
+    <link rel="stylesheet" href="../assets/revealjs/plugin/highlight/monokai.css">
 </head>
 <body>
     <div class="reveal">
@@ -31,10 +31,10 @@ def generate_slide_html(lesson_number: int) -> str:
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/dist/reveal.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/plugin/markdown/markdown.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/plugin/highlight/highlight.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/plugin/notes/notes.js"></script>
+    <script src="../assets/revealjs/dist/reveal.js"></script>
+    <script src="../assets/revealjs/plugin/markdown/markdown.js"></script>
+    <script src="../assets/revealjs/plugin/highlight/highlight.js"></script>
+    <script src="../assets/revealjs/plugin/notes/notes.js"></script>
     <script>
         Reveal.initialize({{
             hash: true,
@@ -69,10 +69,10 @@ def clean_slide_markdown(md_path: pathlib.Path) -> None:
 def generate_all_slides():
     """Gera arquivos HTML para todos os 16 slides"""
     slides_dst_dir = pathlib.Path('docs/slides')
-    slides_src_dir = slides_dst_dir / 'src'
+    slides_src_dir = slides_dst_dir / '.src'
     
     if not slides_src_dir.exists():
-        print("[yellow]⚠ Pasta docs/slides/src/ não encontrada.[/yellow]")
+        print("[yellow]⚠ Pasta docs/slides/.src/ não encontrada.[/yellow]")
         return
     
     print("\n[bold cyan]📊 Gerando Slides HTML...[/bold cyan]")

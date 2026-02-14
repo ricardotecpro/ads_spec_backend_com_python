@@ -5,10 +5,10 @@ import pytest
 from playwright.sync_api import Page, expect
 
 
-@pytest.fixture(scope="session")
-def base_url():
-    """URL base do servidor local MkDocs"""
-    return "http://127.0.0.1:8000"
+# @pytest.fixture(scope="session")
+# def base_url():
+#     """URL base do servidor local MkDocs"""
+#     return "http://127.0.0.1:8000"
 
 
 @pytest.fixture

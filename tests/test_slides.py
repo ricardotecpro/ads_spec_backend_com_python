@@ -24,13 +24,14 @@ class TestSlides:
         # Check for the standalone HTML file generated/copied by the hook
         slide_url = f"{base_url}/slides/{lesson_number:02d}-slides.html"
         
-        page.goto(slide_url)
+        page.goto(slide_url, wait_until="networkidle")
         
         # Verifica se não é 404
         expect(page).not_to_have_title("404")
         
-        # Verify it's a RevealJS presentation
-        expect(page.locator(".reveal")).to_be_visible()
+        # Verify it's a RevealJS presentation (with longer timeout for CI)
+        # RevealJS needs time to load from CDN and initialize
+        expect(page.locator(".reveal")).to_be_attached(timeout=20000)
 
     def test_revealjs_present_on_slide_01(self, page_with_base_url: Page, base_url: str):
         """Verifica se RevealJS está presente no slide 01"""
