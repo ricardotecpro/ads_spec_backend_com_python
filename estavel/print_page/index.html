@@ -2805,15 +2805,12 @@ Escreva um código que imprima seu nome, sua idade e sua cidade, um por linha.</
 </tr>
 </tbody>
 </table>
-<pre class="mermaid"><code>mindmap
-  root((Tipos de Dados))
-    Texto
-      str
-    Números
-      int
-      float
-    Booleanos
-      bool</code></pre>
+<pre class="mermaid"><code>flowchart TD
+    A[Tipos de Dados] --&gt; B[Texto: str]
+    A --&gt; C[Numeros]
+    A --&gt; D[Booleanos: bool]
+    C --&gt; E[int]
+    C --&gt; F[float]</code></pre>
 <h3 id="02-3-a-funcao-type">3. A Função <code>type()</code></h3>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#02-__codelineno-1-1"></a><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>      <span class="c1"># &lt;class 'int'&gt;</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#02-__codelineno-1-2"></a><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="mf">3.14</span><span class="p">))</span>    <span class="c1"># &lt;class 'float'&gt;</span>
@@ -3712,12 +3709,19 @@ Usamos chaves <code>{}</code>.</p>
 </span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#07-__codelineno-3-6"></a><span class="nb">print</span><span class="p">(</span><span class="n">A</span> <span class="o">-</span> <span class="n">B</span><span class="p">)</span> <span class="c1"># {1, 2} -&gt; Diferença (O que tem só em A)</span>
 </span></code></pre></div>
 <h3 id="07-5-quando-usar-o-que">5. Quando usar o quê?</h3>
-<pre class="mermaid"><code>graph TD
-    A{Precisa mudar?}
-    A -- Sim --&gt; B{Precisa de Ordem?}
-    A -- Não --&gt; C[Tupla]
-    B -- Sim --&gt; D[Lista]
-    B -- Não --&gt; E[Set]</code></pre>
+<p><strong>Árvore de Decisão:</strong></p>
+<ol>
+<li><strong>Precisa mudar os dados?</strong></li>
+<li>✅ Sim → Continue para 2</li>
+<li>
+<p>❌ Não → Use <strong>Tupla</strong></p>
+</li>
+<li>
+<p><strong>Precisa manter ordem?</strong></p>
+</li>
+<li>✅ Sim → Use <strong>Lista</strong></li>
+<li>❌ Não → Use <strong>Set</strong></li>
+</ol>
 <table>
 <thead>
 <tr>
@@ -3835,10 +3839,10 @@ Usamos chaves <code>{}</code>.</p>
 <p>Dicionários são coleções flexíveis onde armazenamos dados em pares <strong>Chave: Valor</strong>.
 Pense em um dicionário real: você procura uma palavra (chave) para encontrar seu significado (valor).</p>
 <p>Em Python, usamos chaves <code>{}</code> (assim como sets), mas com a sintaxe <code>chave: valor</code>.</p>
-<pre class="mermaid"><code>graph LR
-    A((Chave)) --&gt; B[Valor]
-    C((Nome)) --&gt; D["Ricardo"]
-    E((Idade)) --&gt; F[30]</code></pre>
+<p><strong>Estrutura:</strong>
+- <strong>Chave</strong> → <strong>Valor</strong>
+- <code>"nome"</code> → <code>"Ricardo"</code>
+- <code>"idade"</code> → <code>30</code></p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#08-__codelineno-0-1"></a><span class="c1"># Criando um dicionário</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#08-__codelineno-0-2"></a><span class="n">aluno</span> <span class="o">=</span> <span class="p">{</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#08-__codelineno-0-3"></a>    <span class="s2">"nome"</span><span class="p">:</span> <span class="s2">"Ricardo"</span><span class="p">,</span>
@@ -3981,11 +3985,12 @@ Para evitar isso, use o método <code>.get()</code>:</p>
 <p>Funções são blocos de código que realizam uma tarefa específica e têm um nome.
 Imagine uma função como uma <strong>Mini-Máquina</strong>:
 1. Entra matéria-prima (Parâmetros).
-2. A máquina trabalha (Corpo da função).
-3. Sai um produto final (Retorno).</p>
-<pre class="mermaid"><code>graph LR
-    A[Entrada: Parâmetros] --&gt; B(Processamento: Função)
-    B --&gt; C[Saída: Retorno]</code></pre>
+2. A máquina trabalha [Corpo da função].
+3. Sai um produto final [Retorno].</p>
+<p><strong>Fluxo:</strong>
+1. <strong>Entrada:</strong> Parâmetros
+2. <strong>Processamento:</strong> Corpo da função
+3. <strong>Saída:</strong> Retorno</p>
 <p><strong>Vantagens:</strong>
 - <strong>Reutilização:</strong> Escreva uma vez, use mil vezes.
 - <strong>Organização:</strong> Quebra programas complexos em partes menores.
