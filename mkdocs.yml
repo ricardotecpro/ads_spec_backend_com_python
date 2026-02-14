@@ -86,7 +86,7 @@ plugins:
   - mkdocs-video
   - termynal:
       title: shell
-      buttons: windows
+      buttons: macos
       prompt_literal_start:
         - "$"
   - rss:
