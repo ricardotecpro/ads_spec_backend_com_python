@@ -109,6 +109,14 @@ def lint(c):
 
 
 @task
+def check_content(c):
+    """Verifica a integridade do conteúdo (aulas, slides, quizzes)"""
+    console.print("[blue]🔍 Verificando conteúdo...[/blue]")
+    c.run("poetry run task check")
+
+
+
+@task
 def format_code(c):
     """Formata código Python com ruff"""
     console.print("[blue]✨ Formatando código...[/blue]")
