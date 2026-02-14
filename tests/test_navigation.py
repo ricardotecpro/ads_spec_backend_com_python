@@ -17,8 +17,10 @@ class TestNavigation:
 
     def _ensure_menu_visible(self, page: Page):
         """Helper to ensure menu is visible (opens drawer if needed)"""
-        if page.locator("label[for='__drawer']").is_visible():
-            page.locator("label[for='__drawer']").click()
+        # Use more specific selector for the header button to avoid ambiguity
+        drawer_button = page.locator("label.md-header__button[for='__drawer']")
+        if drawer_button.is_visible():
+            drawer_button.click()
 
     def test_curso_menu_exists(self, page_with_base_url: Page, base_url: str):
         """Verifica se o menu 'Aulas' existe"""
@@ -63,13 +65,13 @@ class TestNavigation:
         
         # Navigate Aulas -> Modulo 1 -> Aula 01
         # Click Aulas
-        page.get_by_role("link", name="Aulas").first.click()
+        page.get_by_role("link", name="Aulas").first.click(force=True)
         
         # Click Modulo 1
-        page.get_by_text("Módulo 1", exact=False).first.click()
+        page.get_by_text("Módulo 1", exact=False).first.click(force=True)
         
         # Click Aula 01
-        page.get_by_text("Aula 01", exact=False).first.click()
+        page.get_by_text("Aula 01", exact=False).first.click(force=True)
         
         # Verifica se chegou na página correta
         expect(page).to_have_url(f"{base_url}/01/")

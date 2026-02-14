@@ -61,4 +61,4 @@ requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.pytest.ini_options]
-base_url = "http://127.0.0.1:8000"
+base_url = "http://127.0.0.1:8766"

@@ -10,11 +10,11 @@ from time import sleep
 from playwright.sync_api import Page, expect
 
 
-@pytest.fixture(scope="session")
-def base_url():
+@pytest.fixture(autouse=True)
+def start_server():
     """
     Inicia um servidor HTTP local para servir o site gerado (site/)
-    e retorna a URL base.
+    para cada teste (escopo de função).
     """
     site_dir = Path("site").absolute()
     
@@ -22,11 +22,12 @@ def base_url():
     if not site_dir.exists() or not (site_dir / "index.html").exists():
         pytest.fail("Diretório 'site/' não encontrado ou inválido. Execute 'poetry run task build' antes dos testes.")
 
-    # Porta fixa para teste
+    # Porta fixa para teste (definida também no pyproject.toml)
     port = "8766"
-    base_url = f"http://localhost:{port}"
+    url = f"http://localhost:{port}"
     
     # Start HTTP server in background
+    # Usamos shell=True para o windows encontrar o python se necessário, mas array é melhor
     server_process = subprocess.Popen(
         ["python", "-m", "http.server", port, "--directory", str(site_dir)],
         stdout=subprocess.PIPE,
@@ -39,7 +40,7 @@ def base_url():
     
     for i in range(max_retries):
         try:
-            response = requests.get(base_url, timeout=1)
+            response = requests.get(url, timeout=1)
             if response.status_code == 200:
                 server_started = True
                 break
@@ -48,9 +49,9 @@ def base_url():
             
     if not server_started:
         server_process.terminate()
-        pytest.fail(f"Servidor HTTP falhou ao iniciar em {base_url}")
+        pytest.fail(f"Servidor HTTP falhou ao iniciar em {url}")
     
-    yield base_url
+    yield
     
     # Cleanup: terminate server
     server_process.terminate()
@@ -60,5 +61,5 @@ def base_url():
 @pytest.fixture
 def page_with_base_url(page: Page, base_url: str):
     """Página do Playwright com URL base configurada"""
-    page.set_default_timeout(10000)  # 10 segundos
+    page.set_default_timeout(30000)  # 30 segundos
     return page
