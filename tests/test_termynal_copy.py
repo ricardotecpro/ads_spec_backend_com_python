@@ -4,6 +4,9 @@ def test_termynal_copy_button(page: Page, start_server):
     """
     Test that the Termynal copy button is injected and visible.
     """
+    # Grant clipboard permissions
+    page.context.grant_permissions(['clipboard-write', 'clipboard-read'])
+
     # Navigate to Lesson 01 where we added the Termynal block
     page.goto("http://localhost:8766/01/")
 
