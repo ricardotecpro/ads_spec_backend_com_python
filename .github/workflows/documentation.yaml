@@ -51,6 +51,9 @@ jobs:
           poetry run task slides
           poetry run task quizzes
           
+          # Build site to trigger hooks (copies slides to site/)
+          poetry run mkdocs build
+          
           # Start MkDocs server in background for tests
           poetry run mkdocs serve &
           PID=$!
