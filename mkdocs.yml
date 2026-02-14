@@ -85,10 +85,10 @@ plugins:
   - macros
   - mkdocs-video
   - termynal:
-      title: powershell
+      title: shell
       buttons: windows
       prompt_literal_start:
-        - "PS"
+        - "$"
   - rss:
       match_path: .*
       date_from_meta:
