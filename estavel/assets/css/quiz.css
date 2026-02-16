@@ -142,3 +142,34 @@
         transform: translateY(0);
     }
 }
+
+/* ========================================
+   Dark Mode Enhancements
+   ======================================== */
+
+/* Dark mode specific styles for better contrast */
+[data-md-color-scheme="slate"] .quiz-option.correct {
+    background-color: rgba(40, 167, 69, 0.2);
+    color: #90ee90;
+    /* Light green for better contrast */
+}
+
+[data-md-color-scheme="slate"] .quiz-option.incorrect {
+    background-color: rgba(220, 53, 69, 0.2);
+    color: #ffb3ba;
+    /* Light red for better contrast */
+}
+
+[data-md-color-scheme="slate"] .quiz-feedback.correct {
+    background-color: rgba(40, 167, 69, 0.25);
+    color: #90ee90;
+    /* Light green */
+    border-left-color: #90ee90;
+}
+
+[data-md-color-scheme="slate"] .quiz-feedback.incorrect {
+    background-color: rgba(220, 53, 69, 0.25);
+    color: #ffb3ba;
+    /* Light red/pink for better readability */
+    border-left-color: #ffb3ba;
+}
