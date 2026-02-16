@@ -1,4 +1,4 @@
-# Material Complementar
+# Materiais
 
 Bem-vindo à seção de materiais complementares do curso. Aqui você encontra recursos adicionais para apoiar seus estudos.
 

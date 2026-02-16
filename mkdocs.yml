@@ -154,9 +154,80 @@ nav:
       - 'Aula 16 - Testes e Boas Práticas': aulas/aula-16.md
   - Materiais:
       - materiais.md
-      - Slides: slides/index.md
-      - Exercícios: exercicios/index.md
-      - Quizzes: quizzes/index.md
-      - Projetos: projetos/index.md
-      - Setups: setups/index.md
+      - Slides:
+          - slides/index.md
+          - 'Slide 01 - Introdução ao Python': slides/slide-01.html
+          - 'Slide 02 - Variáveis e Tipos de Dados': slides/slide-02.html
+          - 'Slide 03 - Operadores e Expressões': slides/slide-03.html
+          - 'Slide 04 - Estruturas Condicionais': slides/slide-04.html
+          - 'Slide 05 - Laços de Repetição': slides/slide-05.html
+          - 'Slide 06 - Listas e Coleções': slides/slide-06.html
+          - 'Slide 07 - Tuplas e Sets': slides/slide-07.html
+          - 'Slide 08 - Dicionários': slides/slide-08.html
+          - 'Slide 09 - Funções': slides/slide-09.html
+          - 'Slide 10 - Módulos e Pacotes': slides/slide-10.html
+          - 'Slide 11 - Manipulação de Arquivos': slides/slide-11.html
+          - 'Slide 12 - Tratamento de Exceções': slides/slide-12.html
+          - 'Slide 13 - Introdução a Classes e Objetos': slides/slide-13.html
+          - 'Slide 14 - Herança e Polimorfismo': slides/slide-14.html
+          - 'Slide 15 - APIs e Requisições HTTP': slides/slide-15.html
+          - 'Slide 16 - Testes e Boas Práticas': slides/slide-16.html
+      - Exercícios:
+          - exercicios/index.md
+          - 'Exercício 01 - Introdução': exercicios/exercicio-01.md
+          - 'Exercício 02 - Variáveis': exercicios/exercicio-02.md
+          - 'Exercício 03 - Operadores': exercicios/exercicio-03.md
+          - 'Exercício 04 - Condicionais': exercicios/exercicio-04.md
+          - 'Exercício 05 - Repetição': exercicios/exercicio-05.md
+          - 'Exercício 06 - Listas': exercicios/exercicio-06.md
+          - 'Exercício 07 - Tuplas e Sets': exercicios/exercicio-07.md
+          - 'Exercício 08 - Dicionários': exercicios/exercicio-08.md
+          - 'Exercício 09 - Funções I': exercicios/exercicio-09.md
+          - 'Exercício 10 - Módulos': exercicios/exercicio-10.md
+          - 'Exercício 11 - Arquivos': exercicios/exercicio-11.md
+          - 'Exercício 12 - Exceções': exercicios/exercicio-12.md
+          - 'Exercício 13 - Classes': exercicios/exercicio-13.md
+          - 'Exercício 14 - Herança': exercicios/exercicio-14.md
+          - 'Exercício 15 - APIs': exercicios/exercicio-15.md
+          - 'Exercício 16 - Testes': exercicios/exercicio-16.md
+      - Quizzes:
+          - quizzes/index.md
+          - 'Quiz 01 - Introdução': quizzes/quiz-01.md
+          - 'Quiz 02 - Variáveis': quizzes/quiz-02.md
+          - 'Quiz 03 - Operadores': quizzes/quiz-03.md
+          - 'Quiz 04 - Condicionais': quizzes/quiz-04.md
+          - 'Quiz 05 - Loops': quizzes/quiz-05.md
+          - 'Quiz 06 - Listas': quizzes/quiz-06.md
+          - 'Quiz 07 - Tuplas e Sets': quizzes/quiz-07.md
+          - 'Quiz 08 - Dicionários': quizzes/quiz-08.md
+          - 'Quiz 09 - Funções I': quizzes/quiz-09.md
+          - 'Quiz 10 - Módulos': quizzes/quiz-10.md
+          - 'Quiz 11 - Arquivos': quizzes/quiz-11.md
+          - 'Quiz 12 - Exceções': quizzes/quiz-12.md
+          - 'Quiz 13 - POO Intro': quizzes/quiz-13.md
+          - 'Quiz 14 - POO Avançado': quizzes/quiz-14.md
+          - 'Quiz 15 - APIs': quizzes/quiz-15.md
+          - 'Quiz 16 - Testes': quizzes/quiz-16.md
+      - Projetos:
+          - projetos/index.md
+          - 'Projeto 01 - Primeiro Programa': projetos/projeto-01.md
+          - 'Projeto 02 - Calculadora IMC': projetos/projeto-02.md
+          - 'Projeto 03 - Calculadora de Gorjeta': projetos/projeto-03.md
+          - 'Projeto 04 - Pedra, Papel e Tesoura': projetos/projeto-04.md
+          - 'Projeto 05 - Tabuada': projetos/projeto-05.md
+          - 'Projeto 06 - Gerenciador de Tarefas': projetos/projeto-06.md
+          - 'Projeto 07 - Análise de Números': projetos/projeto-07.md
+          - 'Projeto 08 - Agenda Telefônica': projetos/projeto-08.md
+          - 'Projeto 09 - Conversor de Temperaturas': projetos/projeto-09.md
+          - 'Projeto 10 - Jogo da Forca': projetos/projeto-10.md
+          - 'Projeto 11 - To-Do List Persistente': projetos/projeto-11.md
+          - 'Projeto 12 - Calculadora Robusta': projetos/projeto-12.md
+          - 'Projeto 13 - Biblioteca': projetos/projeto-13.md
+          - 'Projeto 14 - RPG Simples': projetos/projeto-14.md
+          - 'Projeto 15 - Buscador GitHub': projetos/projeto-15.md
+          - 'Projeto 16 - Task Manager (TDD)': projetos/projeto-16.md
+      - Configuração:
+          - setups/index.md
+          - 'Setup Windows': setups/setup-01.md
+          - 'Setup Linux': setups/setup-02.md
   - Impressão: print_page.md
