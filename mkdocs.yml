@@ -125,6 +125,9 @@ extra:
     provider: mike
     default: estavel
 
+hooks:
+  - hooks/copy_slides.py
+
 nav:
   - Home: index.md
   - Sobre: sobre.md

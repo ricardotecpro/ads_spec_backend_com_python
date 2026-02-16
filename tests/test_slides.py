@@ -64,3 +64,27 @@ class TestSlides:
         # Verifica se há pelo menos um slide
         slide = page.locator(".slides section").first
         expect(slide).to_be_visible()
+
+    def test_slide_markdown_loads_without_404(self, page_with_base_url: Page, base_url: str):
+        """Verifica que markdown carrega sem erro 404 - TESTE CRÍTICO"""
+        page = page_with_base_url
+        
+        # Interceptar requisições de rede para detectar 404
+        errors_404 = []
+        def handle_response(response):
+            if response.status == 404:
+                errors_404.append(response.url)
+        
+        page.on("response", handle_response)
+        
+        # Acessar slide
+        page.goto(f"{base_url}/slides/slide-01.html", wait_until="networkidle")
+        
+        # Aguardar RevealJS carregar e processar markdown
+        page.wait_for_timeout(3000)
+        
+        # Verificar que não houve 404
+        assert len(errors_404) == 0, (
+            f"Erros 404 encontrados ao carregar slide: {errors_404}. "
+            f"Verifique se os arquivos .md foram copiados para site/slides/ pelo hook."
+        )
