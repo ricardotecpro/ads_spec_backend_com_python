@@ -256,7 +256,7 @@ def generate_nav_yaml():
         nav.append(f"        - 'Aula {lid:02d} - {title}': {filename}")
     
     nav.append("  - Materiais:")
-    nav.append("      - materiais/index.md")
+    nav.append("      - materiais.md")
     nav.append("      - Slides: slides/index.md")
     nav.append("      - Exercícios: exercicios/index.md")
     nav.append("      - Quizzes: quizzes/")
