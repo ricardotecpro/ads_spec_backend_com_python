@@ -65,7 +65,10 @@ class TestQuizzes:
             option.click()
             
             # Verifica se classe 'selected' foi adicionada (implementado no quiz.js)
+            # A classe pode ser "quiz-option selected correct" ou similar
             expect(option).to_have_class(re.compile(r"selected"))
+            # Adicionalmente, verificar se tem 'correct' ou 'incorrect'
+            expect(option).to_have_class(re.compile(r"(correct|incorrect)"))
             
             # Verifica feedback
             feedback = page.locator(".quiz-feedback").first
