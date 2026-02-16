@@ -8,7 +8,7 @@ Bem-vindo à seção de **Setup**! Aqui você encontra guias completos para conf
 
 Selecione o guia de instalação adequado para o seu sistema:
 
-### 🪟 [Instalação Windows](instalacao_windows.md)
+### 🪟 [Instalação Windows](01.md)
 
 Guia completo para configurar Python e VSCode no Windows:
 
@@ -22,7 +22,7 @@ Guia completo para configurar Python e VSCode no Windows:
 
 ---
 
-### 🐧 [Instalação Linux (Ubuntu)](instalacao_linux.md)
+### 🐧 [Instalação Linux (Ubuntu)](02.md)
 
 Guia completo para configurar Python e PyCharm no Ubuntu:
 
