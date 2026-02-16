@@ -52,8 +52,8 @@ class TestNavigation:
         page.goto(base_url)
         
         # Link de impressão geralmente é um ícone no header ou footer
-        # Verificamos a presença no DOM, não necessariamente visibilidade imediata (pode estar em menu)
-        print_link = page.locator("a[href*='print']")
+        # Verificamos a presença no DOM, searching for print_page
+        print_link = page.locator("a[href*='print_page']")
         expect(print_link.first).to_be_attached()
 
     def test_navigation_to_lesson_01(self, page_with_base_url: Page, base_url: str):

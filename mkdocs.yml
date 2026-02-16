@@ -95,7 +95,7 @@ plugins:
         datetime_format: '%Y-%m-%d %H:%M:%S'
   - print-site:
       add_to_navigation: false
-      print_page_rel_path: 'print.md'
+      print_page_rel_path: 'print_page.md'
       print_page_title: 'Versão para Impressão'
       add_print_site_banner: false
       enumerate_headings: false
@@ -152,9 +152,10 @@ nav:
       - 'Aula 15 - APIs e Requisições HTTP': 15.md
       - 'Aula 16 - Testes e Boas Práticas': 16.md
   - Material:
+      - material/index.md
       - Slides: slides/index.md
       - Exercícios: exercicios/index.md
       - Quizzes: quizzes/index.md
       - Projetos: projetos/index.md
       - Setup: setup/index.md
-  - Impressão: print.md
+  - Impressão: print_page.md

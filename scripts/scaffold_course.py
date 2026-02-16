@@ -252,12 +252,14 @@ def generate_nav_yaml():
         
         nav.append(f"    - 'Aula {lid:02d} - {title}': {filename}")
     
-    nav.append("  - Material:") # Was Material Complementar
+    nav.append("  - Material:")
+    nav.append("      - material/index.md")
     nav.append("      - Slides: slides/index.md")
     nav.append("      - Exercícios: exercicios/index.md")
-    nav.append("      - Quizzes: quizzes/") # Quizzes section
-    nav.append("  - Projetos: projetos/")
-    nav.append("  - Impressão: print.md") # plugin auto-generates often but we can link
+    nav.append("      - Quizzes: quizzes/")
+    nav.append("      - Projetos: projetos/")
+    nav.append("      - Setup: setup/index.md")
+    nav.append("  - Impressão: print_page.md")
     
     return "\n".join(nav)
 
