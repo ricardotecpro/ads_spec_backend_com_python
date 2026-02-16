@@ -52,7 +52,7 @@ Antes de começar, certifique-se de ter:
 Após configurar seu ambiente:
 
 1. ✅ **Teste a instalação** - Execute seu primeiro programa
-2. 📚 **Comece as aulas** - Vá para [Aula 01](../01.md)
+2. 📚 **Comece as aulas** - Vá para [Aula 01](../aulas/01.md)
 3. 💪 **Pratique** - Faça os exercícios propostos
 4. 🚀 **Desenvolva** - Crie seus próprios projetos
 

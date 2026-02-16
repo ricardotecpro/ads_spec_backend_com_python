@@ -188,7 +188,7 @@ Este curso foi desenhado para te levar do zero ao profissional.
 <div class="grid cards" markdown>
 
 -   :material-rocket: **Começar Agora**
-    -   [Ir para Aula 01](01.md)
+    -   [Ir para Aula 01](aulas/01.md)
 
 </div>
 """
@@ -211,7 +211,7 @@ def create_files():
         title = lesson["title"]
         
         # Paths
-        p_aula = Path(f"docs/{lid:02d}.md")
+        p_aula = Path(f"docs/aulas/{lid:02d}.md")
         p_slide = Path(f"docs/slides/{lid:02d}-slides.md")
         p_quiz = Path(f"docs/quizzes/quiz-{lid:02d}.md")
         p_exerc = Path(f"docs/exercicios/exercicios-{lid:02d}.md")
@@ -238,22 +238,25 @@ def create_files():
 def generate_nav_yaml():
     nav = ["nav:", "  - Início: index.md"]
     
+    nav.append("  - Aulas:")
+    nav.append("      - aulas/index.md")
+    
     current_module = None
     
     for lesson in SYLLABUS:
         module = lesson["module"]
         title = lesson["title"]
         lid = lesson["id"]
-        filename = f"{lid:02d}.md"
+        filename = f"aulas/{lid:02d}.md"
         
         if module != current_module:
-            nav.append(f"  - {module}:")
+            nav.append(f"      - {module}:")
             current_module = module
         
-        nav.append(f"    - 'Aula {lid:02d} - {title}': {filename}")
+        nav.append(f"        - 'Aula {lid:02d} - {title}': {filename}")
     
-    nav.append("  - Material:")
-    nav.append("      - material/index.md")
+    nav.append("  - Materiais:")
+    nav.append("      - materiais/index.md")
     nav.append("      - Slides: slides/index.md")
     nav.append("      - Exercícios: exercicios/index.md")
     nav.append("      - Quizzes: quizzes/")

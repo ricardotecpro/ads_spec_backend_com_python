@@ -36,14 +36,14 @@ class TestNavigation:
         expect(link).to_be_visible()
 
     def test_material_menu_exists(self, page_with_base_url: Page, base_url: str):
-        """Verifica se o menu 'Material' existe"""
+        """Verifica se o menu 'Materiais' existe"""
         page = page_with_base_url
         page.goto(base_url)
         
         self._ensure_menu_visible(page)
         
-        # Procura pelo item de menu "Material"
-        link = page.get_by_role("link", name="Material", exact=True).first
+        # Procura pelo item de menu "Materiais"
+        link = page.get_by_role("link", name="Materiais", exact=True).first
         expect(link).to_be_visible()
 
     def test_print_version_link_exists(self, page_with_base_url: Page, base_url: str):
@@ -74,5 +74,5 @@ class TestNavigation:
         page.get_by_text("Aula 01", exact=False).first.click(force=True)
         
         # Verifica se chegou na página correta
-        expect(page).to_have_url(f"{base_url}/01/")
+        expect(page).to_have_url(f"{base_url}/aulas/01/")
         expect(page.locator("h1")).to_contain_text("Aula 01")

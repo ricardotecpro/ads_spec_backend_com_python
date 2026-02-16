@@ -1,0 +1,43 @@
+# Aulas do Curso
+
+Bem-vindo à seção de aulas! Aqui você encontra todo o conteúdo do curso organizado por módulos.
+
+## 📚 Módulos do Curso
+
+<div class="grid cards" markdown>
+
+-   :material-numeric-1-box: **Módulo 1 – Fundamentos**
+    
+    - [Aula 01 - Introdução ao Python](01.md)
+    - [Aula 02 - Variáveis e Tipos de Dados](02.md)
+    - [Aula 03 - Operadores e Expressões](03.md)
+    - [Aula 04 - Estruturas Condicionais](04.md)
+
+-   :material-numeric-2-box: **Módulo 2 – Estruturas de Controle**
+    
+    - [Aula 05 - Laços de Repetição](05.md)
+    - [Aula 06 - Listas e Coleções](06.md)
+    - [Aula 07 - Tuplas e Sets](07.md)
+    - [Aula 08 - Dicionários](08.md)
+
+-   :material-numeric-3-box: **Módulo 3 – Funções e Modularização**
+    
+    - [Aula 09 - Funções](09.md)
+    - [Aula 10 - Módulos e Pacotes](10.md)
+
+-   :material-numeric-4-box: **Módulo 4 – Arquivos e Exceções**
+    
+    - [Aula 11 - Manipulação de Arquivos](11.md)
+    - [Aula 12 - Tratamento de Exceções](12.md)
+
+-   :material-numeric-5-box: **Módulo 5 – Programação Orientada a Objetos**
+    
+    - [Aula 13 - Introdução a Classes e Objetos](13.md)
+    - [Aula 14 - Herança e Polimorfismo](14.md)
+
+-   :material-numeric-6-box: **Módulo 6 – Ecossistema**
+    
+    - [Aula 15 - APIs e Requisições HTTP](15.md)
+    - [Aula 16 - Testes e Boas Práticas](16.md)
+
+</div>
