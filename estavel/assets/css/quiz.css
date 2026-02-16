@@ -1,7 +1,9 @@
 /* Quiz Modern UI */
 :root {
-    --quiz-primary: #3776ab; /* Python Blue */
-    --quiz-secondary: #ffda62; /* Python Yellow */
+    --quiz-primary: #3776ab;
+    /* Python Blue */
+    --quiz-secondary: #ffda62;
+    /* Python Yellow */
     --quiz-success: #28a745;
     --quiz-error: #dc3545;
     --quiz-bg: #ffffff;
@@ -9,6 +11,15 @@
     --quiz-border: #e0e0e0;
     --quiz-hover: #f8f9fa;
     --quiz-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark Mode Overrides */
+[data-md-color-scheme="slate"] {
+    --quiz-bg: var(--md-card-bg-color, #1e2129);
+    --quiz-text: var(--md-text-color, #e0e0e0);
+    --quiz-border: var(--md-default-fg-color--lightest, #404040);
+    --quiz-hover: rgba(255, 255, 255, 0.05);
+    --quiz-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 .quiz-container {
@@ -53,7 +64,8 @@
 
 .quiz-option.selected {
     border-color: var(--quiz-primary);
-    background-color: rgba(55, 118, 171, 0.05); /* very light blue */
+    background-color: rgba(55, 118, 171, 0.1);
+    /* slightly more opaque for dark mode visibility */
     font-weight: 500;
 }
 
@@ -120,6 +132,13 @@
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-5px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
