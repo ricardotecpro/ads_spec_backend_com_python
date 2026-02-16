@@ -20,6 +20,7 @@ def generate_slide_html(lesson_number: int) -> str:
     <link rel="stylesheet" href="https://unpkg.com/reveal.js@4.5.0/dist/reveal.css">
     <link rel="stylesheet" href="https://unpkg.com/reveal.js@4.5.0/dist/theme/black.css">
     <link rel="stylesheet" href="https://unpkg.com/reveal.js@4.5.0/plugin/highlight/monokai.css">
+    <link rel="stylesheet" href="../assets/css/reveal-custom.css">
 </head>
 <body>
     <div class="reveal">
@@ -29,6 +30,11 @@ def generate_slide_html(lesson_number: int) -> str:
                      data-separator-vertical="^\\n--\\n$">
             </section>
         </div>
+    </div>
+    
+    <!-- Dicas de Atalhos -->
+    <div class="reveal-shortcuts">
+        Atalhos: F (Tela Cheia) | S (Speaker View)
     </div>
 
     <script src="https://unpkg.com/reveal.js@4.5.0/dist/reveal.js"></script>
