@@ -6,13 +6,13 @@ document.addEventListener('DOMContentLoaded', () => {
     options.forEach(option => {
         option.addEventListener('click', function () {
             // Prevent multiple clicks if already answered
-            const parent = this.parentElement;
-            if (parent.querySelector('.quiz-option.correct') || parent.querySelector('.quiz-option.incorrect')) {
-                return;
-            }
+            // Allow changing answer: Remove state from siblings
+            parent.querySelectorAll('.quiz-option').forEach(opt => {
+                opt.classList.remove('selected', 'correct', 'incorrect');
+                // We don't use 'disabled' anymore to allow switching
+                opt.classList.remove('disabled');
+            });
 
-            // Remove selected from siblings
-            parent.querySelectorAll('.quiz-option').forEach(opt => opt.classList.remove('selected'));
             this.classList.add('selected');
 
             // Check answer
@@ -23,8 +23,9 @@ document.addEventListener('DOMContentLoaded', () => {
             // Apply visual state to the option
             this.classList.add(isCorrect ? 'correct' : 'incorrect');
 
-            // Disable other options visually
-            parent.querySelectorAll('.quiz-option').forEach(opt => opt.classList.add('disabled'));
+            // Optional: You could disable *after* a correct answer if you wanted to lock it then,
+            // but the request is to allow changing, so we keep it open or just visual.
+            // parent.querySelectorAll('.quiz-option').forEach(opt => opt.classList.add('disabled'));
 
             if (feedbackEl) {
                 feedbackEl.innerHTML = (isCorrect ? '<strong>Correto!</strong> ' : '<strong>Incorreto.</strong> ') + (feedbackText || '');

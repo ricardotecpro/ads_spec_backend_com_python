@@ -95,6 +95,7 @@ plugins:
         datetime_format: '%Y-%m-%d %H:%M:%S'
   - print-site:
       add_to_navigation: true
+      print_page_rel_path: 'print.md'
       print_page_title: 'Versão para Impressão'
       add_print_site_banner: false
       enumerate_headings: false
@@ -150,9 +151,10 @@ nav:
     - Módulo 6 – Ecossistema:
       - 'Aula 15 - APIs e Requisições HTTP': 15.md
       - 'Aula 16 - Testes e Boas Práticas': 16.md
-  - Material Complementar:
+  - Material:
       - Slides: slides/index.md
       - Exercícios: exercicios/index.md
       - Quizzes: quizzes/index.md
       - Projetos: projetos/index.md
       - Setup: setup/index.md
+  - Impressão: print.md

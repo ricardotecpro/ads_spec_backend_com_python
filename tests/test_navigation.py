@@ -35,25 +35,25 @@ class TestNavigation:
         link = page.get_by_role("link", name="Aulas").first
         expect(link).to_be_visible()
 
-    def test_material_complementar_menu_exists(self, page_with_base_url: Page, base_url: str):
-        """Verifica se o menu 'Material Complementar' existe"""
+    def test_material_menu_exists(self, page_with_base_url: Page, base_url: str):
+        """Verifica se o menu 'Material' existe"""
         page = page_with_base_url
         page.goto(base_url)
         
         self._ensure_menu_visible(page)
         
-        # Procura pelo item de menu "Material Complementar"
-        link = page.get_by_role("link", name="Material Complementar").first
+        # Procura pelo item de menu "Material"
+        link = page.get_by_role("link", name="Material", exact=True).first
         expect(link).to_be_visible()
 
     def test_print_version_link_exists(self, page_with_base_url: Page, base_url: str):
-        """Verifica se o link 'Versão para Impressão' existe"""
+        """Verifica se o link 'Impressão' existe"""
         page = page_with_base_url
         page.goto(base_url)
         
         # Link de impressão geralmente é um ícone no header ou footer
         # Verificamos a presença no DOM, não necessariamente visibilidade imediata (pode estar em menu)
-        print_link = page.locator("a[href*='print_page']")
+        print_link = page.locator("a[href*='print']")
         expect(print_link.first).to_be_attached()
 
     def test_navigation_to_lesson_01(self, page_with_base_url: Page, base_url: str):

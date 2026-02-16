@@ -44,19 +44,6 @@ Criada por **Guido van Rossum** (1991).
 
 ---
 
-## Teste Termynal
-
-### Opção 3: Code Block (termynal)
-
-<!-- termynal -->
-```console
-$ pip install termynal
----> 100%
-Installed
-```
-
----
-
 ## 🌍 Olá, Mundo!
 
 A tradição da programação.
