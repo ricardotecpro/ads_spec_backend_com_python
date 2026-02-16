@@ -134,13 +134,13 @@ for i in range(1, 11):
 <div class="grid cards" markdown>
 
 -   :material-presentation: **Acessar Slides**
-    -   [Ver Slides da Aula](../slides/05-slides.html)
+    -   [Ver Slides da Aula](../slides/slide-05.html)
 
 -   :material-school: **Quiz**
     -   [Responder Quiz](../quizzes/quiz-05.md)
 
 -   :material-dumbbell: **Exercícios**
-    -   [Lista de Exercícios](../exercicios/exercicios-05.md)
+    -   [Lista de Exercícios](../exercicios/exercicio-05.md)
 
 -   :material-rocket: **Projeto**
     -   [Mini Projeto](../projetos/projeto-05.md)

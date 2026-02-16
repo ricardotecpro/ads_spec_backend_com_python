@@ -188,7 +188,7 @@ Este curso foi desenhado para te levar do zero ao profissional.
 <div class="grid cards" markdown>
 
 -   :material-rocket: **Começar Agora**
-    -   [Ir para Aula 01](aulas/01.md)
+    -   [Ir para Aula 01](aulas/aula-01.md)
 
 </div>
 """
@@ -211,10 +211,10 @@ def create_files():
         title = lesson["title"]
         
         # Paths
-        p_aula = Path(f"docs/aulas/{lid:02d}.md")
-        p_slide = Path(f"docs/slides/{lid:02d}-slides.md")
+        p_aula = Path(f"docs/aulas/aula-{lid:02d}.md")
+        p_slide = Path(f"docs/slides/slide-{lid:02d}.md")
         p_quiz = Path(f"docs/quizzes/quiz-{lid:02d}.md")
-        p_exerc = Path(f"docs/exercicios/exercicios-{lid:02d}.md")
+        p_exerc = Path(f"docs/exercicios/exercicio-{lid:02d}.md")
         p_proj = Path(f"docs/projetos/projeto-{lid:02d}.md")
         
         # Write Files
@@ -247,7 +247,7 @@ def generate_nav_yaml():
         module = lesson["module"]
         title = lesson["title"]
         lid = lesson["id"]
-        filename = f"aulas/{lid:02d}.md"
+        filename = f"aulas/aula-{lid:02d}.md"
         
         if module != current_module:
             nav.append(f"      - {module}:")
@@ -261,7 +261,7 @@ def generate_nav_yaml():
     nav.append("      - Exercícios: exercicios/index.md")
     nav.append("      - Quizzes: quizzes/")
     nav.append("      - Projetos: projetos/")
-    nav.append("      - Setup: setup/index.md")
+    nav.append("      - Setups: setups/index.md")
     nav.append("  - Impressão: print_page.md")
     
     return "\n".join(nav)

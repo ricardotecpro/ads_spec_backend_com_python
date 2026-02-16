@@ -167,13 +167,13 @@ class ContaPoupanca(Conta):
 <div class="grid cards" markdown>
 
 -   :material-presentation: **Acessar Slides**
-    -   [Ver Slides da Aula](../slides/14-slides.html)
+    -   [Ver Slides da Aula](../slides/slide-14.html)
 
 -   :material-school: **Quiz**
     -   [Responder Quiz](../quizzes/quiz-14.md)
 
 -   :material-dumbbell: **Exercícios**
-    -   [Lista de Exercícios](../exercicios/exercicios-14.md)
+    -   [Lista de Exercícios](../exercicios/exercicio-14.md)
 
 -   :material-rocket: **Projeto**
     -   [Mini Projeto](../projetos/projeto-14.md)

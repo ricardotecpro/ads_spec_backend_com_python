@@ -16,7 +16,7 @@ Bem-vindo à seção de materiais complementares do curso. Aqui você encontra r
 -   :material-rocket: [**Projetos**](../projetos/index.md)
     -   Desenvolva projetos práticos para aplicar o que aprendeu.
 
--   :material-cog: [**Setup**](../setup/index.md)
+-   :material-cog: [**Setup**](../setups/index.md)
     -   Guias de instalação e configuração do ambiente.
 
 </div>

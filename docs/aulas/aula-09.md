@@ -136,13 +136,13 @@ print(f"Seu IMC é {meu_imc:.2f}: {classificacao}")
 <div class="grid cards" markdown>
 
 -   :material-presentation: **Acessar Slides**
-    -   [Ver Slides da Aula](../slides/09-slides.html)
+    -   [Ver Slides da Aula](../slides/slide-09.html)
 
 -   :material-school: **Quiz**
     -   [Responder Quiz](../quizzes/quiz-09.md)
 
 -   :material-dumbbell: **Exercícios**
-    -   [Lista de Exercícios](../exercicios/exercicios-09.md)
+    -   [Lista de Exercícios](../exercicios/exercicio-09.md)
 
 -   :material-rocket: **Projeto**
     -   [Mini Projeto](../projetos/projeto-09.md)

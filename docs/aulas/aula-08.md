@@ -150,13 +150,13 @@ print(f"Valor total em estoque: R$ {produto['preco'] * produto['estoque']:.2f}")
 <div class="grid cards" markdown>
 
 -   :material-presentation: **Acessar Slides**
-    -   [Ver Slides da Aula](../slides/08-slides.html)
+    -   [Ver Slides da Aula](../slides/slide-08.html)
 
 -   :material-school: **Quiz**
     -   [Responder Quiz](../quizzes/quiz-08.md)
 
 -   :material-dumbbell: **Exercícios**
-    -   [Lista de Exercícios](../exercicios/exercicios-08.md)
+    -   [Lista de Exercícios](../exercicios/exercicio-08.md)
 
 -   :material-rocket: **Projeto**
     -   [Mini Projeto](../projetos/projeto-08.md)

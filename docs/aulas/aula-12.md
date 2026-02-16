@@ -156,13 +156,13 @@ while True:
 <div class="grid cards" markdown>
 
 -   :material-presentation: **Acessar Slides**
-    -   [Ver Slides da Aula](../slides/12-slides.html)
+    -   [Ver Slides da Aula](../slides/slide-12.html)
 
 -   :material-school: **Quiz**
     -   [Responder Quiz](../quizzes/quiz-12.md)
 
 -   :material-dumbbell: **Exercícios**
-    -   [Lista de Exercícios](../exercicios/exercicios-12.md)
+    -   [Lista de Exercícios](../exercicios/exercicio-12.md)
 
 -   :material-rocket: **Projeto**
     -   [Mini Projeto](../projetos/projeto-12.md)

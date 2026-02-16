@@ -126,13 +126,13 @@ def dobro(x):
 <div class="grid cards" markdown>
 
 -   :material-presentation: **Acessar Slides**
-    -   [Ver Slides da Aula](../slides/16-slides.html)
+    -   [Ver Slides da Aula](../slides/slide-16.html)
 
 -   :material-school: **Quiz**
     -   [Responder Quiz](../quizzes/quiz-16.md)
 
 -   :material-dumbbell: **Exercícios**
-    -   [Lista de Exercícios](../exercicios/exercicios-16.md)
+    -   [Lista de Exercícios](../exercicios/exercicio-16.md)
 
 -   :material-rocket: **Projeto Final**
     -   [Gerenciador de Tarefas com TDD](../projetos/projeto-16.md)

@@ -152,13 +152,13 @@ print(f"Voto obrigatório? {voto_obrigatorio}")
 <div class="grid cards" markdown>
 
 -   :material-presentation: **Acessar Slides**
-    -   [Ver Slides da Aula](../slides/03-slides.html)
+    -   [Ver Slides da Aula](../slides/slide-03.html)
 
 -   :material-school: **Quiz**
     -   [Responder Quiz](../quizzes/quiz-03.md)
 
 -   :material-dumbbell: **Exercícios**
-    -   [Lista de Exercícios](../exercicios/exercicios-03.md)
+    -   [Lista de Exercícios](../exercicios/exercicio-03.md)
 
 -   :material-rocket: **Projeto**
     -   [Mini Projeto](../projetos/projeto-03.md)

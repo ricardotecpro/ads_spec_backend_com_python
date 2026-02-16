@@ -74,5 +74,5 @@ class TestNavigation:
         page.get_by_text("Aula 01", exact=False).first.click(force=True)
         
         # Verifica se chegou na página correta
-        expect(page).to_have_url(f"{base_url}/aulas/01/")
+        expect(page).to_have_url(f"{base_url}/aulas/aula-01/")
         expect(page.locator("h1")).to_contain_text("Aula 01")

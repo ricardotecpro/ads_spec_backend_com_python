@@ -150,13 +150,13 @@ else:
 <div class="grid cards" markdown>
 
 -   :material-presentation: **Acessar Slides**
-    -   [Ver Slides da Aula](../slides/04-slides.html)
+    -   [Ver Slides da Aula](../slides/slide-04.html)
 
 -   :material-school: **Quiz**
     -   [Responder Quiz](../quizzes/quiz-04.md)
 
 -   :material-dumbbell: **Exercícios**
-    -   [Lista de Exercícios](../exercicios/exercicios-04.md)
+    -   [Lista de Exercícios](../exercicios/exercicio-04.md)
 
 -   :material-rocket: **Projeto**
     -   [Mini Projeto](../projetos/projeto-04.md)

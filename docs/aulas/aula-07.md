@@ -136,13 +136,13 @@ print(f"Lista final ordenada: {convidados_unicos}")
 <div class="grid cards" markdown>
 
 -   :material-presentation: **Acessar Slides**
-    -   [Ver Slides da Aula](../slides/07-slides.html)
+    -   [Ver Slides da Aula](../slides/slide-07.html)
 
 -   :material-school: **Quiz**
     -   [Responder Quiz](../quizzes/quiz-07.md)
 
 -   :material-dumbbell: **Exercícios**
-    -   [Lista de Exercícios](../exercicios/exercicios-07.md)
+    -   [Lista de Exercícios](../exercicios/exercicio-07.md)
 
 -   :material-rocket: **Projeto**
     -   [Mini Projeto](../projetos/projeto-07.md)

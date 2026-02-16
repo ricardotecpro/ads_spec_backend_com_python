@@ -149,13 +149,13 @@ print(f"Você tem (ou fará) {idade} anos.")
 <div class="grid cards" markdown>
 
 -   :material-presentation: **Acessar Slides**
-    -   [Ver Slides da Aula](../slides/02-slides.html)
+    -   [Ver Slides da Aula](../slides/slide-02.html)
 
 -   :material-school: **Quiz**
     -   [Responder Quiz](../quizzes/quiz-02.md)
 
 -   :material-dumbbell: **Exercícios**
-    -   [Lista de Exercícios](../exercicios/exercicios-02.md)
+    -   [Lista de Exercícios](../exercicios/exercicio-02.md)
 
 -   :material-rocket: **Projeto**
     -   [Mini Projeto](../projetos/projeto-02.md)

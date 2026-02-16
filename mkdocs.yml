@@ -131,32 +131,32 @@ nav:
   - Aulas:
     - aulas/index.md
     - Módulo 1 – Fundamentos:
-      - 'Aula 01 - Introdução ao Python': aulas/01.md
-      - 'Aula 02 - Variáveis e Tipos de Dados': aulas/02.md
-      - 'Aula 03 - Operadores e Expressões': aulas/03.md
-      - 'Aula 04 - Estruturas Condicionais': aulas/04.md
+      - 'Aula 01 - Introdução ao Python': aulas/aula-01.md
+      - 'Aula 02 - Variáveis e Tipos de Dados': aulas/aula-02.md
+      - 'Aula 03 - Operadores e Expressões': aulas/aula-03.md
+      - 'Aula 04 - Estruturas Condicionais': aulas/aula-04.md
     - Módulo 2 – Estruturas de Controle:
-      - 'Aula 05 - Laços de Repetição': aulas/05.md
-      - 'Aula 06 - Listas e Coleções': aulas/06.md
-      - 'Aula 07 - Tuplas e Sets': aulas/07.md
-      - 'Aula 08 - Dicionários': aulas/08.md
+      - 'Aula 05 - Laços de Repetição': aulas/aula-05.md
+      - 'Aula 06 - Listas e Coleções': aulas/aula-06.md
+      - 'Aula 07 - Tuplas e Sets': aulas/aula-07.md
+      - 'Aula 08 - Dicionários': aulas/aula-08.md
     - Módulo 3 – Funções e Modularização:
-      - 'Aula 09 - Funções': aulas/09.md
-      - 'Aula 10 - Módulos e Pacotes': aulas/10.md
+      - 'Aula 09 - Funções': aulas/aula-09.md
+      - 'Aula 10 - Módulos e Pacotes': aulas/aula-10.md
     - Módulo 4 – Arquivos e Exceções:
-      - 'Aula 11 - Manipulação de Arquivos': aulas/11.md
-      - 'Aula 12 - Tratamento de Exceções': aulas/12.md
+      - 'Aula 11 - Manipulação de Arquivos': aulas/aula-11.md
+      - 'Aula 12 - Tratamento de Exceções': aulas/aula-12.md
     - Módulo 5 – Programação Orientada a Objetos:
-      - 'Aula 13 - Introdução a Classes e Objetos': aulas/13.md
-      - 'Aula 14 - Herança e Polimorfismo': aulas/14.md
+      - 'Aula 13 - Introdução a Classes e Objetos': aulas/aula-13.md
+      - 'Aula 14 - Herança e Polimorfismo': aulas/aula-14.md
     - Módulo 6 – Ecossistema:
-      - 'Aula 15 - APIs e Requisições HTTP': aulas/15.md
-      - 'Aula 16 - Testes e Boas Práticas': aulas/16.md
+      - 'Aula 15 - APIs e Requisições HTTP': aulas/aula-15.md
+      - 'Aula 16 - Testes e Boas Práticas': aulas/aula-16.md
   - Materiais:
       - materiais/index.md
       - Slides: slides/index.md
       - Exercícios: exercicios/index.md
       - Quizzes: quizzes/index.md
       - Projetos: projetos/index.md
-      - Setup: setup/index.md
+      - Setups: setups/index.md
   - Impressão: print_page.md

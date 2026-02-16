@@ -150,13 +150,13 @@ print(gerar_senha(12))
 <div class="grid cards" markdown>
 
 -   :material-presentation: **Acessar Slides**
-    -   [Ver Slides da Aula](../slides/10-slides.html)
+    -   [Ver Slides da Aula](../slides/slide-10.html)
 
 -   :material-school: **Quiz**
     -   [Responder Quiz](../quizzes/quiz-10.md)
 
 -   :material-dumbbell: **Exercícios**
-    -   [Lista de Exercícios](../exercicios/exercicios-10.md)
+    -   [Lista de Exercícios](../exercicios/exercicio-10.md)
 
 -   :material-rocket: **Projeto**
     -   [Mini Projeto](../projetos/projeto-10.md)
