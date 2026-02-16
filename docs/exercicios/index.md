@@ -40,7 +40,7 @@ Bem-vindo à seção de exercícios! Aqui você encontra listas de exercícios p
 
 </div>
 
-## 💡 Dicas
+## :material-lightbulb: Dicas
 
 - Tente resolver os exercícios sem consultar a solução
 - Pratique regularmente para fixar o conteúdo
