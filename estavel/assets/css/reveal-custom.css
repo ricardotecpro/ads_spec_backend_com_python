@@ -23,7 +23,16 @@
     font-family: sans-serif;
     font-size: 12px;
     z-index: 1000;
-    pointer-events: none; /* Let clicks pass through */
+    pointer-events: none;
+    /* Let clicks pass through */
+}
+
+/* Hide shortcuts in fullscreen mode */
+:fullscreen .reveal-shortcuts,
+:-webkit-full-screen .reveal-shortcuts,
+:-moz-full-screen .reveal-shortcuts,
+:-ms-fullscreen .reveal-shortcuts {
+    display: none;
 }
 
 /* Hide shortcuts in print mode */
