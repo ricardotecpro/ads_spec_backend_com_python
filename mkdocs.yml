@@ -156,7 +156,6 @@ nav:
       - 'Aula 15 - APIs e Requisições HTTP': aulas/aula-15.md
       - 'Aula 16 - Testes e Boas Práticas': aulas/aula-16.md
   - Materiais:
-      - materiais.md
       - Slides:
           - slides/index.md
           - 'Slide 01 - Introdução ao Python': slides/slide-01.html
