@@ -8,7 +8,7 @@ def test_termynal_copy_button(page: Page, start_server):
     page.context.grant_permissions(['clipboard-write', 'clipboard-read'])
 
     # Navigate to Lesson 01 where we added the Termynal block
-    page.goto("http://localhost:8766/01/")
+    page.goto("http://localhost:8766/aulas/aula-01/")
 
     # Wait for Termynal to be visible
     termynal = page.locator(".termy").first

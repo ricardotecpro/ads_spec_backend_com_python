@@ -3,10 +3,10 @@ import os
 from pathlib import Path
 
 # Expected course structure
-EXPECTED_LESSONS = [f"{i:02d}.md" for i in range(1, 17)]
-EXPECTED_SLIDES = [f"{i:02d}-slides.md" for i in range(1, 17)]
+EXPECTED_LESSONS = [f"aulas/aula-{i:02d}.md" for i in range(1, 17)]
+EXPECTED_SLIDES = [f"slide-{i:02d}.md" for i in range(1, 17)]
 EXPECTED_QUIZZES = [f"quiz-{i:02d}.md" for i in range(1, 17)]
-EXPECTED_EXERCISES = [f"exercicios-{i:02d}.md" for i in range(1, 17)]
+EXPECTED_EXERCISES = [f"exercicio-{i:02d}.md" for i in range(1, 17)]
 EXPECTED_PROJECTS = [f"projeto-{i:02d}.md" for i in range(1, 17)]
 
 def test_content_structure_exists():

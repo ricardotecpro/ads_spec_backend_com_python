@@ -13,10 +13,10 @@ from playwright.sync_api import Page, expect
 def test_build_output_exists():
     """Verify that all expected build output files exist."""
     assert os.path.exists("site/index.html"), "Main index.html not found"
-    assert os.path.exists("site/01/index.html"), "Lesson 01 page not found"
-    assert os.path.exists("site/16/index.html"), "Lesson 16 page not found"
+    assert os.path.exists("site/aulas/aula-01/index.html"), "Lesson 01 page not found"
+    assert os.path.exists("site/aulas/aula-16/index.html"), "Lesson 16 page not found"
     assert os.path.exists("site/slides/index.html"), "Slides index not found"
-    assert os.path.exists("site/setup/index.html"), "Setup index not found"
+    assert os.path.exists("site/setups/index.html"), "Setup index not found"
     assert os.path.exists("site/assets/js/quiz.js"), "Quiz JS not found"
     assert os.path.exists("site/assets/css/quiz.css"), "Quiz CSS not found"
 
@@ -41,7 +41,7 @@ def test_homepage_structure(page: Page, base_url):
 # Test 3: Navigation to Lesson 01
 def test_lesson_01_page(page: Page, base_url):
     """Test Lesson 01 page loads and has correct content."""
-    page.goto(f"{base_url}/01/")
+    page.goto(f"{base_url}/aulas/aula-01/")
     
     # Check title (flexible match)
     expect(page).to_have_title(re.compile(r"Aula 01.*Python"))
@@ -93,7 +93,7 @@ def test_slides_structure(page: Page, base_url):
 # Test 6: Lesson 16 page (Testing/Boas Práticas)
 def test_lesson_16_page(page: Page, base_url):
     """Test Lesson 16 page loads correctly."""
-    page.goto(f"{base_url}/16/")
+    page.goto(f"{base_url}/aulas/aula-16/")
     
     # Check title
     expect(page).to_have_title(re.compile(r"Aula 16.*Testes"))
@@ -123,7 +123,7 @@ def test_mermaid_diagram(page: Page, base_url):
 # Test 8: Assets loading
 def test_assets_load(page: Page, base_url):
     """Test that CSS and JS assets load correctly."""
-    page.goto(f"{base_url}/01/")
+    page.goto(f"{base_url}/aulas/aula-01/")
     
     # Check that quiz.js is loaded
     quiz_script = page.locator("script[src*='quiz.js']")

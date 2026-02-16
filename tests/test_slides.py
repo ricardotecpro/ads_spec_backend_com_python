@@ -22,7 +22,7 @@ class TestSlides:
         """Verifica se cada página de slide carrega sem erro 404"""
         page = page_with_base_url
         # Check for the standalone HTML file generated/copied by the hook
-        slide_url = f"{base_url}/slides/{lesson_number:02d}-slides.html"
+        slide_url = f"{base_url}/slides/slide-{lesson_number:02d}.html"
         
         page.goto(slide_url, wait_until="networkidle")
         
@@ -36,7 +36,7 @@ class TestSlides:
     def test_revealjs_present_on_slide_01(self, page_with_base_url: Page, base_url: str):
         """Verifica se RevealJS está presente no slide 01"""
         page = page_with_base_url
-        page.goto(f"{base_url}/slides/01-slides.html")
+        page.goto(f"{base_url}/slides/slide-01.html")
         
         # Verifica se a estrutura RevealJS existe
         reveal_container = page.locator(".reveal")
@@ -45,7 +45,7 @@ class TestSlides:
     def test_slide_navigation_exists(self, page_with_base_url: Page, base_url: str):
         """Verifica se controles de navegação de slides existem"""
         page = page_with_base_url
-        page.goto(f"{base_url}/slides/01-slides.html")
+        page.goto(f"{base_url}/slides/slide-01.html")
         
         # RevealJS adiciona controles de navegação
         # Check if controls exist in DOM (might be disabled/hidden on first slide)
@@ -55,7 +55,7 @@ class TestSlides:
     def test_slide_content_visible(self, page_with_base_url: Page, base_url: str):
         """Verifica se o conteúdo do slide está visível"""
         page = page_with_base_url
-        page.goto(f"{base_url}/slides/01-slides.html")
+        page.goto(f"{base_url}/slides/slide-01.html")
         
         # RevealJS usa .slides como container de slides
         slides_container = page.locator(".slides")

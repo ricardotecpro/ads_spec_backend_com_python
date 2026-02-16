@@ -24,7 +24,7 @@ def generate_slide_html(lesson_number: int) -> str:
 <body>
     <div class="reveal">
         <div class="slides">
-            <section data-markdown="{lesson_number:02d}-slides.md"
+            <section data-markdown="slide-{lesson_number:02d}.md"
                      data-separator="^\\n---\\n$"
                      data-separator-vertical="^\\n--\\n$">
             </section>
@@ -79,10 +79,10 @@ def generate_all_slides():
     print(f"Fonte: {slides_src_dir}")
     
     for i in track(range(1, 17), description="Processando slides..."):
-        src_md_name = f"{i:02d}-slides.md"
+        src_md_name = f"slide-{i:02d}.md"
         src_md_path = slides_src_dir / src_md_name
         dst_md_path = slides_dst_dir / src_md_name
-        html_path = slides_dst_dir / f"{i:02d}-slides.html"
+        html_path = slides_dst_dir / f"slide-{i:02d}.html"
         
         if src_md_path.exists():
             # 1. Ler fonte
