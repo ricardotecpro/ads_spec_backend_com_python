@@ -1,0 +1,65 @@
+============================= test session starts =============================
+platform win32 -- Python 3.13.0, pytest-8.4.2, pluggy-1.6.0 -- C:\Users\rlp\AppData\Local\pypoetry\Cache\virtualenvs\ads-spec-backend-com-python-E57qCZbl-py3.13\Scripts\python.exe
+cachedir: .pytest_cache
+baseurl: http://127.0.0.1:8766
+rootdir: D:\SourceCode\REPOS\github.io\ads_spec_backend_com_python
+configfile: pyproject.toml
+plugins: base-url-2.1.0, playwright-0.5.2
+collecting ... collected 1 item
+
+tests/test_fullscreen.py::test_shortcuts_hidden_in_fullscreen[chromium] 
+Created locator. Count: 0
+FAILED
+
+================================== FAILURES ===================================
+________________ test_shortcuts_hidden_in_fullscreen[chromium] ________________
+
+page = <Page url='http://127.0.0.1:8766/slides/slide-01.html'>
+
+    def test_shortcuts_hidden_in_fullscreen(page: Page):
+        """
+        Test that the .reveal-shortcuts element is hidden when the presentation
+        enters fullscreen mode.
+    
+        Note: Fullscreen API in headless mode can be tricky.
+        We rely on checking if the CSS pseudo-class matches or if specific styling is applied.
+        However, forcing pseudo-classes in Playwright is hard.
+        Instead, we check if the element has the class or if we can simulate the state.
+    
+        Actually, triggering 'F' in Reveal.js triggers the API.
+        Browsers usually require user gesture. page.keyboard.press helps.
+        """
+        # Load a slide
+        page.on("console", lambda msg: print(f"BROWSER LOG: {msg.text}"))
+        page.goto("/slides/slide-01.html")
+    
+    
+        # 1. Verify shortcuts are initially visible
+        shortcuts = page.locator(".reveal-shortcuts")
+        print(f"\nCreated locator. Count: {shortcuts.count()}")
+    
+        # Debug info
+        if shortcuts.count() > 0:
+            box = shortcuts.bounding_box()
+            print(f"Bounding box: {box}")
+            viz = shortcuts.is_visible()
+            print(f"Is visible: {viz}")
+            if not viz:
+                # Check style
+                display = shortcuts.evaluate("el => getComputedStyle(el).display")
+                print(f"Computed display: {display}")
+                opacity = shortcuts.evaluate("el => getComputedStyle(el).opacity")
+                print(f"Computed opacity: {opacity}")
+    
+>       expect(shortcuts).to_be_visible()
+E       AssertionError: Locator expected to be visible
+E       Actual value: None
+E       Error: element(s) not found 
+E       Call log:
+E         - Expect "to_be_visible" with timeout 5000ms
+E         - waiting for locator(".reveal-shortcuts")
+
+tests\test_fullscreen.py:39: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/test_fullscreen.py::test_shortcuts_hidden_in_fullscreen[chromium]
+============================== 1 failed in 8.40s ==============================

@@ -27,14 +27,6 @@
     /* Let clicks pass through */
 }
 
-/* Hide shortcuts in fullscreen mode */
-:fullscreen .reveal-shortcuts,
-:-webkit-full-screen .reveal-shortcuts,
-:-moz-full-screen .reveal-shortcuts,
-:-ms-fullscreen .reveal-shortcuts {
-    display: none;
-}
-
 /* Hide shortcuts in print mode */
 @media print {
     .reveal-shortcuts {
