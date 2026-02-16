@@ -1,4 +1,0 @@
-Unused Files Report
-===================
-These files were not found referenced in mkdocs.yml or other files.
-

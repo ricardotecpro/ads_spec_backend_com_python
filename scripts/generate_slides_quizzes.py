@@ -38,6 +38,10 @@ def generate_slide_html(lesson_number: int) -> str:
     <script>
         Reveal.initialize({{
             hash: true,
+            slideNumber: 'c/t',
+            showSlideNumber: 'all',
+            controls: true,
+            progress: true,
             plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
         }});
     </script>
