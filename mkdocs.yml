@@ -21,18 +21,20 @@ theme:
     - search.suggest
     - search.highlight
   palette:
-    - scheme: slate
-      primary: indigo
-      accent: amber
-      toggle:
-        icon: material/weather-night
-        name: Mudar para modo claro
+    # Light Mode (Default)
     - scheme: default
-      primary: indigo
-      accent: amber
+      primary: blue
+      accent: yellow
       toggle:
         icon: material/weather-sunny
         name: Mudar para modo escuro
+    # Dark Mode
+    - scheme: slate
+      primary: blue
+      accent: yellow
+      toggle:
+        icon: material/weather-night
+        name: Mudar para modo claro
   icon:
     repo: fontawesome/brands/github
 
@@ -122,6 +124,8 @@ extra:
       link: https://github.com/ricardotecpro
     - icon: fontawesome/brands/linkedin
       link: https://linkedin.com/in/ricardotecpro
+    - icon: fontawesome/solid/globe
+      link: https://ricardotecpro.github.io/
   version:
     provider: mike
     default: estavel
