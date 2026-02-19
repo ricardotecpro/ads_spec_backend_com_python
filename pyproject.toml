@@ -1,9 +1,9 @@
 [project]
-name = "ads-spec-backend-com-python"
+name = "ads_spec_backend_com_python"
 version = "1.0.0"
-description = "Curso Completo de Python - Backend"
+description = "Curso de Python - Backend"
 authors = [
-    {name = "Ricardo", email = "ricardo@example.com"}
+    {name = "Ricardo Tec Pro", email = "ricardotecpro@hotmail.com"}
 ]
 readme = "README.md"
 requires-python = ">=3.11,<4.0"

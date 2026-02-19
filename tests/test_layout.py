@@ -27,7 +27,7 @@ def test_homepage_structure(page: Page, base_url):
     page.goto(base_url)
     
     # Check title
-    expect(page).to_have_title("Python Backend - Curso Completo")
+    expect(page).to_have_title("Python Backend - Curso")
     
     # Check main heading
     heading = page.locator("h1")
