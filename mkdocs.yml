@@ -22,16 +22,18 @@ theme:
     - search.highlight
   palette:
     # Light Mode (Default)
-    - scheme: default
-      primary: blue
-      accent: yellow
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: amber
       toggle:
         icon: material/weather-sunny
         name: Mudar para modo escuro
     # Dark Mode
-    - scheme: slate
-      primary: blue
-      accent: yellow
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: amber
       toggle:
         icon: material/weather-night
         name: Mudar para modo claro
