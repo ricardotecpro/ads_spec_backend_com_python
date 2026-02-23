@@ -5,8 +5,8 @@ repo_name: ricardotecpro/ads_spec_backend_com_python
 theme:
   name: material
   language: pt-BR
-  favicon: assets/images/python-logo-notext.svg
-  logo: assets/images/python-logo-notext.svg
+  favicon: assets/images/logo.png
+  logo: assets/images/logo.png
   custom_dir: overrides
   features:
     - navigation.tracking
